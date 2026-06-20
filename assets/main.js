@@ -47,6 +47,69 @@ function pubCategoryClass(category) {
   return 'other';
 }
 
+function publicationGroupHeading(category) {
+  const descriptions = {
+    'Peer-reviewed scientific articles': 'Journal articles and peer-reviewed chapters.',
+    'Scientific books and edited volumes': 'Authored books, edited volumes, and special issues.',
+    'Non-refereed scientific articles and reviews': 'Essay reviews, book reviews, and scientific discussion pieces.',
+    'Professional and stakeholder publications': 'Reports, policy briefs, and stakeholder-facing texts.'
+  };
+  return `<header class="publication-group-head"><h2>${escapeHTML(category)}</h2><p>${escapeHTML(descriptions[category] || '')}</p></header>`;
+}
+
+function isAcademicPublication(pub) {
+  return pub.category.includes('Peer-reviewed') || pub.category.includes('Scientific books') || pub.category.includes('Non-refereed scientific');
+}
+
+function renderPublicationGroups(publications) {
+  const groups = [...new Set(publications.map(p => p.category))];
+  return groups.map(category => {
+    const items = publications.filter(p => p.category === category).map(p => publicationCard(p)).join('');
+    return `<section class="publication-group">${publicationGroupHeading(category)}${items}</section>`;
+  }).join('');
+}
+
+function renderPublicFacingBlock() {
+  const updates = ((data.engagement && data.engagement.updates) || []).slice(0, 5);
+  if (!updates.length) return '';
+  const cards = updates.map(item => `<article class="public-item">
+    <div class="public-kind">${escapeHTML(item.kind)} · ${escapeHTML(item.date)}</div>
+    <h3>${escapeHTML(item.title)}</h3>
+    <p>${escapeHTML(item.text)}</p>
+    <a class="tiny-link" href="${item.url}" target="_blank" rel="noreferrer">Open link</a>
+  </article>`).join('');
+  return `<section class="publication-group public-facing-group">
+    <header class="publication-group-head"><h2>Public writing and updates</h2><p>LinkedIn, blog, and university pieces.</p></header>
+    ${cards}
+  </section>`;
+}
+
+function renderPublicationBoard(publications, includePublicFacing = false) {
+  const academic = publications.filter(isAcademicPublication);
+  const professional = publications.filter(p => !isAcademicPublication(p));
+  const academicCount = academic.length;
+  const publicCount = professional.length + (includePublicFacing ? (((data.engagement && data.engagement.updates) || []).slice(0, 5).length) : 0);
+  return `<div class="publication-board">
+    <section class="publication-column academic-column">
+      <header class="column-head">
+        <p class="eyebrow">Academic work</p>
+        <h2>Research publications</h2>
+        <p>${academicCount} items</p>
+      </header>
+      ${renderPublicationGroups(academic) || '<p>No matching academic items.</p>'}
+    </section>
+    <aside class="publication-column public-column">
+      <header class="column-head">
+        <p class="eyebrow">Beyond academia</p>
+        <h2>Reports, briefs, and engagement</h2>
+        <p>${publicCount} items</p>
+      </header>
+      ${renderPublicationGroups(professional) || '<p>No matching professional items.</p>'}
+      ${includePublicFacing ? renderPublicFacingBlock() : ''}
+    </aside>
+  </div>`;
+}
+
 function publicationCard(pub, compact = false) {
   const links = (pub.links || []).map(l => `<a class="tiny-link" href="${l.url}" target="_blank" rel="noreferrer">${escapeHTML(l.label)}</a>`).join('');
   const tags = (pub.tags || []).map(t => `<span class="pub-tag">${escapeHTML(t)}</span>`).join('');
@@ -166,8 +229,13 @@ function initPublicationPage() {
       const hay = [p.category, p.type, p.year, p.title, p.authors, p.venue, p.status, ...(p.tags || [])].join(' ').toLowerCase();
       return (current === 'All' || p.category === current) && (!q || hay.includes(q));
     });
-    countEl.textContent = `${filtered.length} publication${filtered.length === 1 ? '' : 's'} shown`;
-    list.innerHTML = filtered.map(p => publicationCard(p)).join('');
+    const academicCount = filtered.filter(isAcademicPublication).length;
+    const otherCount = filtered.length - academicCount;
+    countEl.textContent = current === 'All'
+      ? `${academicCount} academic items · ${otherCount} professional/stakeholder items`
+      : `${filtered.length} item${filtered.length === 1 ? '' : 's'} shown`;
+    const showBoard = current === 'All';
+    list.innerHTML = showBoard ? renderPublicationBoard(filtered, !q) : filtered.map(p => publicationCard(p)).join('');
     initCopyButtons(list);
   }
   filtersEl.addEventListener('click', e => {
