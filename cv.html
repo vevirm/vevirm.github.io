@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academic CV | Veli Virmajoki</title>
+  <meta name="description" content="Academic CV of Veli Virmajoki: roles, education, funding, teaching, and supervision.">
+  <meta property="og:title" content="Academic CV | Veli Virmajoki">
+  <meta property="og:description" content="Academic CV of Veli Virmajoki: roles, education, funding, teaching, and supervision.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1a2a3a">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/site-data.js"></script>
+  <script defer src="assets/main.js"></script>
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Veli Virmajoki",
+    "jobTitle": "Senior Researcher",
+    "affiliation": {"@type":"CollegeOrUniversity","name":"University of Turku"},
+    "email": "mailto:vevirm@utu.fi",
+    "url": "https://www.utu.fi/en/people/veli-virmajoki",
+    "sameAs": ["https://www.linkedin.com/in/veli-virmajoki-0b163692/", "https://orcid.org/0000-0002-1963-587X", "https://scholar.google.com/citations?hl=fi&user=zf1KYYIAAAAJ"]
+  }</script>
+</head>
+<body data-page="cv">
+
+<header class="site-header" data-header>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Veli Virmajoki home">
+      <span class="brand-mark">VV</span>
+      <span class="brand-text">Veli Virmajoki</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+      <a href="engagement.html">Public engagement</a>
+      <a class="nav-pill" href="mailto:vevirm@utu.fi">Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+<main id="main" class="page-shell">
+  <section class="page-hero section-pad compact">
+    <div class="container narrow">
+      <p class="eyebrow">Academic CV</p>
+      <h1>Career, education, funding, teaching, and supervision</h1>
+      <p class="lead small">A public-facing CV page based on the supplied academic CV. The public page includes email contact, but intentionally omits private phone details.</p>
+      <button class="button" onclick="window.print()">Print / save as PDF</button>
+    </div>
+  </section>
+  <section class="section-pad compact">
+    <div class="container cv-layout">
+      <aside class="cv-sidebar">
+        <h2>Profile</h2>
+        <p data-profile="bio"></p>
+        <div class="chips small" data-research-areas></div>
+      </aside>
+      <div class="cv-main">
+        <section class="timeline-section"><h2>Current role</h2><div data-cv="current"></div></section>
+        <section class="timeline-section"><h2>Previous experience</h2><div data-cv="experience"></div></section>
+        <section class="timeline-section"><h2>Education and qualifications</h2><div data-cv="education"></div></section>
+        <section class="timeline-section"><h2>Research funding</h2><div data-cv="funding"></div></section>
+        <section class="timeline-section"><h2>Teaching and supervision</h2><div data-cv="teaching"></div><div data-cv="supervision"></div></section>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>Veli Virmajoki</strong>
+      <p>Senior Researcher · Finland Futures Research Centre · University of Turku</p>
+    </div>
+    <div class="footer-links" data-link-list="footer"></div>
+  </div>
+  <div class="container footer-note">
+    <span>Static academic website prototype. Edit content in <code>assets/site-data.js</code>.</span>
+  </div>
+</footer>
+
+</body>
+</html>
