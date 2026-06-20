@@ -1,6 +1,6 @@
 # Veli Virmajoki academic website
 
-This is a static academic website for Veli Virmajoki.
+This is a static academic website prototype built from the provided University of Turku profile, CV, publication list, and application vision material.
 
 ## Files
 
@@ -8,7 +8,7 @@ This is a static academic website for Veli Virmajoki.
 - `publications.html` — filterable publication list, separated into peer-reviewed, books, non-refereed scientific work, and professional/stakeholder outputs
 - `cv.html` — public-facing academic CV summary
 - `engagement.html` — LinkedIn/blog/public engagement page
-- `assets/site-data.js` — editable data source for profile, publications, CV, and selected updates
+- `assets/site-data.js` — editable data source for profile, publications, CV, vision, and curated updates
 - `assets/styles.css` — visual design
 - `assets/main.js` — filtering, rendering, copy-citation buttons, mobile menu
 
