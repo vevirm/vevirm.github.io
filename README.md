@@ -19,3 +19,6 @@ Most content is in `assets/site-data.js`. Update publications, profile links, an
 ## Deployment
 
 This is a static website. Upload the files to GitHub Pages or another static host. No build step is required.
+
+
+Pages included: Home, Publications, CV, Public engagement, and Contact.

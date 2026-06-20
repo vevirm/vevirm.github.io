@@ -5,8 +5,8 @@ window.siteData = {
     "affiliation": "Finland Futures Research Centre (FFRC), University of Turku",
     "email": "vevirm@utu.fi",
     "portrait": "https://www.utu.fi/sites/default/files/styles/profile_picture_horizontal/public/images/profile/1138410.jpg?itok=OXEoXhGR",
-    "tagline": "Philosopher of science and futures researcher working on how possible futures can be studied responsibly.",
-    "bio": "I am Senior Researcher at the Finland Futures Research Centre, University of Turku, and Docent in Philosophy of Science. My work combines strong academic research with applied foresight: I study how possible futures can be conceptualized, explained, and used in serious decision-making.",
+    "tagline": "Futures studies, Delphi method, foresight, and philosophy of science.",
+    "bio": "I am Senior Researcher at the Finland Futures Research Centre, University of Turku, and Docent in Philosophy of Science. I study how possible futures can be conceptualized, explained, and used in serious research and decision-making.",
     "researchAreas": [
       "Futures of work",
       "Futures of science",

@@ -49,10 +49,10 @@ function pubCategoryClass(category) {
 
 function publicationGroupHeading(category) {
   const descriptions = {
-    'Peer-reviewed scientific articles': 'Journal articles and peer-reviewed chapters.',
-    'Scientific books and edited volumes': 'Authored books, edited volumes, and special issues.',
-    'Non-refereed scientific articles and reviews': 'Essay reviews, book reviews, and scientific discussion pieces.',
-    'Professional and stakeholder publications': 'Reports, policy briefs, and stakeholder-facing texts.'
+    'Peer-reviewed scientific articles': 'Peer-reviewed work in futures studies, philosophy of science, and historiography.',
+    'Scientific books and edited volumes': 'Monographs, edited books, and special issues.',
+    'Non-refereed scientific articles and reviews': 'Essay reviews, book reviews, and scholarly discussion pieces.',
+    'Professional and stakeholder publications': 'Reports, policy briefs, and work written for decision-making contexts.'
   };
   return `<header class="publication-group-head"><h2>${escapeHTML(category)}</h2><p>${escapeHTML(descriptions[category] || '')}</p></header>`;
 }
@@ -79,7 +79,7 @@ function renderPublicFacingBlock() {
     <a class="tiny-link" href="${item.url}" target="_blank" rel="noreferrer">Open link</a>
   </article>`).join('');
   return `<section class="publication-group public-facing-group">
-    <header class="publication-group-head"><h2>Public writing and updates</h2><p>LinkedIn, blog, and university pieces.</p></header>
+    <header class="publication-group-head"><h2>Public writing and updates</h2><p>Blog, LinkedIn, and university pieces.</p></header>
     ${cards}
   </section>`;
 }
@@ -92,7 +92,7 @@ function renderPublicationBoard(publications, includePublicFacing = false) {
   return `<div class="publication-board">
     <section class="publication-column academic-column">
       <header class="column-head">
-        <p class="eyebrow">Academic work</p>
+        <p class="eyebrow">Academic</p>
         <h2>Research publications</h2>
         <p>${academicCount} items</p>
       </header>
@@ -100,8 +100,8 @@ function renderPublicationBoard(publications, includePublicFacing = false) {
     </section>
     <aside class="publication-column public-column">
       <header class="column-head">
-        <p class="eyebrow">Beyond academia</p>
-        <h2>Reports, briefs, and engagement</h2>
+        <p class="eyebrow">Professional / societal</p>
+        <h2>Reports, briefs, engagement</h2>
         <p>${publicCount} items</p>
       </header>
       ${renderPublicationGroups(professional) || '<p>No matching professional items.</p>'}
@@ -126,7 +126,7 @@ function publicationCard(pub, compact = false) {
     <div class="pub-year">${escapeHTML(pub.year)}</div>
     <div>
       <span class="pub-category ${pubCategoryClass(pub.category)}">${escapeHTML(pub.category)}</span>
-      <h2>${escapeHTML(pub.title)}</h2>
+      <h3>${escapeHTML(pub.title)}</h3>
       <div class="pub-meta">${escapeHTML(pub.authors)}</div>
       <p><strong>${escapeHTML(pub.type)}</strong> · ${escapeHTML(pub.venue)}${pub.status ? ` · ${escapeHTML(pub.status)}` : ''}</p>
       <div class="pub-tags">${tags}</div>
@@ -158,10 +158,10 @@ function renderStats() {
   const books = pubs.filter(p => p.category.includes('books')).length;
   const professional = pubs.filter(p => p.category.includes('Professional')).length;
   el.innerHTML = [
-    [pubs.length, 'listed outputs'],
-    [peer, 'peer-reviewed / academic articles & chapters'],
-    [books, 'books & edited volumes'],
-    [professional, 'professional / stakeholder publications']
+    [pubs.length, 'listed publications and outputs'],
+    [peer, 'peer-reviewed articles and chapters'],
+    [books, 'books, edited volumes, special issues'],
+    [professional, 'reports and stakeholder publications']
   ].map(([n, label]) => `<div class="stat"><strong>${n}</strong><span>${label}</span></div>`).join('');
 }
 
@@ -232,7 +232,7 @@ function initPublicationPage() {
     const academicCount = filtered.filter(isAcademicPublication).length;
     const otherCount = filtered.length - academicCount;
     countEl.textContent = current === 'All'
-      ? `${academicCount} academic items · ${otherCount} professional/stakeholder items`
+      ? `${academicCount} academic items · ${otherCount} reports/engagement items`
       : `${filtered.length} item${filtered.length === 1 ? '' : 's'} shown`;
     list.innerHTML = renderPublicationBoard(filtered, !q && current === 'All');
     initCopyButtons(list);
