@@ -5,8 +5,8 @@ window.siteData = {
     "affiliation": "Finland Futures Research Centre (FFRC), University of Turku",
     "email": "vevirm@utu.fi",
     "portrait": "https://www.utu.fi/sites/default/files/styles/profile_picture_horizontal/public/images/profile/1138410.jpg?itok=OXEoXhGR",
-    "tagline": "I study what could happen — and why it matters.",
-    "bio": "Veli Virmajoki is a philosopher turned futures researcher working on futures of work, futures of science, futures of universities, and the societal consequences of scientific development. His work connects philosophy of science, philosophy of historiography, futures studies, Delphi methods, scenario thinking, and organizational foresight capability.",
+    "tagline": "Philosopher of science and futures researcher working on how possible futures can be studied responsibly.",
+    "bio": "I am Senior Researcher at the Finland Futures Research Centre, University of Turku, and Docent in Philosophy of Science. My work combines strong academic research with applied foresight: I study how possible futures can be conceptualized, explained, and used in serious decision-making.",
     "researchAreas": [
       "Futures of work",
       "Futures of science",
@@ -786,28 +786,6 @@ window.siteData = {
       }
     ]
   },
-  "vision": {
-    "headline": "Connecting conceptual foundations with applied foresight",
-    "summary": "The long-term development vision for FFRC presented in the application material emphasizes scientifically robust futures studies, stronger societal interaction, and teaching that prepares graduates for academic, policy, and industry careers.",
-    "pillars": [
-      {
-        "title": "Foundations + applications",
-        "text": "Develop futures studies as a field where conceptual work on methods, assumptions, and knowledge-production strengthens applied foresight on urgent societal questions."
-      },
-      {
-        "title": "Societal interaction as a core practice",
-        "text": "Treat stakeholder workshops, Delphi studies, scenarios, policy briefs, and organizational foresight not as add-ons, but as part of how futures research operates."
-      },
-      {
-        "title": "Distinct scientific expertise",
-        "text": "Clarify what academically grounded foresight contributes beyond generic strategic thinking and non-academic foresight practice."
-      },
-      {
-        "title": "Careers across sectors",
-        "text": "Prepare researchers and foresight professionals for work across universities, public policy, industry, and public engagement."
-      }
-    ]
-  },
   "engagement": {
     "updates": [
       {
@@ -842,7 +820,7 @@ window.siteData = {
         "kind": "University of Turku perspective",
         "date": "2026",
         "title": "University of Turku in 2040: visions from the University community",
-        "text": "A public-facing piece connected to the university futures project and the dialectic Delphi study.",
+        "text": "A University of Turku piece connected to the university futures project and the dialectic Delphi study.",
         "url": "https://www.utu.fi/en/news/perspective/university-of-turku-in-2040-visions-from-the-university-community"
       }
     ]
