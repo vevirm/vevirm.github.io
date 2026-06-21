@@ -23,3 +23,6 @@ The current visual identity uses white, red, and black, with spacious sections a
 Added Research Radar:
 - research-radar.html
 - assets/research-radar-approved.json
+
+
+Research Radar is now visible in the top navigation as Radar and has a stronger homepage callout.
