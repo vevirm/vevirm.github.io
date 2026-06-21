@@ -167,16 +167,12 @@ function initCopyButtons(root = document) {
 function renderStats() {
   const el = $('[data-stats]');
   if (!el) return;
-  const pubs = data.publications || [];
-  const peer = pubs.filter(p => p.category.includes('Peer')).length;
-  const books = pubs.filter(p => p.category.includes('books')).length;
-  const professional = pubs.filter(p => p.category.includes('Professional')).length;
   el.innerHTML = [
-    [pubs.length, 'listed publications and outputs'],
-    [peer, 'peer-reviewed articles and chapters'],
-    [books, 'books, edited volumes, special issues'],
-    [professional, 'reports and stakeholder publications']
-  ].map(([n, label]) => `<div class="stat"><strong>${n}</strong><span>${label}</span></div>`).join('');
+    ['Peer-reviewed arguments', 'Research in futures studies, philosophy of science, historiography, and counterfactual thinking.'],
+    ['Books and frameworks', 'Long-form work where concepts and methods have room to develop.'],
+    ['Research-grounded scans', 'Horizon scanning based on substantial bodies of papers, books, and reports.'],
+    ['Methods that connect fields', 'Dialectic Delphi, narratives-with-branches, CLA extensions, and futures as space.']
+  ].map(([title, text]) => `<div class="stat nature-card"><strong>${title}</strong><span>${text}</span></div>`).join('');
 }
 
 function renderSelectedPublications() {
@@ -246,8 +242,8 @@ function initPublicationPage() {
     const academicCount = filtered.filter(isAcademicPublication).length;
     const otherCount = filtered.length - academicCount;
     countEl.textContent = current === 'All'
-      ? `${academicCount} academic items · ${otherCount} reports/engagement items`
-      : `${filtered.length} item${filtered.length === 1 ? '' : 's'} shown`;
+      ? 'Showing scholarly publications, books, reviews, reports, and stakeholder-oriented work.'
+      : 'Filtered selection shown.';
     list.innerHTML = renderPublicationBoard(filtered, !q && current === 'All');
     initCopyButtons(list);
   }

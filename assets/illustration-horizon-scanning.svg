@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Deep horizon scanning illustration</title>
+  <desc id="desc">A calm white, red, and black line illustration of stacked books, papers, and a scanning lens.</desc>
+  <rect width="720" height="420" rx="34" fill="#fff"/>
+  <rect x="30" y="30" width="660" height="360" rx="28" fill="#faf8f7" stroke="#111" stroke-width="2"/>
+  <circle cx="584" cy="118" r="54" fill="#fff2f3" stroke="#b20f16" stroke-width="5"/>
+  <line x1="622" y1="156" x2="674" y2="208" stroke="#111" stroke-width="12" stroke-linecap="round"/>
+  <line x1="552" y1="118" x2="614" y2="118" stroke="#b20f16" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+  <line x1="584" y1="86" x2="584" y2="150" stroke="#b20f16" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
+
+  <g transform="translate(88 104)">
+    <rect x="0" y="160" width="362" height="54" rx="7" fill="#111"/>
+    <rect x="20" y="110" width="360" height="54" rx="7" fill="#fff" stroke="#111" stroke-width="3"/>
+    <rect x="44" y="118" width="74" height="38" rx="2" fill="#b20f16" opacity="0.95"/>
+    <line x1="144" y1="128" x2="328" y2="128" stroke="#111" stroke-width="4" stroke-linecap="round"/>
+    <line x1="144" y1="145" x2="288" y2="145" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+
+    <rect x="-8" y="60" width="332" height="50" rx="7" fill="#fff2f3" stroke="#b20f16" stroke-width="3"/>
+    <line x1="22" y1="76" x2="278" y2="76" stroke="#111" stroke-width="4" stroke-linecap="round"/>
+    <line x1="22" y1="94" x2="206" y2="94" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+
+    <rect x="36" y="8" width="348" height="54" rx="7" fill="#fff" stroke="#111" stroke-width="3"/>
+    <rect x="58" y="18" width="56" height="34" rx="3" fill="#111"/>
+    <line x1="138" y1="25" x2="332" y2="25" stroke="#b20f16" stroke-width="4" stroke-linecap="round"/>
+    <line x1="138" y1="43" x2="286" y2="43" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+
+    <path d="M406 42c-12 0-22 10-22 22v122c0 12 10 22 22 22h88c12 0 22-10 22-22V64c0-12-10-22-22-22h-88z" fill="#fff" stroke="#111" stroke-width="3"/>
+    <path d="M407 42c27 15 54 15 87 0" fill="none" stroke="#b20f16" stroke-width="4"/>
+    <line x1="414" y1="82" x2="486" y2="82" stroke="#111" stroke-width="3" stroke-linecap="round"/>
+    <line x1="414" y1="102" x2="494" y2="102" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+    <line x1="414" y1="122" x2="478" y2="122" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+  </g>
+
+  <path d="M98 334h510" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.2"/>
+  <text x="90" y="356" fill="#111" font-family="Arial, sans-serif" font-size="19" font-weight="700">papers · books · reports</text>
+  <text x="442" y="356" fill="#b20f16" font-family="Arial, sans-serif" font-size="19" font-weight="700">careful scan</text>
+</svg>
