@@ -14,9 +14,23 @@ function initNav() {
   const btn = $('.nav-toggle');
   const nav = $('#site-nav');
   if (!btn || !nav) return;
+  const close = () => {
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  };
   btn.addEventListener('click', () => {
     const open = nav.classList.toggle('open');
     btn.setAttribute('aria-expanded', String(open));
+  });
+  nav.addEventListener('click', e => {
+    if (e.target.closest('a')) close();
+  });
+  document.addEventListener('click', e => {
+    if (!nav.classList.contains('open')) return;
+    if (!nav.contains(e.target) && !btn.contains(e.target)) close();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') close();
   });
 }
 

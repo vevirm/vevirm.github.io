@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-<rect width="128" height="128" rx="28" fill="#13202f"/>
+<rect width="128" height="128" rx="28" fill="#111111"/>
+<path d="M0 94 L128 34 L128 128 L0 128 Z" fill="#b20f16" opacity="0.9"/>
 <text x="64" y="78" text-anchor="middle" font-family="Georgia, serif" font-size="54" font-weight="700" fill="#ffffff">VV</text>
 </svg>

@@ -5,17 +5,21 @@ window.siteData = {
     "affiliation": "Finland Futures Research Centre (FFRC), University of Turku",
     "email": "vevirm@utu.fi",
     "portrait": "https://www.utu.fi/sites/default/files/styles/profile_picture_horizontal/public/images/profile/1138410.jpg?itok=OXEoXhGR",
-    "tagline": "Futures studies, Delphi method, foresight, and philosophy of science.",
-    "bio": "I am Senior Researcher at the Finland Futures Research Centre, University of Turku, and Docent in Philosophy of Science. I study how possible futures can be conceptualized, explained, and used in serious research and decision-making.",
+    "tagline": "Futures studies, Delphi method, narrative foresight, and philosophy of science.",
+    "bio": "I am a Senior Researcher at the Finland Futures Research Centre, University of Turku, and Docent in Philosophy of Science. I study possible futures, how they are conceptualized and justified, and how futures methods can be made clearer and stronger.",
     "researchAreas": [
-      "Futures of work",
-      "Futures of science",
-      "Futures of universities",
+      "Futures studies",
+      "Dialectic Delphi and Delphi methodology",
+      "Narrative foresight and narratives-with-branches",
+      "Futures of work and work arrangements",
+      "Futures of science and university futures",
       "Philosophy of futures studies",
       "Philosophy of science",
-      "Philosophy of historiography",
-      "Delphi method",
-      "Explanation, contingency, and counterfactual thinking"
+      "Causal Layered Analysis and science",
+      "Possibility space and futures as space",
+      "Horizon scanning",
+      "Explanation, contingency, and counterfactual thinking",
+      "Limits of conceivability"
     ],
     "links": [
       {
