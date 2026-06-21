@@ -1,0 +1,135 @@
+{
+  "max_candidates": 30,
+  "days_back": 14,
+  "minimum_score": 9,
+  "mailto": "vevirm@utu.fi",
+  "topics": [
+    {
+      "name": "Futures studies and foresight",
+      "queries": [
+        "futures studies foresight methodology",
+        "strategic foresight futures research",
+        "anticipation future studies"
+      ],
+      "keywords": ["futures studies", "foresight", "futures research", "anticipation", "scenario", "scenarios", "horizon scanning"]
+    },
+    {
+      "name": "Narrative foresight",
+      "queries": [
+        "narrative foresight futures studies",
+        "storytelling scenarios futures studies",
+        "participatory foresight narratives"
+      ],
+      "keywords": ["narrative", "narratives", "storytelling", "scenario", "participatory foresight", "radical futures"]
+    },
+    {
+      "name": "Delphi and expert methods",
+      "queries": [
+        "Delphi method futures research",
+        "Delphi study foresight experts",
+        "expert elicitation futures studies"
+      ],
+      "keywords": ["delphi", "expert elicitation", "expert judgement", "consensus", "foresight", "survey"]
+    },
+    {
+      "name": "Futures of work",
+      "queries": [
+        "future of work hybrid work arrangements",
+        "remote work future work arrangements",
+        "workplace futures digital green transition"
+      ],
+      "keywords": ["future of work", "futures of work", "hybrid work", "remote work", "work arrangements", "workplace", "digital work"]
+    },
+    {
+      "name": "University futures and higher education",
+      "queries": [
+        "university futures higher education foresight",
+        "future of universities higher education policy",
+        "higher education futures academic values"
+      ],
+      "keywords": ["university", "universities", "higher education", "academic values", "teaching", "research policy"]
+    },
+    {
+      "name": "Philosophy of futures studies and science",
+      "queries": [
+        "philosophy of futures studies",
+        "philosophy of science futures studies",
+        "future of science philosophy of science"
+      ],
+      "keywords": ["philosophy of futures studies", "philosophy of science", "future of science", "scientific change", "conceptual engineering"]
+    },
+    {
+      "name": "Counterfactuals, historiography and conceivability",
+      "queries": [
+        "counterfactual history philosophy of history",
+        "historical counterfactuals historiography explanation",
+        "conceivability possible futures alternatives"
+      ],
+      "keywords": ["counterfactual", "counterfactuals", "historiography", "philosophy of history", "historical explanation", "conceivability", "unconceived alternatives"]
+    },
+    {
+      "name": "Causal Layered Analysis and deep futures methods",
+      "queries": [
+        "causal layered analysis futures studies",
+        "CLA futures studies methodology",
+        "worldviews myths futures studies"
+      ],
+      "keywords": ["causal layered analysis", "CLA", "worldview", "myth", "metaphor", "deep futures"]
+    }
+  ],
+  "preferred_sources": [
+    "Futures",
+    "Futures & Foresight Science",
+    "Technological Forecasting and Social Change",
+    "Journal of Futures Studies",
+    "foresight",
+    "Long Range Planning",
+    "Research Policy",
+    "Science and Public Policy",
+    "Social Studies of Science",
+    "Science, Technology, & Human Values",
+    "Studies in History and Philosophy of Science",
+    "Philosophy of Science",
+    "British Journal for the Philosophy of Science",
+    "European Journal for Philosophy of Science",
+    "Synthese",
+    "Erkenntnis",
+    "Philosophy & Technology",
+    "Journal of the Philosophy of History",
+    "History and Theory",
+    "Higher Education",
+    "Studies in Higher Education",
+    "Higher Education Policy",
+    "Minerva",
+    "New Technology, Work and Employment",
+    "Work, Employment and Society",
+    "Human Relations",
+    "Organization Studies"
+  ],
+  "preferred_publishers": [
+    "Oxford University Press",
+    "Cambridge University Press",
+    "Routledge",
+    "Springer",
+    "Palgrave Macmillan",
+    "MIT Press",
+    "Princeton University Press",
+    "University of Chicago Press",
+    "Harvard University Press",
+    "OECD",
+    "UNESCO",
+    "European Commission",
+    "JRC"
+  ],
+  "blocked_terms": [
+    "press release",
+    "news",
+    "newspaper",
+    "blog",
+    "market report",
+    "stock market",
+    "investment outlook",
+    "crypto",
+    "advertisement"
+  ]
+}
