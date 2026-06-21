@@ -60,6 +60,10 @@ scripts/research_radar_scan.py
 .github/workflows/research-radar.yml
 ```
 
-The scanner now uses a hard quality gate before scoring. It admits only DOI-bearing scholarly articles, academic books/chapters, authoritative institutional reports, and serious borderline working papers/preprints from recognised research bodies. It rejects news, blogs, vendor/consultancy material, press releases, listicles, shallow trend roundups, and thin items without enough substance signals. Tune this in `assets/research-radar-config.json` under `quality_gate`.
-
 The workflow runs weekly and can also be started manually from GitHub Actions.
+
+### Scanner focus after the strict-theme update
+
+The weekly scanner is not a general “interesting new papers” feed. It now applies a site-focus gate after the publication/substance gate. A candidate must be close to the themes of this site: futures/foresight methods, Delphi, scenario work, horizon scanning, narrative foresight, philosophy of futures studies, philosophy/futures of science, historiography/counterfactuals/conceivability, or system-level futures of work and universities.
+
+This means that a peer-reviewed empirical article can still be rejected if it is merely a good qualitative study about an unrelated applied topic. The scanner now rejects micro-experience/domain-drift papers unless they clearly contribute to the site's methods, concepts, policy/system analysis, or core futures/philosophy themes.

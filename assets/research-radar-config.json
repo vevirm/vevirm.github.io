@@ -1,7 +1,7 @@
 {
   "max_candidates": 30,
   "days_back": 14,
-  "minimum_score": 14,
+  "minimum_score": 16,
   "openalex_per_query": 25,
   "mailto": "vevirm@utu.fi",
   "topics": [
@@ -20,6 +20,32 @@
         "scenario",
         "scenarios",
         "horizon scanning"
+      ],
+      "required_terms": [
+        "futures studies",
+        "futures research",
+        "foresight",
+        "strategic foresight",
+        "anticipation",
+        "horizon scanning",
+        "scenario planning",
+        "scenario analysis",
+        "scenarios"
+      ],
+      "required_groups": [
+        [
+          "futures studies",
+          "futures research",
+          "foresight",
+          "strategic foresight",
+          "anticipation",
+          "horizon scanning",
+          "scenario planning",
+          "scenario analysis",
+          "scenario method",
+          "scenario methods",
+          "scenarios"
+        ]
       ]
     },
     {
@@ -36,6 +62,35 @@
         "scenario",
         "participatory foresight",
         "radical futures"
+      ],
+      "required_terms": [
+        "narrative foresight",
+        "futures studies",
+        "futures research",
+        "foresight",
+        "scenario",
+        "scenarios",
+        "futures literacy"
+      ],
+      "required_groups": [
+        [
+          "narrative",
+          "narratives",
+          "storytelling",
+          "stories",
+          "science fiction",
+          "fictional",
+          "speculative"
+        ],
+        [
+          "foresight",
+          "futures studies",
+          "futures research",
+          "scenario",
+          "scenarios",
+          "futures literacy",
+          "anticipation"
+        ]
       ]
     },
     {
@@ -52,6 +107,33 @@
         "consensus",
         "foresight",
         "survey"
+      ],
+      "required_terms": [
+        "Delphi",
+        "Delphi method",
+        "Delphi study",
+        "expert elicitation",
+        "expert judgement",
+        "expert judgment"
+      ],
+      "required_groups": [
+        [
+          "Delphi",
+          "expert elicitation",
+          "expert judgement",
+          "expert judgment"
+        ],
+        [
+          "foresight",
+          "futures",
+          "scenario",
+          "policy",
+          "consensus",
+          "dissensus",
+          "expert judgement",
+          "expert judgment",
+          "expert elicitation"
+        ]
       ]
     },
     {
@@ -69,6 +151,42 @@
         "work arrangements",
         "workplace",
         "digital work"
+      ],
+      "required_terms": [
+        "future of work",
+        "futures of work",
+        "workplace futures",
+        "hybrid work",
+        "remote work",
+        "work arrangements",
+        "working life"
+      ],
+      "required_groups": [
+        [
+          "future of work",
+          "futures of work",
+          "work arrangements",
+          "workplace futures",
+          "remote work",
+          "hybrid work",
+          "working life"
+        ],
+        [
+          "arrangement",
+          "arrangements",
+          "technology",
+          "automation",
+          "organisation",
+          "organization",
+          "policy",
+          "labour",
+          "labor",
+          "employment",
+          "workplace",
+          "digitalisation",
+          "digitalization",
+          "autonomy"
+        ]
       ]
     },
     {
@@ -85,6 +203,40 @@
         "academic values",
         "teaching",
         "research policy"
+      ],
+      "required_terms": [
+        "university futures",
+        "future of universities",
+        "future of higher education",
+        "higher education futures",
+        "higher education policy",
+        "university",
+        "universities"
+      ],
+      "required_groups": [
+        [
+          "university futures",
+          "future of universities",
+          "future of higher education",
+          "higher education futures",
+          "higher education",
+          "university",
+          "universities"
+        ],
+        [
+          "policy",
+          "governance",
+          "research",
+          "teaching",
+          "academic",
+          "institution",
+          "institutions",
+          "funding",
+          "autonomy",
+          "science",
+          "knowledge",
+          "mission"
+        ]
       ]
     },
     {
@@ -100,6 +252,41 @@
         "future of science",
         "scientific change",
         "conceptual engineering"
+      ],
+      "required_terms": [
+        "philosophy of futures studies",
+        "philosophy of science",
+        "future of science",
+        "futures of science",
+        "scientific change",
+        "science policy",
+        "research policy",
+        "conceptual engineering"
+      ],
+      "required_groups": [
+        [
+          "philosophy of futures studies",
+          "philosophy of science",
+          "future of science",
+          "futures of science",
+          "scientific change",
+          "science policy",
+          "research policy",
+          "conceptual engineering",
+          "scientific realism"
+        ],
+        [
+          "philosophy",
+          "philosophical",
+          "conceptual",
+          "epistemic",
+          "epistemology",
+          "knowledge",
+          "method",
+          "science",
+          "scientific",
+          "research"
+        ]
       ]
     },
     {
@@ -117,6 +304,28 @@
         "historical explanation",
         "conceivability",
         "unconceived alternatives"
+      ],
+      "required_terms": [
+        "counterfactual history",
+        "historical counterfactual",
+        "historiography",
+        "philosophy of history",
+        "historical explanation",
+        "conceivability",
+        "unconceived alternatives"
+      ],
+      "required_groups": [
+        [
+          "counterfactual history",
+          "historical counterfactual",
+          "historical counterfactuals",
+          "historiography",
+          "philosophy of history",
+          "historical explanation",
+          "unconceived alternatives",
+          "conceivability",
+          "conceivable alternatives"
+        ]
       ]
     },
     {
@@ -133,6 +342,27 @@
         "myth",
         "metaphor",
         "deep futures"
+      ],
+      "required_terms": [
+        "causal layered analysis",
+        "CLA",
+        "deep futures"
+      ],
+      "required_groups": [
+        [
+          "causal layered analysis",
+          "CLA"
+        ],
+        [
+          "futures",
+          "foresight",
+          "futures studies",
+          "worldview",
+          "worldviews",
+          "myth",
+          "metaphor",
+          "deep futures"
+        ]
       ]
     }
   ],
@@ -203,6 +433,30 @@
     "webinar",
     "podcast"
   ],
+  "fit_gate": {
+    "min_topic_keyword_hits": 1,
+    "require_required_term": true,
+    "excluded_content_terms": [
+      "BDSM",
+      "cumdump",
+      "dating app",
+      "dildo",
+      "erotic",
+      "fetish",
+      "Grindr",
+      "hook-up app",
+      "hookup app",
+      "pornographic",
+      "pornography",
+      "sex work",
+      "sex worker",
+      "sexual fetish",
+      "Tinder"
+    ],
+    "require_required_groups": true,
+    "require_site_focus": true,
+    "reject_micro_experience_without_system_anchor": true
+  },
   "quality_gate": {
     "min_substance_signals": 4,
     "min_abstract_words": 80,
@@ -388,5 +642,274 @@
       "wikipedia.org"
     ],
     "article_requires_known_venue": true
+  },
+  "site_focus": {
+    "min_core_anchor_hits": 1,
+    "min_contribution_hits": 1,
+    "core_anchor_terms": [
+      "futures studies",
+      "futures research",
+      "foresight",
+      "strategic foresight",
+      "anticipation",
+      "anticipatory governance",
+      "horizon scanning",
+      "weak signals",
+      "scenario planning",
+      "scenario analysis",
+      "scenario method",
+      "scenario methods",
+      "scenarios",
+      "Delphi",
+      "policy Delphi",
+      "expert elicitation",
+      "expert judgement",
+      "expert judgment",
+      "causal layered analysis",
+      "CLA",
+      "deep futures",
+      "narrative foresight",
+      "futures literacy",
+      "future imaginaries",
+      "sociotechnical imaginaries",
+      "future of work",
+      "futures of work",
+      "work arrangements",
+      "workplace futures",
+      "hybrid work",
+      "remote work",
+      "working life",
+      "university futures",
+      "future of universities",
+      "future of higher education",
+      "higher education futures",
+      "higher education policy",
+      "future of science",
+      "futures of science",
+      "philosophy of futures studies",
+      "philosophy of science",
+      "scientific change",
+      "science policy",
+      "research policy",
+      "historiography",
+      "philosophy of history",
+      "historical counterfactual",
+      "counterfactual history",
+      "historical explanation",
+      "conceivability",
+      "unconceived alternatives",
+      "possibility space"
+    ],
+    "strong_title_anchor_terms": [
+      "futures studies",
+      "futures research",
+      "foresight",
+      "strategic foresight",
+      "anticipation",
+      "horizon scanning",
+      "weak signals",
+      "scenario planning",
+      "scenario analysis",
+      "Delphi",
+      "causal layered analysis",
+      "CLA",
+      "narrative foresight",
+      "future of work",
+      "futures of work",
+      "work arrangements",
+      "workplace futures",
+      "university futures",
+      "future of universities",
+      "future of higher education",
+      "higher education futures",
+      "future of science",
+      "futures of science",
+      "philosophy of futures studies",
+      "philosophy of science",
+      "historiography",
+      "philosophy of history",
+      "historical counterfactual",
+      "counterfactual history",
+      "conceivability",
+      "unconceived alternatives",
+      "possibility space"
+    ],
+    "contribution_terms": [
+      "method",
+      "methods",
+      "methodology",
+      "methodological",
+      "framework",
+      "model",
+      "typology",
+      "taxonomy",
+      "dimension",
+      "dimensions",
+      "concept",
+      "conceptual",
+      "theory",
+      "theoretical",
+      "philosophy",
+      "philosophical",
+      "epistemic",
+      "epistemology",
+      "knowledge",
+      "validity",
+      "quality",
+      "justification",
+      "evaluation",
+      "review",
+      "systematic review",
+      "scoping review",
+      "literature review",
+      "bibliometric",
+      "evidence",
+      "data",
+      "dataset",
+      "empirical",
+      "survey",
+      "interview",
+      "case study",
+      "case studies",
+      "findings",
+      "analysis",
+      "we analyse",
+      "we analyze",
+      "we argue",
+      "we develop",
+      "we propose",
+      "implications",
+      "policy",
+      "governance",
+      "institution",
+      "institutional",
+      "system",
+      "systems",
+      "arrangement",
+      "arrangements",
+      "scenario",
+      "Delphi",
+      "horizon scanning",
+      "causal layered analysis"
+    ],
+    "system_level_terms": [
+      "institution",
+      "institutions",
+      "institutional",
+      "system",
+      "systems",
+      "policy",
+      "policies",
+      "governance",
+      "organisation",
+      "organization",
+      "organisational",
+      "organizational",
+      "university",
+      "universities",
+      "higher education",
+      "academic",
+      "science",
+      "scientific",
+      "research",
+      "knowledge",
+      "funding",
+      "labour market",
+      "labor market",
+      "employment",
+      "workplace",
+      "work arrangements",
+      "technology",
+      "digitalisation",
+      "digitalization",
+      "automation",
+      "autonomy",
+      "public sector",
+      "stakeholder",
+      "stakeholders"
+    ],
+    "micro_experience_terms": [
+      "experience",
+      "experiences",
+      "lived experience",
+      "identity",
+      "identities",
+      "motivation",
+      "motivations",
+      "perception",
+      "perceptions",
+      "attitudes",
+      "feelings",
+      "emotion",
+      "emotions",
+      "wellbeing",
+      "well-being",
+      "coping",
+      "self",
+      "body",
+      "embodiment",
+      "intimacy",
+      "dating",
+      "relationship",
+      "relationships",
+      "sexuality",
+      "sexual",
+      "desire",
+      "consumption",
+      "consumer",
+      "patients",
+      "patient",
+      "students’ experiences",
+      "student experiences"
+    ],
+    "domain_drift_terms": [
+      "cumdump",
+      "dildo",
+      "pornography",
+      "pornographic",
+      "BDSM",
+      "fetish",
+      "sexual fetish",
+      "sex work",
+      "sex worker",
+      "hook-up app",
+      "hookup app",
+      "dating app",
+      "Tinder",
+      "Grindr",
+      "intimacy",
+      "sexuality",
+      "sexual",
+      "erotic",
+      "clinical",
+      "patient",
+      "patients",
+      "nursing",
+      "therapy",
+      "mental health",
+      "psychotherapy",
+      "addiction",
+      "gaming",
+      "tourism",
+      "hospitality",
+      "fashion",
+      "food",
+      "diet",
+      "religion",
+      "spirituality",
+      "sport",
+      "sports",
+      "music",
+      "film",
+      "cinema",
+      "television",
+      "celebrity",
+      "consumer",
+      "consumption",
+      "marketing",
+      "brand",
+      "branding"
+    ],
+    "domain_drift_policy": "reject_when_title_drift_without_strong_title_anchor"
   }
 }

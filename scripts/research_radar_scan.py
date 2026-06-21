@@ -152,9 +152,93 @@ def contains_any(text: str, terms: Iterable[str]) -> bool:
     return any(t.lower() in low for t in terms if t)
 
 
+def term_pattern(term: str) -> re.Pattern[str]:
+    """Match a topic term without letting short acronyms match inside words."""
+    escaped = re.escape(term.strip().lower())
+    if not escaped:
+        return re.compile(r"a^")
+    # Use word boundaries at the ends, but allow normal punctuation/spaces inside phrases.
+    escaped = escaped.replace(r"\ ", r"\s+")
+    return re.compile(rf"(?<![a-z0-9]){escaped}(?![a-z0-9])", re.IGNORECASE)
+
+
+def matched_terms(text: str, terms: Iterable[str]) -> List[str]:
+    haystack = text or ""
+    matches: List[str] = []
+    for term in terms:
+        if term and term_pattern(term).search(haystack):
+            matches.append(term)
+    return matches
+
+
 def list_matches(texts: Iterable[str], patterns: Iterable[str]) -> List[str]:
     haystack = " ".join(t for t in texts if t).lower()
     return [p for p in patterns if p and p.lower() in haystack]
+
+
+def required_group_matches(text: str, groups: Iterable[Iterable[str]]) -> Tuple[bool, List[str], List[str]]:
+    """Return (ok, hit-signals, missing-group-summaries) for topic-specific gates."""
+    signals: List[str] = []
+    missing: List[str] = []
+    for group in groups or []:
+        group_terms = [t for t in group if t]
+        hits = matched_terms(text, group_terms)
+        if hits:
+            signals.append("required group: " + ", ".join(hits[:4]))
+        else:
+            missing.append(" / ".join(group_terms[:4]))
+    return not missing, signals, missing
+
+
+def site_focus_gate(text: str, title: str, config: Dict[str, Any]) -> Tuple[bool, List[str]]:
+    """Keep the radar near the intellectual project described on the website.
+
+    Publication quality is not enough. The site is about futures/foresight
+    methods, philosophy of futures studies and science, historiography, and
+    selected institutional/system-level application areas. This gate rejects
+    good-but-off-topic empirical papers, especially micro-experience studies
+    that only match loose words such as future, narrative, work, or identity.
+    """
+    focus = config.get("site_focus", {})
+    if not focus:
+        return True, []
+
+    title_hits = matched_terms(title, focus.get("strong_title_anchor_terms", []))
+    core_hits = matched_terms(text, focus.get("core_anchor_terms", []))
+    contribution_hits = matched_terms(text, focus.get("contribution_terms", []))
+    system_hits = matched_terms(text, focus.get("system_level_terms", []))
+    micro_hits = matched_terms(text, focus.get("micro_experience_terms", []))
+    title_drift_hits = matched_terms(title, focus.get("domain_drift_terms", []))
+
+    min_core = int(focus.get("min_core_anchor_hits", 1))
+    min_contrib = int(focus.get("min_contribution_hits", 1))
+    signals: List[str] = []
+
+    if len(core_hits) < min_core:
+        return False, [f"outside site focus ({len(core_hits)}/{min_core} core anchors)"]
+    signals.append("site anchor: " + ", ".join(core_hits[:5]))
+
+    if len(contribution_hits) < min_contrib:
+        return False, [f"no method/concept/evidence contribution signal ({len(contribution_hits)}/{min_contrib})"]
+    signals.append("contribution signal: " + ", ".join(contribution_hits[:5]))
+
+    # A title that announces an unrelated applied/micro domain should not be
+    # rescued by a loose abstract word. It may pass only when the title itself
+    # clearly says it is about one of the site's core topics.
+    if title_drift_hits and not title_hits:
+        return False, ["domain drift in title: " + ", ".join(title_drift_hits[:4])]
+
+    # Micro-experience studies can be high quality but they are usually not the
+    # radar's target unless they are tied to institutions, policy, systems,
+    # method development, or explicit futures/foresight/scenario work.
+    if micro_hits and not (system_hits or title_hits):
+        return False, ["micro-experience paper without system/method anchor: " + ", ".join(micro_hits[:4])]
+
+    if title_hits:
+        signals.append("title anchor: " + ", ".join(title_hits[:4]))
+    if system_hits:
+        signals.append("system/policy level: " + ", ".join(system_hits[:4]))
+    return True, signals
 
 
 def type_labels(work: Dict[str, Any]) -> List[str]:
@@ -328,6 +412,62 @@ def substance_gate(work: Dict[str, Any], config: Dict[str, Any]) -> Tuple[bool, 
     return len(signals) >= min_signals, signals
 
 
+def topical_fit_gate(work: Dict[str, Any], topic: Dict[str, Any], config: Dict[str, Any]) -> Tuple[bool, List[str]]:
+    """Reject items that are scholarly but not actually a good radar fit.
+
+    OpenAlex search can return tangentially related works. Quality alone must not be
+    enough: an item needs a clear topic anchor, a contribution orientation, and a
+    fit with the intellectual themes of the site.
+    """
+    fit = config.get("fit_gate", {})
+    title = normalize_text(work.get("display_name"))
+    abstract = strip_abstract(work.get("abstract_inverted_index"))
+    source = get_source_name(work)
+    publisher = get_publisher(work)
+    main_text = f"{title} {abstract}"
+    all_text = f"{main_text} {source} {publisher}"
+
+    excluded = matched_terms(all_text, fit.get("excluded_content_terms", []))
+    if excluded:
+        return False, ["out-of-scope domain term: " + ", ".join(excluded[:3])]
+
+    if fit.get("require_site_focus", True):
+        focus_ok, focus_signals = site_focus_gate(main_text, title, config)
+        if not focus_ok:
+            return False, focus_signals
+    else:
+        focus_signals = []
+
+    keywords = topic.get("keywords", [])
+    keyword_hits = matched_terms(main_text, keywords)
+    min_hits = int(fit.get("min_topic_keyword_hits", 1))
+    if len(keyword_hits) < min_hits:
+        return False, [f"weak topical fit ({len(keyword_hits)}/{min_hits} topic keyword hits)"]
+
+    required_terms = topic.get("required_terms", [])
+    if fit.get("require_required_term", True) and required_terms:
+        required_hits = matched_terms(main_text, required_terms)
+        if not required_hits:
+            return False, ["missing topic anchor: " + ", ".join(required_terms[:5])]
+    else:
+        required_hits = []
+
+    group_signals: List[str] = []
+    if fit.get("require_required_groups", True) and topic.get("required_groups"):
+        groups_ok, group_signals, missing_groups = required_group_matches(main_text, topic.get("required_groups", []))
+        if not groups_ok:
+            return False, ["missing required theme group: " + " | ".join(missing_groups[:2])]
+
+    signals = []
+    signals.extend(focus_signals[:4])
+    signals.extend(group_signals[:3])
+    if required_hits:
+        signals.append("topic anchor: " + ", ".join(required_hits[:4]))
+    if keyword_hits:
+        signals.append("topic keywords: " + ", ".join(keyword_hits[:4]))
+    return True, signals
+
+
 def quality_gate(work: Dict[str, Any], config: Dict[str, Any]) -> Tuple[bool, List[str]]:
     exclusions = hard_exclusion_reasons(work, config)
     if exclusions:
@@ -356,8 +496,15 @@ def score_work(work: Dict[str, Any], topic: Dict[str, Any], config: Dict[str, An
     if not accepted:
         return -999, quality_reasons
 
-    reasons: List[str] = ["quality gate: " + "; ".join(quality_reasons[:4])]
-    score = 8
+    fit_ok, fit_reasons = topical_fit_gate(work, topic, config)
+    if not fit_ok:
+        return -998, fit_reasons
+
+    reasons: List[str] = [
+        "quality gate: " + "; ".join(quality_reasons[:4]),
+        "topical fit: " + "; ".join(fit_reasons[:3]),
+    ]
+    score = 4
 
     source_match = preferred_source_match(work, config)
     if source_match:
@@ -370,9 +517,9 @@ def score_work(work: Dict[str, Any], topic: Dict[str, Any], config: Dict[str, An
         reasons.append(f"preferred publisher/institution: {pub_match}")
 
     keywords = topic.get("keywords", [])
-    matched_keywords = [kw for kw in keywords if kw.lower() in text]
+    matched_keywords = matched_terms(f"{title} {abstract}", keywords)
     if matched_keywords:
-        score += min(6, 2 * len(matched_keywords))
+        score += min(8, 2 * len(matched_keywords))
         reasons.append("topic match: " + ", ".join(matched_keywords[:4]))
 
     pub_date = normalize_text(work.get("publication_date"))
@@ -410,6 +557,7 @@ def make_candidate(work: Dict[str, Any], topic: Dict[str, Any], score: int, reas
     abstract = strip_abstract(work.get("abstract_inverted_index"))
     abstract_short = abstract[:450].rsplit(" ", 1)[0] + "…" if len(abstract) > 450 else abstract
     _, quality_reasons = quality_gate(work, config)
+    _, fit_reasons = topical_fit_gate(work, topic, config)
     return {
         "id": normalize_text(work.get("id")) or get_url(work),
         "title": title,
@@ -426,6 +574,7 @@ def make_candidate(work: Dict[str, Any], topic: Dict[str, Any], score: int, reas
         "score": score,
         "reasons": reasons,
         "quality_signals": quality_reasons,
+        "fit_signals": fit_reasons,
         "references": referenced_work_count(work),
         "abstract_words": word_count(abstract),
         "abstract": abstract_short,
@@ -449,8 +598,9 @@ def collect_candidates(config: Dict[str, Any]) -> List[Dict[str, Any]]:
             for work in works:
                 score, reasons = score_work(work, topic, config)
                 if score < min_score:
-                    if score <= -999 and reasons:
-                        key = reasons[0]
+                    if score <= -998 and reasons:
+                        prefix = "quality" if score <= -999 else "fit"
+                        key = f"{prefix}: {reasons[0]}"
                         rejected_counts[key] = rejected_counts.get(key, 0) + 1
                     continue
                 cand = make_candidate(work, topic, score, reasons, config)
@@ -476,11 +626,11 @@ def render_markdown(candidates: List[Dict[str, Any]], config: Dict[str, Any]) ->
     lines.append("")
     lines.append("This file is generated automatically. It is a candidate list only; nothing here appears on the public website unless later added to `assets/research-radar-approved.json`.")
     lines.append("")
-    lines.append("The scanner now applies a hard publication-type gate and a substance gate before topical scoring. This should exclude news, blogs, vendor material, listicles, weak preprints, and thin conceptual/prospecting pieces.")
+    lines.append("The scanner now applies hard publication-type, substance, site-focus, and topical-fit gates before scoring. Quality alone is not enough: items also need to fit the intellectual project of the site — futures/foresight methods, philosophy of futures studies and science, historiography/counterfactuals, or system-level futures of work/universities/science.")
     lines.append("")
     lines.append("To curate, tell ChatGPT something like: `approve 2, 5, 9` or `hold 12`. Everything else can be ignored.")
     lines.append("")
-    lines.append(f"Scan window: last {config.get('days_back', 14)} days. Maximum candidates shown: {config.get('max_candidates', 30)}. Minimum score: {config.get('minimum_score', 13)}. Substance gate: at least {gate.get('min_substance_signals', 4)} signals.")
+    lines.append(f"Scan window: last {config.get('days_back', 14)} days. Maximum candidates shown: {config.get('max_candidates', 30)}. Minimum score: {config.get('minimum_score', 13)}. Substance gate: at least {gate.get('min_substance_signals', 4)} signals. Site-focus gate: at least {config.get('site_focus', {}).get('min_core_anchor_hits', 1)} core anchor and {config.get('site_focus', {}).get('min_contribution_hits', 1)} contribution signal.")
     lines.append("")
 
     if not candidates:
@@ -499,6 +649,7 @@ def render_markdown(candidates: List[Dict[str, Any]], config: Dict[str, Any]) ->
         lines.append(f"**Type:** {c.get('type') or 'n.d.'}; source type: {c.get('source_type') or 'n.d.'}; references: {c.get('references', 0)}; abstract words: {c.get('abstract_words', 0)}")
         lines.append(f"**Topic:** {c['topic']}")
         lines.append(f"**Quality gate:** {'; '.join(c.get('quality_signals', [])[:6])}.")
+        lines.append(f"**Topical fit:** {'; '.join(c.get('fit_signals', [])[:4])}.")
         lines.append(f"**Why selected:** {'; '.join(c['reasons'])}.")
         lines.append(f"**Link:** {c['url']}")
         if c.get("abstract"):
