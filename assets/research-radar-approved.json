@@ -395,6 +395,61 @@
         "higher education",
         "institutional change"
       ]
+    },
+  {
+  "items": [
+    {
+      "topic": "Existing item 1"
+    },
+    {
+      "topic": "Existing item 2"
+    },
+    {
+      "topic": "Existing item 3"
+    },
+
+    {
+      "topic": "Delphi and expert methods",
+      "title": "Augmentation or automation? The expanding role of artificial intelligence in urban planning and governance",
+      "authors": "Frank Othengrafen, Lars Sievers, Merle Frankl",
+      "year": "2026",
+      "source": "International Journal of Urban Sustainable Development. DOI: 10.1080/19463138.2026.2686016",
+      "why": "Relevant as an empirical Delphi-based study of how AI is being positioned in urban planning and governance, especially the distinction between decision-support augmentation and automation.",
+      "connectsWith": [
+        "Delphi",
+        "AI governance",
+        "urban governance",
+        "automation"
+      ]
+    },
+    {
+      "topic": "Futures of work",
+      "title": "Spatial implications of remote work: insights from seven European case studies",
+      "authors": "Georgia Pozoukidou, Theodora Istoriou, Dimitra Plastara, Margarita Angelidou, Katharina Fellnhofer et al.",
+      "year": "2026",
+      "source": "Cities. DOI: 10.1016/j.cities.2026.107199",
+      "why": "Useful for the futures-of-work strand because it treats remote work as a spatial and governance issue rather than only an individual employment preference.",
+      "connectsWith": [
+        "remote work",
+        "futures of work",
+        "spatial change",
+        "urban systems"
+      ]
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "Three theses of the future as a Science, Technology and Society Studies research object: current approaches and challenges",
+      "authors": "Cristián Navarrete, Iván Ojeda-Pereira, Fernando Campos-Medina, Sebastián Herrera-León",
+      "year": "2026",
+      "source": "Humanities and Social Sciences Communications. DOI: 10.1057/s41599-026-07541-0",
+      "why": "A strong conceptual fit for the radar because it treats the future itself as an STS research object and connects futures studies with science and technology studies.",
+      "connectsWith": [
+        "futures studies",
+        "STS",
+        "philosophy of science",
+        "anticipation"
+      ]
     }
   ]
+}]
 }
