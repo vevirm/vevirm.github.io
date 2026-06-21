@@ -1,6 +1,6 @@
 {
-  "updated": "Initial seed from references already used around Veli Virmajoki's work",
-  "mode": "curated-seed",
+  "updated": "Initial seed from references already used around Veli Virmajoki's work, with curated 2026-W25 additions",
+  "mode": "curated-approved",
   "items": [
     {
       "topic": "Futures studies and foresight",
@@ -396,18 +396,6 @@
         "institutional change"
       ]
     },
-  {
-  "items": [
-    {
-      "topic": "Existing item 1"
-    },
-    {
-      "topic": "Existing item 2"
-    },
-    {
-      "topic": "Existing item 3"
-    },
-
     {
       "topic": "Delphi and expert methods",
       "title": "Augmentation or automation? The expanding role of artificial intelligence in urban planning and governance",
@@ -451,5 +439,4 @@
       ]
     }
   ]
-}]
 }
