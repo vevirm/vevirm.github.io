@@ -1,28 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
-  <title id="title">Narrative foresight illustration</title>
-  <desc id="desc">A white, red and black illustration of a book opening into branching futures.</desc>
+  <title id="title">Branching narrative tree</title>
+  <desc id="desc">A simple tree showing a narrative trunk branching into different possible futures.</desc>
   <rect width="720" height="420" rx="34" fill="#fff"/>
   <rect x="30" y="30" width="660" height="360" rx="28" fill="#faf8f7" stroke="#111" stroke-width="2"/>
-  <path d="M104 128c74-34 150-22 222 24v158c-77-45-153-55-222-20V128z" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M616 128c-74-34-150-22-222 24v158c77-45 153-55 222-20V128z" fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M326 152c24-19 46-19 68 0v158c-23-13-46-13-68 0V152z" fill="#fff2f3" stroke="#b20f16" stroke-width="4"/>
-  <line x1="142" y1="164" x2="270" y2="164" stroke="#111" stroke-width="4" stroke-linecap="round" opacity="0.65"/>
-  <line x1="142" y1="192" x2="280" y2="192" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.38"/>
-  <line x1="142" y1="220" x2="244" y2="220" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.38"/>
-  <line x1="450" y1="164" x2="578" y2="164" stroke="#111" stroke-width="4" stroke-linecap="round" opacity="0.65"/>
-  <line x1="440" y1="192" x2="578" y2="192" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.38"/>
-  <line x1="474" y1="220" x2="578" y2="220" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.38"/>
-
-  <path d="M358 92 C385 82 428 68 468 62" fill="none" stroke="#111" stroke-width="5" stroke-linecap="round"/>
-  <path d="M468 62 C516 56 554 70 592 92" fill="none" stroke="#b20f16" stroke-width="5" stroke-linecap="round"/>
-  <path d="M468 62 C510 108 538 130 594 142" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round" opacity="0.58"/>
-  <path d="M468 62 C500 30 542 24 594 36" fill="none" stroke="#b20f16" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
-  <circle cx="358" cy="92" r="11" fill="#111"/>
-  <circle cx="468" cy="62" r="16" fill="#b20f16"/>
-  <circle cx="592" cy="92" r="10" fill="#111"/>
-  <circle cx="594" cy="142" r="9" fill="#111"/>
-  <circle cx="594" cy="36" r="9" fill="#b20f16"/>
-  <text x="100" y="346" fill="#111" font-family="Arial, sans-serif" font-size="18" font-weight="700">base narrative</text>
-  <text x="304" y="346" fill="#b20f16" font-family="Arial, sans-serif" font-size="18" font-weight="700">episode</text>
-  <text x="442" y="346" fill="#111" font-family="Arial, sans-serif" font-size="18" font-weight="700">branches</text>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M360 334V210" stroke="#111" stroke-width="12"/>
+    <path d="M360 214C328 178 300 150 242 132" stroke="#111" stroke-width="8"/>
+    <path d="M360 214C400 168 442 130 514 104" stroke="#b20f16" stroke-width="8"/>
+    <path d="M360 238C418 226 472 222 556 246" stroke="#111" stroke-width="7"/>
+    <path d="M332 246C288 238 246 242 190 274" stroke="#b20f16" stroke-width="7"/>
+    <path d="M242 132C212 106 186 98 142 98" stroke="#111" stroke-width="5" opacity="0.75"/>
+    <path d="M242 132C222 158 202 178 160 192" stroke="#b20f16" stroke-width="5" opacity="0.85"/>
+    <path d="M514 104C548 82 574 76 610 82" stroke="#b20f16" stroke-width="5" opacity="0.9"/>
+    <path d="M514 104C538 138 570 156 614 162" stroke="#111" stroke-width="5" opacity="0.75"/>
+    <path d="M556 246C590 236 616 240 640 258" stroke="#111" stroke-width="5" opacity="0.75"/>
+    <path d="M190 274C158 284 132 304 106 332" stroke="#b20f16" stroke-width="5" opacity="0.85"/>
+  </g>
+  <g>
+    <circle cx="360" cy="210" r="17" fill="#111"/>
+    <circle cx="242" cy="132" r="13" fill="#fff" stroke="#111" stroke-width="4"/>
+    <circle cx="514" cy="104" r="13" fill="#b20f16"/>
+    <circle cx="556" cy="246" r="13" fill="#fff" stroke="#111" stroke-width="4"/>
+    <circle cx="190" cy="274" r="13" fill="#b20f16"/>
+  </g>
+  <path d="M244 348H476" stroke="#111" stroke-width="4" stroke-linecap="round" opacity="0.2"/>
+  <g font-family="Arial, sans-serif" font-weight="700" font-size="19">
+    <text x="292" y="372" fill="#111">base narrative</text>
+    <text x="520" y="82" fill="#b20f16">branch</text>
+    <text x="78" y="336" fill="#111">episode</text>
+  </g>
 </svg>

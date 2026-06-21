@@ -108,7 +108,7 @@ function renderPublicationBoard(publications, includePublicFacing = false) {
       <header class="column-head">
         <p class="eyebrow">Academic</p>
         <h2>Research publications</h2>
-        <p>${academicCount} items</p>
+        <p>Peer-reviewed articles, books, chapters, and reviews</p>
       </header>
       ${renderPublicationGroups(academic) || '<p>No matching academic items.</p>'}
     </section>
@@ -116,7 +116,7 @@ function renderPublicationBoard(publications, includePublicFacing = false) {
       <header class="column-head">
         <p class="eyebrow">Professional / societal</p>
         <h2>Reports, briefs, engagement</h2>
-        <p>${publicCount} items</p>
+        <p>Reports, briefs, and public-facing research work</p>
       </header>
       ${renderPublicationGroups(professional) || '<p>No matching professional items.</p>'}
       ${includePublicFacing ? renderPublicFacingBlock() : ''}

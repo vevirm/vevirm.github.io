@@ -1,29 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
-  <title id="title">Futures as space illustration</title>
-  <desc id="desc">A white red and black conceptual map of possibility space with axes, positions, and possible movements.</desc>
+  <title id="title">Futures as space</title>
+  <desc id="desc">A simple three-dimensional box with a figure in the middle, surrounded by arrows and conceptual labels.</desc>
   <rect width="720" height="420" rx="34" fill="#fff"/>
-  <defs>
-    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
-      <path d="M36 0H0V36" fill="none" stroke="#111" stroke-width="1" opacity="0.08"/>
-    </pattern>
-  </defs>
   <rect x="30" y="30" width="660" height="360" rx="28" fill="#faf8f7" stroke="#111" stroke-width="2"/>
-  <rect x="70" y="72" width="538" height="256" rx="20" fill="url(#grid)" stroke="#e7dfdc"/>
-  <line x1="110" y1="290" x2="568" y2="290" stroke="#111" stroke-width="4" stroke-linecap="round"/>
-  <line x1="110" y1="290" x2="110" y2="104" stroke="#111" stroke-width="4" stroke-linecap="round"/>
-  <path d="M148 260 C190 218 238 238 279 192 C326 140 363 162 406 124 C449 86 502 112 548 84" fill="none" stroke="#b20f16" stroke-width="7" stroke-linecap="round"/>
-  <path d="M148 260 C214 280 302 266 374 244 C446 222 491 214 550 206" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round" opacity="0.45" stroke-dasharray="10 11"/>
-  <circle cx="148" cy="260" r="14" fill="#111"/>
-  <circle cx="279" cy="192" r="17" fill="#b20f16"/>
-  <circle cx="406" cy="124" r="14" fill="#111"/>
-  <circle cx="548" cy="84" r="14" fill="#b20f16"/>
-  <g fill="#111" font-family="Arial, sans-serif" font-size="17" font-weight="700">
-    <text x="126" y="318">dimension A</text>
-    <text x="36" y="166" transform="rotate(-90 36 166)">dimension B</text>
-    <text x="130" y="242">now</text>
-    <rect x="292" y="160" width="82" height="26" rx="8" fill="#faf8f7" opacity="0.92"/><text x="302" y="179" fill="#b20f16">tension</text>
-    <rect x="418" y="95" width="66" height="25" rx="8" fill="#faf8f7" opacity="0.92"/><text x="428" y="114">model</text>
-    <rect x="472" y="50" width="104" height="26" rx="8" fill="#faf8f7" opacity="0.92"/><text x="482" y="69" fill="#b20f16">movement</text>
+  <defs>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#b20f16"/></marker>
+    <marker id="arrowBlack" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#111"/></marker>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="178" y="136" width="288" height="178" rx="4" stroke="#111" stroke-width="5"/>
+    <path d="M178 136L274 82H562V260L466 314" stroke="#111" stroke-width="5"/>
+    <path d="M466 136L562 82M466 314V136M178 314L274 260H562" stroke="#111" stroke-width="5" opacity="0.82"/>
+    <path d="M274 82V260" stroke="#111" stroke-width="3" opacity="0.45"/>
+    <path d="M178 136H466M274 260H562" stroke="#111" stroke-width="2" opacity="0.2"/>
   </g>
-  <path d="M584 88l-34-3 16-30" fill="none" stroke="#b20f16" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(326 204)" stroke="#111" stroke-width="5" stroke-linecap="round" fill="none">
+    <circle cx="0" cy="-38" r="18" fill="#fff"/>
+    <path d="M0 -20V38M-40 0H40M0 38L-34 82M0 38L34 82"/>
+  </g>
+  <circle cx="326" cy="204" r="8" fill="#b20f16"/>
+  <g fill="none" stroke-width="5" stroke-linecap="round">
+    <path d="M326 204C270 176 234 172 190 186" stroke="#b20f16" marker-end="url(#arrowRed)"/>
+    <path d="M326 204C386 162 428 132 482 112" stroke="#b20f16" marker-end="url(#arrowRed)"/>
+    <path d="M326 204C376 226 420 252 474 288" stroke="#111" marker-end="url(#arrowBlack)"/>
+    <path d="M326 204C286 246 258 274 218 306" stroke="#111" marker-end="url(#arrowBlack)"/>
+    <path d="M326 204C330 158 338 124 358 92" stroke="#b20f16" opacity="0.75" marker-end="url(#arrowRed)"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-weight="700">
+    <text x="108" y="183" font-size="22" fill="#b20f16">tension field</text>
+    <text x="470" y="106" font-size="20" fill="#111">adjacency</text>
+    <text x="482" y="306" font-size="20" fill="#b20f16">movement</text>
+    <text x="146" y="328" font-size="19" fill="#111">possible location</text>
+    <text x="356" y="78" font-size="18" fill="#111" opacity="0.72">dimension</text>
+  </g>
 </svg>

@@ -1,37 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
-  <title id="title">Deep horizon scanning illustration</title>
-  <desc id="desc">A calm white, red, and black line illustration of stacked books, papers, and a scanning lens.</desc>
+  <title id="title">Horizon scanning as deep reading</title>
+  <desc id="desc">A restrained pile of books, papers and reports used for horizon scanning.</desc>
   <rect width="720" height="420" rx="34" fill="#fff"/>
   <rect x="30" y="30" width="660" height="360" rx="28" fill="#faf8f7" stroke="#111" stroke-width="2"/>
-  <circle cx="584" cy="118" r="54" fill="#fff2f3" stroke="#b20f16" stroke-width="5"/>
-  <line x1="622" y1="156" x2="674" y2="208" stroke="#111" stroke-width="12" stroke-linecap="round"/>
-  <line x1="552" y1="118" x2="614" y2="118" stroke="#b20f16" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
-  <line x1="584" y1="86" x2="584" y2="150" stroke="#b20f16" stroke-width="4" stroke-linecap="round" opacity="0.75"/>
-
-  <g transform="translate(88 104)">
-    <rect x="0" y="160" width="362" height="54" rx="7" fill="#111"/>
-    <rect x="20" y="110" width="360" height="54" rx="7" fill="#fff" stroke="#111" stroke-width="3"/>
-    <rect x="44" y="118" width="74" height="38" rx="2" fill="#b20f16" opacity="0.95"/>
-    <line x1="144" y1="128" x2="328" y2="128" stroke="#111" stroke-width="4" stroke-linecap="round"/>
-    <line x1="144" y1="145" x2="288" y2="145" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
-
-    <rect x="-8" y="60" width="332" height="50" rx="7" fill="#fff2f3" stroke="#b20f16" stroke-width="3"/>
-    <line x1="22" y1="76" x2="278" y2="76" stroke="#111" stroke-width="4" stroke-linecap="round"/>
-    <line x1="22" y1="94" x2="206" y2="94" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
-
-    <rect x="36" y="8" width="348" height="54" rx="7" fill="#fff" stroke="#111" stroke-width="3"/>
-    <rect x="58" y="18" width="56" height="34" rx="3" fill="#111"/>
-    <line x1="138" y1="25" x2="332" y2="25" stroke="#b20f16" stroke-width="4" stroke-linecap="round"/>
-    <line x1="138" y1="43" x2="286" y2="43" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
-
-    <path d="M406 42c-12 0-22 10-22 22v122c0 12 10 22 22 22h88c12 0 22-10 22-22V64c0-12-10-22-22-22h-88z" fill="#fff" stroke="#111" stroke-width="3"/>
-    <path d="M407 42c27 15 54 15 87 0" fill="none" stroke="#b20f16" stroke-width="4"/>
-    <line x1="414" y1="82" x2="486" y2="82" stroke="#111" stroke-width="3" stroke-linecap="round"/>
-    <line x1="414" y1="102" x2="494" y2="102" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
-    <line x1="414" y1="122" x2="478" y2="122" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+  <g transform="translate(118 100)">
+    <rect x="32" y="188" width="420" height="50" rx="7" fill="#111"/>
+    <rect x="0" y="138" width="432" height="52" rx="8" fill="#fff" stroke="#111" stroke-width="4"/>
+    <rect x="24" y="149" width="78" height="30" rx="2" fill="#b20f16"/>
+    <path d="M126 154H372M126 174H324" stroke="#111" stroke-width="4" stroke-linecap="round" opacity="0.65"/>
+    <rect x="60" y="86" width="386" height="52" rx="8" fill="#fff2f3" stroke="#b20f16" stroke-width="4"/>
+    <path d="M90 102H386M90 121H304" stroke="#111" stroke-width="4" stroke-linecap="round" opacity="0.65"/>
+    <rect x="18" y="36" width="396" height="52" rx="8" fill="#fff" stroke="#111" stroke-width="4"/>
+    <rect x="322" y="46" width="58" height="32" rx="2" fill="#111"/>
+    <path d="M46 52H282M46 70H220" stroke="#b20f16" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+    <path d="M86 24C160 0 230 0 302 24" fill="none" stroke="#111" stroke-width="4" opacity="0.45"/>
+    <rect x="464" y="94" width="88" height="118" rx="8" fill="#fff" stroke="#111" stroke-width="4" transform="rotate(7 508 153)"/>
+    <path d="M486 126L532 132M482 150L530 156M478 174L514 179" stroke="#b20f16" stroke-width="4" stroke-linecap="round" transform="rotate(7 508 153)"/>
   </g>
-
-  <path d="M98 334h510" stroke="#111" stroke-width="3" stroke-linecap="round" opacity="0.2"/>
-  <text x="90" y="356" fill="#111" font-family="Arial, sans-serif" font-size="19" font-weight="700">papers · books · reports</text>
-  <text x="442" y="356" fill="#b20f16" font-family="Arial, sans-serif" font-size="19" font-weight="700">careful scan</text>
+  <g transform="translate(492 82)" fill="none" stroke-linecap="round">
+    <circle cx="54" cy="54" r="42" fill="#fff" stroke="#b20f16" stroke-width="5"/>
+    <path d="M84 84L134 134" stroke="#111" stroke-width="11"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#111" opacity="0.72">
+    <text x="164" y="72">papers</text><text x="278" y="72">books</text><text x="396" y="72">reports</text>
+  </g>
 </svg>
