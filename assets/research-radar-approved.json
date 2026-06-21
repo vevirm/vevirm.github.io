@@ -1,0 +1,400 @@
+{
+  "updated": "Initial seed from references already used around Veli Virmajoki's work",
+  "mode": "curated-seed",
+  "items": [
+    {
+      "topic": "Futures studies and foresight",
+      "title": "The Futures Field: Functions, Forms, and Critical Issues",
+      "authors": "Roy Amara",
+      "year": "1974",
+      "source": "Futures, 6(4), 289–301",
+      "why": "A classic reference for the basic orientation of futures studies around possible, probable, and preferable futures. It gives useful background for why futures research is not simple prediction.",
+      "connectsWith": [
+        "futures studies",
+        "possible futures",
+        "probable futures",
+        "preferable futures"
+      ]
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "Causal Layered Analysis: Poststructuralism as Method",
+      "authors": "Sohail Inayatullah",
+      "year": "1998",
+      "source": "Futures, 30(8), 815–829",
+      "why": "One of the central methodological texts in futures studies. It is important for thinking about layers of futures: litany, systems, worldview, and myth/metaphor.",
+      "connectsWith": [
+        "Causal Layered Analysis",
+        "CLA",
+        "worldviews",
+        "futures of science"
+      ]
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "Foundations of Futures Studies",
+      "authors": "Wendell Bell",
+      "year": "2009 [1997]",
+      "source": "Transaction Publishers",
+      "why": "A broad foundation for futures studies as a field. It is useful when asking what kind of knowledge, judgement, and responsibility futures research can have.",
+      "connectsWith": [
+        "futures studies",
+        "foresight",
+        "possible futures"
+      ]
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "An outline of future-oriented dialectics",
+      "authors": "Toni Ahlqvist",
+      "year": "2022",
+      "source": "Futures, 143, 103037",
+      "why": "A relevant conceptual paper for thinking about trajectories, tensions, and dialectical positions in futures research. It connects well with work that treats opposed futures as productive material.",
+      "connectsWith": [
+        "dialectics",
+        "futures research",
+        "tensions",
+        "Delphi"
+      ]
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "Techniques of futuring: On how imagined futures become socially performative",
+      "authors": "Jasper Oomen, Jesse Hoffman & Maarten A. Hajer",
+      "year": "2022",
+      "source": "European Journal of Social Theory, 25(2), 252–270",
+      "why": "Useful for understanding futures not only as images, but as practices and techniques that can shape social reality.",
+      "connectsWith": [
+        "futuring",
+        "anticipation",
+        "performative futures"
+      ]
+    },
+    {
+      "topic": "Scenarios, history and horizon scanning",
+      "title": "Does the intuitive logics method – and its recent enhancements – produce effective scenarios?",
+      "authors": "George Wright, Ron Bradfield & George Cairns",
+      "year": "2013",
+      "source": "Technological Forecasting and Social Change, 80(4), 631–642",
+      "why": "A useful quality discussion for scenario methods. It belongs to the methodological background for asking what makes scenario work actually helpful.",
+      "connectsWith": [
+        "scenario methods",
+        "intuitive logics",
+        "foresight quality"
+      ]
+    },
+    {
+      "topic": "Scenarios, history and horizon scanning",
+      "title": "The critical role of history in scenario thinking",
+      "authors": "Ron Bradfield, James Derbyshire & George Wright",
+      "year": "2016",
+      "source": "Futures, 77, 56–66",
+      "why": "A strong bridge between historical reasoning and scenario work. It is relevant for thinking about how the past can help causal analysis of the future without assuming repetition.",
+      "connectsWith": [
+        "scenarios",
+        "history",
+        "counterfactuals",
+        "causal analysis"
+      ]
+    },
+    {
+      "topic": "Scenarios, history and horizon scanning",
+      "title": "Unifying weak signals definitions to improve construct understanding",
+      "authors": "B. L. van Veen & J. R. Ortt",
+      "year": "2021",
+      "source": "Futures, 134, 102837",
+      "why": "Relevant for horizon scanning because it clarifies a frequently used but often unclear concept. A scan needs concepts that are not too loose.",
+      "connectsWith": [
+        "weak signals",
+        "horizon scanning",
+        "conceptual clarity"
+      ]
+    },
+    {
+      "topic": "Narrative foresight",
+      "title": "Introduction to narrative for futures studies",
+      "authors": "Vuokko Jarva",
+      "year": "2014",
+      "source": "Journal of Futures Studies, 18(3), 5–26",
+      "why": "A useful entry point for understanding what narrative can do in futures studies and why narrative is more than decoration for scenarios.",
+      "connectsWith": [
+        "narrative",
+        "futures studies",
+        "communication"
+      ]
+    },
+    {
+      "topic": "Narrative foresight",
+      "title": "Narrative foresight",
+      "authors": "Ivana Milojević & Sohail Inayatullah",
+      "year": "2015",
+      "source": "Futures, 73, 151–162",
+      "why": "A central paper for narrative foresight. It helps explain why futures are not only analysed but also told, negotiated, and lived through stories.",
+      "connectsWith": [
+        "narrative foresight",
+        "storytelling",
+        "futures studies"
+      ]
+    },
+    {
+      "topic": "Narrative foresight",
+      "title": "Creating narrative scenarios: Science fiction prototyping at Emerge",
+      "authors": "Michael Burnam-Fink",
+      "year": "2015",
+      "source": "Futures, 70, 48–55",
+      "why": "Shows how narrative scenario work and science fiction prototyping can make futures more concrete and discussable.",
+      "connectsWith": [
+        "narrative scenarios",
+        "science fiction prototyping",
+        "radical futures"
+      ]
+    },
+    {
+      "topic": "Narrative foresight",
+      "title": "Futures literacy through narrative",
+      "authors": "Genevieve Liveley, William Slocombe & Emily Spiers",
+      "year": "2021",
+      "source": "Futures, 125",
+      "why": "Connects narrative with futures literacy. It is helpful for thinking about how people learn to work with futures through story, temporality, and imagination.",
+      "connectsWith": [
+        "futures literacy",
+        "narrative",
+        "imagination"
+      ]
+    },
+    {
+      "topic": "Narrative foresight",
+      "title": "Futures in Action: Expectations, Imaginaries and Narratives of the Future",
+      "authors": "Giacomo Bazzani",
+      "year": "2023",
+      "source": "Sociology, 57(2), 382–397",
+      "why": "Useful for understanding how futures, imaginaries, expectations, and narratives shape action. It gives a social-theoretical neighbour to narrative foresight.",
+      "connectsWith": [
+        "expectations",
+        "imaginaries",
+        "narratives"
+      ]
+    },
+    {
+      "topic": "Delphi and expert methods",
+      "title": "The Delphi Method: Techniques and Applications",
+      "authors": "Harold A. Linstone & Murray Turoff (eds.)",
+      "year": "1975",
+      "source": "Addison-Wesley",
+      "why": "A foundational volume for Delphi as a method tradition. It gives historical and methodological background for more specific Delphi designs.",
+      "connectsWith": [
+        "Delphi method",
+        "expert judgement",
+        "foresight methods"
+      ]
+    },
+    {
+      "topic": "Delphi and expert methods",
+      "title": "Disaggregative policy Delphi: Using cluster analysis as a tool for systematic scenario formation",
+      "authors": "Petri Tapio",
+      "year": "2002",
+      "source": "Technological Forecasting and Social Change, 70, 83–101",
+      "why": "A major example of developing Delphi beyond simple consensus. It is useful background for seeing how Delphi can handle plural viewpoints.",
+      "connectsWith": [
+        "Delphi",
+        "scenario formation",
+        "plurality"
+      ]
+    },
+    {
+      "topic": "Delphi and expert methods",
+      "title": "The Delphi technique: Past, present, and future prospects — Introduction to the special issue",
+      "authors": "Gene Rowe & George Wright",
+      "year": "2011",
+      "source": "Technological Forecasting and Social Change, 78(9), 1487–1490",
+      "why": "A compact overview of Delphi as a continuing methodological tradition, useful for locating new Delphi variants inside the wider field.",
+      "connectsWith": [
+        "Delphi method",
+        "expert methods",
+        "method development"
+      ]
+    },
+    {
+      "topic": "Delphi and expert methods",
+      "title": "Review of Delphi-based scenario studies: Quality and design considerations",
+      "authors": "Markus Nowack, Jan Endrikat & Edeltraud Guenther",
+      "year": "2011",
+      "source": "Technological Forecasting and Social Change, 78(9), 1603–1615",
+      "why": "A useful methodological review for how Delphi and scenario work have been combined, and what quality problems need attention.",
+      "connectsWith": [
+        "Delphi",
+        "scenarios",
+        "method quality"
+      ]
+    },
+    {
+      "topic": "Delphi and expert methods",
+      "title": "Improving the Delphi process: Lessons from social psychological research",
+      "authors": "Fergus Bolger & George Wright",
+      "year": "2011",
+      "source": "Technological Forecasting and Social Change, 78(9), 1500–1513",
+      "why": "Helpful for improving Delphi design through attention to judgement, group processes, and expert reasoning.",
+      "connectsWith": [
+        "Delphi",
+        "expert judgement",
+        "social psychology"
+      ]
+    },
+    {
+      "topic": "Delphi and expert methods",
+      "title": "Consensus measurement in Delphi studies: Review and implications for future quality assurance",
+      "authors": "Heiko A. von der Gracht",
+      "year": "2012",
+      "source": "Technological Forecasting and Social Change, 79, 1525–1536",
+      "why": "Important for the usual consensus-oriented side of Delphi. It is also useful when contrasting consensus with disagreement, tension, and dialectic designs.",
+      "connectsWith": [
+        "Delphi",
+        "consensus",
+        "quality assurance"
+      ]
+    },
+    {
+      "topic": "Philosophy of science and futures of science",
+      "title": "The Structure of Scientific Revolutions",
+      "authors": "Thomas S. Kuhn",
+      "year": "1970 [1962]",
+      "source": "University of Chicago Press",
+      "why": "Still central for thinking about paradigms, scientific change, normal science, and rupture. It is unavoidable background for futures of science.",
+      "connectsWith": [
+        "scientific change",
+        "paradigms",
+        "future of science"
+      ]
+    },
+    {
+      "topic": "Philosophy of science and futures of science",
+      "title": "Representing and Intervening",
+      "authors": "Ian Hacking",
+      "year": "1983",
+      "source": "Cambridge University Press",
+      "why": "Important for philosophy of science because it shifts attention to intervention, experiment, and scientific practice, not only representation.",
+      "connectsWith": [
+        "philosophy of science",
+        "scientific practice",
+        "realism"
+      ]
+    },
+    {
+      "topic": "Philosophy of science and futures of science",
+      "title": "Scientific Realism: How Science Tracks Truth",
+      "authors": "Stathis Psillos",
+      "year": "1999",
+      "source": "Routledge",
+      "why": "A central defence of scientific realism. It matters for futures of science because assumptions about continuity and truth shape how scientific futures are imagined.",
+      "connectsWith": [
+        "scientific realism",
+        "future of science",
+        "continuity"
+      ]
+    },
+    {
+      "topic": "Conceivability, counterfactuals and history",
+      "title": "Exceeding Our Grasp: Science, History, and the Problem of Unconceived Alternatives",
+      "authors": "P. Kyle Stanford",
+      "year": "2006",
+      "source": "Oxford University Press",
+      "why": "Central for thinking about unconceived alternatives and the limits of our ability to imagine serious alternatives to present theories or worlds.",
+      "connectsWith": [
+        "unconceived alternatives",
+        "limits of conceivability",
+        "philosophy of science"
+      ]
+    },
+    {
+      "topic": "Conceivability, counterfactuals and history",
+      "title": "Darwin Deleted: Imagining a World without Darwin",
+      "authors": "Peter J. Bowler",
+      "year": "2013",
+      "source": "University of Chicago Press",
+      "why": "A substantial example of counterfactual history of science. It helps show how alternative histories can illuminate what did and did not depend on a single figure.",
+      "connectsWith": [
+        "counterfactual history",
+        "history of science",
+        "alternative pasts"
+      ]
+    },
+    {
+      "topic": "Conceivability, counterfactuals and history",
+      "title": "Science As It Could Have Been",
+      "authors": "Léna Soler, Emiliano Trizio & Andrew Pickering (eds.)",
+      "year": "2015",
+      "source": "University of Pittsburgh Press",
+      "why": "A major collection on contingency and inevitability in science. It gives background for asking how different science could have been.",
+      "connectsWith": [
+        "contingency",
+        "alternative science",
+        "future of science"
+      ]
+    },
+    {
+      "topic": "Conceivability, counterfactuals and history",
+      "title": "So close no matter how far: counterfactuals in history of science and the inevitability/contingency controversy",
+      "authors": "Luca Tambolo",
+      "year": "2020",
+      "source": "Synthese, 197(5), 2111–2141",
+      "why": "Important for the problem that counterfactual histories may be pulled back toward the actual present. It is highly relevant for limits of conceivability.",
+      "connectsWith": [
+        "counterfactuals",
+        "leaking counterfactuals",
+        "contingency"
+      ]
+    },
+    {
+      "topic": "University futures and higher education",
+      "title": "Building futures scenarios for universities and higher education: An international approach",
+      "authors": "Stéphan Vincent-Lancrin",
+      "year": "2004",
+      "source": "Policy Futures in Education, 2, 245–263",
+      "why": "Useful for the methodological tradition of thinking about universities through scenarios and international comparison.",
+      "connectsWith": [
+        "university futures",
+        "higher education",
+        "scenarios"
+      ]
+    },
+    {
+      "topic": "University futures and higher education",
+      "title": "Visioning 2035: The future of the higher education sector in the UK",
+      "authors": "Eddie Blass, Anne Jasman & Steve Shelley",
+      "year": "2010",
+      "source": "Futures, 42, 445–453",
+      "why": "A useful scenario-oriented paper on higher education futures. It gives background for comparing institutional futures over a long horizon.",
+      "connectsWith": [
+        "higher education futures",
+        "scenarios",
+        "university futures"
+      ]
+    },
+    {
+      "topic": "University futures and higher education",
+      "title": "The third mission of the university: A systematic literature review on potentials and constraints",
+      "authors": "Lorenzo Compagnucci & Francesca Spigarelli",
+      "year": "2020",
+      "source": "Technological Forecasting and Social Change, 161, 120284",
+      "why": "Useful for university futures because it examines the third mission and the tensions around social, economic, and institutional roles of universities.",
+      "connectsWith": [
+        "third mission",
+        "university futures",
+        "societal impact"
+      ]
+    },
+    {
+      "topic": "University futures and higher education",
+      "title": "Only connect: Designing university futures",
+      "authors": "Ronald Barnett",
+      "year": "2023",
+      "source": "Quality in Higher Education, 29, 116–131",
+      "why": "A recent and relevant piece for thinking about university futures with philosophical and institutional seriousness.",
+      "connectsWith": [
+        "university futures",
+        "higher education",
+        "institutional change"
+      ]
+    }
+  ]
+}

@@ -49,8 +49,11 @@ function fillProfile() {
     el.innerHTML = (p.researchAreas || []).map(area => `<span class="chip">${escapeHTML(area)}</span>`).join('');
   });
   $$('[data-link-list="footer"]').forEach(el => {
+    const internal = [{ label: 'Research Radar', url: 'research-radar.html' }];
     const allowed = (p.links || []).filter(l => ['University profile','Google Scholar','ORCID','LinkedIn','Futures of Science blog'].includes(l.label));
-    el.innerHTML = allowed.map(l => `<a href="${l.url}" target="_blank" rel="noreferrer">${escapeHTML(l.label)}</a>`).join('');
+    const internalLinks = internal.map(l => `<a href="${l.url}">${escapeHTML(l.label)}</a>`).join('');
+    const externalLinks = allowed.map(l => `<a href="${l.url}" target="_blank" rel="noreferrer">${escapeHTML(l.label)}</a>`).join('');
+    el.innerHTML = internalLinks + externalLinks;
   });
 }
 
@@ -274,6 +277,35 @@ function renderCV() {
   });
 }
 
+async function renderResearchRadar() {
+  const list = $('[data-radar-list]');
+  if (!list) return;
+  const countEl = $('[data-radar-count]');
+  try {
+    const res = await fetch('assets/research-radar-approved.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('Could not load radar data');
+    const payload = await res.json();
+    const items = Array.isArray(payload.items) ? payload.items : [];
+    if (countEl) countEl.textContent = `${items.length} selected references`;
+    const topics = [...new Set(items.map(item => item.topic || 'Other'))];
+    list.innerHTML = topics.map(topic => {
+      const cards = items.filter(item => (item.topic || 'Other') === topic).map(item => {
+        const connects = (item.connectsWith || []).map(tag => `<span class="chip">${escapeHTML(tag)}</span>`).join('');
+        return `<article class="radar-item">
+          <div class="radar-meta">${escapeHTML(item.authors || '')} · ${escapeHTML(item.year || '')}</div>
+          <h3>${escapeHTML(item.title || '')}</h3>
+          <p class="radar-source">${escapeHTML(item.source || '')}</p>
+          <p>${escapeHTML(item.why || '')}</p>
+          ${connects ? `<div class="radar-tags">${connects}</div>` : ''}
+        </article>`;
+      }).join('');
+      return `<section class="radar-topic"><h2>${escapeHTML(topic)}</h2><div class="radar-topic-grid">${cards}</div></section>`;
+    }).join('');
+  } catch (err) {
+    list.innerHTML = '<p>The Research Radar data could not be loaded.</p>';
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   setActiveNav();
@@ -284,4 +316,5 @@ document.addEventListener('DOMContentLoaded', () => {
   renderEngagement();
   initPublicationPage();
   renderCV();
+  renderResearchRadar();
 });

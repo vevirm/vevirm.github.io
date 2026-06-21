@@ -18,3 +18,8 @@ Static GitHub Pages site.
 - Interactive behaviour: `assets/main.js`
 
 The current visual identity uses white, red, and black, with spacious sections and restrained typography.
+
+
+Added Research Radar:
+- research-radar.html
+- assets/research-radar-approved.json
