@@ -62,8 +62,10 @@ scripts/research_radar_scan.py
 
 The workflow runs weekly and can also be started manually from GitHub Actions.
 
-### Scanner focus after the strict-theme update
+### Scanner focus after the balanced-neighbourhood update
 
-The weekly scanner is not a general “interesting new papers” feed. It now applies a site-focus gate after the publication/substance gate. A candidate must be close to the themes of this site: futures/foresight methods, Delphi, scenario work, horizon scanning, narrative foresight, philosophy of futures studies, philosophy/futures of science, historiography/counterfactuals/conceivability, or system-level futures of work and universities.
+The weekly scanner is not a general “interesting new papers” feed, but it should also not merely rediscover Veli Virmajoki's own publications. It now uses a balanced neighbourhood gate: first publication/substance quality, then intellectual proximity to the site.
 
-This means that a peer-reviewed empirical article can still be rejected if it is merely a good qualitative study about an unrelated applied topic. The scanner now rejects micro-experience/domain-drift papers unless they clearly contribute to the site's methods, concepts, policy/system analysis, or core futures/philosophy themes.
+A candidate should connect to futures/foresight methods, Delphi/expert methods, scenario work, horizon scanning, narrative foresight, philosophy of futures studies, philosophy/futures of science, historiography/counterfactuals/conceivability, or system-level futures of work, universities, higher education, science, knowledge, policy, or governance.
+
+Self-authored works are excluded from the discovery list. Peer-reviewed empirical articles can still be rejected when they are mainly micro-experience studies in unrelated domains, even if they have methods and references.

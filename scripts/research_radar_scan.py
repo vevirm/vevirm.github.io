@@ -146,6 +146,32 @@ def authors(work: Dict[str, Any], limit: int = 5) -> str:
 def has_authors(work: Dict[str, Any]) -> bool:
     return authors(work) != "Unknown author(s)"
 
+def author_names(work: Dict[str, Any]) -> List[str]:
+    names: List[str] = []
+    for a in work.get("authorships", []):
+        auth = a.get("author") or {}
+        name = normalize_text(auth.get("display_name"))
+        if name:
+            names.append(name)
+    return names
+
+
+def self_author_match(work: Dict[str, Any], config: Dict[str, Any]) -> Optional[str]:
+    """Return the matching author-name fragment if this is the site author's work."""
+    self_cfg = config.get("self_exclusion", {})
+    if not self_cfg.get("exclude_self_authored", False):
+        return None
+    fragments = [normalize_text(x).lower() for x in self_cfg.get("author_name_fragments", []) if normalize_text(x)]
+    if not fragments:
+        return None
+    for name in author_names(work):
+        low = name.lower()
+        for fragment in fragments:
+            if fragment in low:
+                return name
+    return None
+
+
 
 def contains_any(text: str, terms: Iterable[str]) -> bool:
     low = (text or "").lower()
@@ -190,55 +216,90 @@ def required_group_matches(text: str, groups: Iterable[Iterable[str]]) -> Tuple[
     return not missing, signals, missing
 
 
-def site_focus_gate(text: str, title: str, config: Dict[str, Any]) -> Tuple[bool, List[str]]:
-    """Keep the radar near the intellectual project described on the website.
+def unique_terms(terms: Iterable[str]) -> List[str]:
+    """Preserve order while de-duplicating matched terms case-insensitively."""
+    seen = set()
+    out: List[str] = []
+    for term in terms:
+        key = term.lower()
+        if key not in seen:
+            seen.add(key)
+            out.append(term)
+    return out
 
-    Publication quality is not enough. The site is about futures/foresight
-    methods, philosophy of futures studies and science, historiography, and
-    selected institutional/system-level application areas. This gate rejects
-    good-but-off-topic empirical papers, especially micro-experience studies
-    that only match loose words such as future, narrative, work, or identity.
+
+def site_focus_gate(text: str, title: str, config: Dict[str, Any]) -> Tuple[bool, List[str]]:
+    """Keep the radar in the user's research neighbourhood without overfitting.
+
+    The previous strict-theme version required exact site vocabulary. That avoided
+    odd off-topic papers, but it also overfit to the author's own publications.
+
+    This version uses a neighbourhood model:
+    - strong title anchors pass when they clearly name a relevant method/topic;
+    - otherwise, a candidate needs either a core anchor plus a contribution signal,
+      or two adjacent anchors plus a contribution/system signal;
+    - domain-drift and micro-experience titles are still rejected unless they have
+      a clear futures/method/system anchor.
     """
     focus = config.get("site_focus", {})
     if not focus:
         return True, []
 
-    title_hits = matched_terms(title, focus.get("strong_title_anchor_terms", []))
-    core_hits = matched_terms(text, focus.get("core_anchor_terms", []))
-    contribution_hits = matched_terms(text, focus.get("contribution_terms", []))
-    system_hits = matched_terms(text, focus.get("system_level_terms", []))
-    micro_hits = matched_terms(text, focus.get("micro_experience_terms", []))
-    title_drift_hits = matched_terms(title, focus.get("domain_drift_terms", []))
+    title_hits = unique_terms(matched_terms(title, focus.get("strong_title_anchor_terms", [])))
+    core_hits = unique_terms(matched_terms(text, focus.get("core_anchor_terms", [])))
+    adjacent_hits = unique_terms(matched_terms(text, focus.get("adjacent_anchor_terms", [])))
+    contribution_hits = unique_terms(matched_terms(text, focus.get("contribution_terms", [])))
+    system_hits = unique_terms(matched_terms(text, focus.get("system_level_terms", [])))
+    title_micro_hits = unique_terms(matched_terms(title, focus.get("micro_experience_terms", [])))
+    title_drift_hits = unique_terms(matched_terms(title, focus.get("domain_drift_terms", [])))
 
-    min_core = int(focus.get("min_core_anchor_hits", 1))
-    min_contrib = int(focus.get("min_contribution_hits", 1))
     signals: List[str] = []
 
-    if len(core_hits) < min_core:
-        return False, [f"outside site focus ({len(core_hits)}/{min_core} core anchors)"]
-    signals.append("site anchor: " + ", ".join(core_hits[:5]))
-
-    if len(contribution_hits) < min_contrib:
-        return False, [f"no method/concept/evidence contribution signal ({len(contribution_hits)}/{min_contrib})"]
-    signals.append("contribution signal: " + ", ".join(contribution_hits[:5]))
-
-    # A title that announces an unrelated applied/micro domain should not be
-    # rescued by a loose abstract word. It may pass only when the title itself
-    # clearly says it is about one of the site's core topics.
+    # Hard guardrail: titles announcing a different applied field should not pass
+    # merely because the abstract contains a loose word such as narrative, future,
+    # experience, or identity.
     if title_drift_hits and not title_hits:
         return False, ["domain drift in title: " + ", ".join(title_drift_hits[:4])]
 
-    # Micro-experience studies can be high quality but they are usually not the
-    # radar's target unless they are tied to institutions, policy, systems,
-    # method development, or explicit futures/foresight/scenario work.
-    if micro_hits and not (system_hits or title_hits):
-        return False, ["micro-experience paper without system/method anchor: " + ", ".join(micro_hits[:4])]
+    # A micro-experience title can be relevant only when it is explicitly about a
+    # core method/topic, a system/policy issue, or institutional arrangement.
+    if title_micro_hits and not (title_hits or system_hits or core_hits):
+        return False, ["micro-experience title without futures/method/system anchor: " + ", ".join(title_micro_hits[:4])]
 
+    min_core = int(focus.get("min_core_anchor_hits", 1))
+    min_contrib = int(focus.get("min_contribution_hits", 1))
+
+    # Best case: the title itself names the radar's intellectual territory.
     if title_hits:
-        signals.append("title anchor: " + ", ".join(title_hits[:4]))
-    if system_hits:
-        signals.append("system/policy level: " + ", ".join(system_hits[:4]))
-    return True, signals
+        signals.append("title anchor: " + ", ".join(title_hits[:5]))
+        if contribution_hits:
+            signals.append("contribution signal: " + ", ".join(contribution_hits[:5]))
+        if system_hits:
+            signals.append("system/policy level: " + ", ".join(system_hits[:5]))
+        return True, signals
+
+    # Good central-neighbourhood fit: one or more core anchors plus some sign that
+    # the work contributes methods, concepts, evidence, policy, governance, or theory.
+    if len(core_hits) >= min_core and len(contribution_hits) >= min_contrib:
+        signals.append("site anchor: " + ", ".join(core_hits[:5]))
+        signals.append("contribution signal: " + ", ".join(contribution_hits[:5]))
+        if system_hits:
+            signals.append("system/policy level: " + ", ".join(system_hits[:5]))
+        return True, signals
+
+    # Adjacent literature is useful, but should have at least two anchors and a
+    # method/concept/system reason for being scanned.
+    if len(adjacent_hits) >= 2 and (contribution_hits or system_hits):
+        signals.append("adjacent anchor: " + ", ".join(adjacent_hits[:5]))
+        if contribution_hits:
+            signals.append("contribution signal: " + ", ".join(contribution_hits[:5]))
+        if system_hits:
+            signals.append("system/policy level: " + ", ".join(system_hits[:5]))
+        return True, signals
+
+    return False, [
+        "outside site focus: needs a strong title anchor, or core/adjacent anchors plus method/concept/system contribution"
+    ]
 
 
 def type_labels(work: Dict[str, Any]) -> List[str]:
@@ -310,6 +371,10 @@ def hard_exclusion_reasons(work: Dict[str, Any], config: Dict[str, Any]) -> List
     reasons: List[str] = []
     if work.get("is_retracted"):
         reasons.append("retracted work")
+
+    own_author = self_author_match(work, config)
+    if own_author:
+        reasons.append(f"self-authored work excluded from discovery radar: {own_author}")
 
     excluded_domain = domain_match(work, gate.get("excluded_domains", []))
     if excluded_domain:
@@ -504,7 +569,7 @@ def score_work(work: Dict[str, Any], topic: Dict[str, Any], config: Dict[str, An
         "quality gate: " + "; ".join(quality_reasons[:4]),
         "topical fit: " + "; ".join(fit_reasons[:3]),
     ]
-    score = 4
+    score = 5
 
     source_match = preferred_source_match(work, config)
     if source_match:
@@ -626,7 +691,7 @@ def render_markdown(candidates: List[Dict[str, Any]], config: Dict[str, Any]) ->
     lines.append("")
     lines.append("This file is generated automatically. It is a candidate list only; nothing here appears on the public website unless later added to `assets/research-radar-approved.json`.")
     lines.append("")
-    lines.append("The scanner now applies hard publication-type, substance, site-focus, and topical-fit gates before scoring. Quality alone is not enough: items also need to fit the intellectual project of the site — futures/foresight methods, philosophy of futures studies and science, historiography/counterfactuals, or system-level futures of work/universities/science.")
+    lines.append("The scanner applies hard publication-type and substance gates, then a flexible site-neighbourhood gate before scoring. Quality alone is not enough: items also need to fit the intellectual project of the site — futures/foresight methods, philosophy of futures studies and science, historiography/counterfactuals, or system-level futures of work/universities/science. Self-authored works are excluded from discovery results.")
     lines.append("")
     lines.append("To curate, tell ChatGPT something like: `approve 2, 5, 9` or `hold 12`. Everything else can be ignored.")
     lines.append("")
