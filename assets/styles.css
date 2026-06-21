@@ -979,16 +979,26 @@ body { background: #faf8f7; }
   font-size: clamp(1.45rem, 3vw, 2.2rem);
   line-height: 1.08;
   margin-bottom: 10px;
-  color: #fff;
+  color: #fff !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6);
 }
 .radar-wisdom-ref {
-  color: rgba(255, 255, 255, 0.72);
-  font-weight: 800;
+  color: #fff !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #fff;
+  font-weight: 900;
   margin-bottom: 16px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6);
 }
 
 .radar-wisdom-card p {
-  color: #fff;
+  color: #fff !important;
+  opacity: 1 !important;
+  -webkit-text-fill-color: #fff;
+  font-weight: 800;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6);
 }
 .radar-wisdom-questions {
   font-size: 1.05rem;
