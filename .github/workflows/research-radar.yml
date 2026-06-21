@@ -1,0 +1,38 @@
+name: Research Radar weekly candidate scan
+
+on:
+  schedule:
+    # Runs every Monday at 07:00 UTC.
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run Research Radar scan
+        run: python scripts/research_radar_scan.py
+
+      - name: Commit candidate list if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add radar-candidates/latest.md radar-candidates/*.md
+          if git diff --cached --quiet; then
+            echo "No Research Radar candidate changes to commit."
+          else
+            git commit -m "Update Research Radar candidates"
+            git push
+          fi
