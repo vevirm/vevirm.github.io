@@ -9,7 +9,7 @@ window.siteData = {
     "bio": "I am a Senior Researcher at the Finland Futures Research Centre, University of Turku, and Docent in Philosophy of Science. I study possible futures, how they are conceptualized and justified, and how futures methods can be made clearer and stronger.",
     "researchAreas": [
       "Futures studies",
-      "Dialectic Delphi and Delphi methodology",
+      "Dialectic Delphi as my own method, and Delphi methodology more generally",
       "Narrative foresight and narratives-with-branches",
       "Futures of work and work arrangements",
       "Futures of science and university futures",
@@ -678,7 +678,7 @@ window.siteData = {
           "Work package lead for Futures of Researchers’ Careers in the EU Foresight on Demand project",
           "Research on futures of work and industries, including CHILL and T-Winning Spaces",
           "Development of organizational foresight capability",
-          "Foundational work on the discipline of futures studies and methods such as Dialectic Delphi and narrative foresight"
+          "Foundational work on the discipline of futures studies, including my dialectic Delphi method and narrative foresight"
         ]
       }
     ],

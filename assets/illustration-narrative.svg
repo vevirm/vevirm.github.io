@@ -1,26 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
   <title id="title">Branching narrative tree</title>
-  <desc id="desc">A simple tree showing one narrative branching into several future directions.</desc>
+  <desc id="desc">A simple continuous tree showing a base narrative branching into different futures.</desc>
   <rect width="720" height="420" rx="34" fill="#fff"/>
   <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M360 340V218" stroke="#111" stroke-width="13"/>
-    <path d="M360 220C326 178 292 150 236 128" stroke="#111" stroke-width="8"/>
-    <path d="M360 220C402 172 448 132 520 104" stroke="#b20f16" stroke-width="8"/>
-    <path d="M360 246C420 232 480 232 558 252" stroke="#111" stroke-width="7"/>
-    <path d="M336 250C288 244 238 252 184 284" stroke="#b20f16" stroke-width="7"/>
-    <path d="M236 128C206 104 176 96 136 100" stroke="#111" stroke-width="5" opacity="0.72"/>
-    <path d="M236 128C214 158 194 180 154 194" stroke="#b20f16" stroke-width="5" opacity="0.88"/>
-    <path d="M520 104C552 82 584 78 616 86" stroke="#b20f16" stroke-width="5" opacity="0.88"/>
-    <path d="M520 104C544 138 578 158 620 166" stroke="#111" stroke-width="5" opacity="0.72"/>
-    <path d="M558 252C594 242 622 246 646 264" stroke="#111" stroke-width="5" opacity="0.72"/>
-    <path d="M184 284C150 296 124 314 98 340" stroke="#b20f16" stroke-width="5" opacity="0.88"/>
+    <path d="M360 356 C360 312 360 270 360 232 C328 206 294 176 252 132 C226 104 190 88 144 90" stroke="#111" stroke-width="9"/>
+    <path d="M360 232 C390 194 434 152 492 116 C530 92 578 82 626 92" stroke="#b20f16" stroke-width="9"/>
+    <path d="M360 262 C418 244 478 244 548 268 C588 282 618 304 642 334" stroke="#111" stroke-width="7"/>
+    <path d="M360 278 C318 268 274 272 230 296 C188 320 150 346 104 356" stroke="#b20f16" stroke-width="7"/>
+    <path d="M252 132 C226 158 202 184 162 198" stroke="#b20f16" stroke-width="5" opacity="0.95"/>
+    <path d="M492 116 C524 144 564 164 616 170" stroke="#111" stroke-width="5" opacity="0.8"/>
   </g>
-  <g>
-    <circle cx="360" cy="220" r="15" fill="#111"/>
-    <circle cx="236" cy="128" r="12" fill="#fff" stroke="#111" stroke-width="4"/>
-    <circle cx="520" cy="104" r="12" fill="#b20f16"/>
-    <circle cx="558" cy="252" r="12" fill="#fff" stroke="#111" stroke-width="4"/>
-    <circle cx="184" cy="284" r="12" fill="#b20f16"/>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" font-weight="850">
+    <text x="296" y="382" fill="#111">base narrative</text>
+    <text x="574" y="78" fill="#b20f16">branch</text>
+    <text x="106" y="382" fill="#b20f16">episode</text>
   </g>
-  <path d="M245 355H475" stroke="#111" stroke-width="4" stroke-linecap="round" opacity="0.18"/>
 </svg>

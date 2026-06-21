@@ -1,29 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
   <title id="title">Dialectic Delphi rupture</title>
-  <desc id="desc">A simple rupture in the ground with two opposed sides and arrows showing structured disagreement.</desc>
+  <desc id="desc">A rupture in the ground separates option A and option B, each questioned in terms of probability and desirability.</desc>
   <rect width="720" height="420" rx="34" fill="#fff"/>
-  <g stroke="#111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <path d="M72 275 C165 256 250 265 328 278"/>
-    <path d="M392 278 C472 262 564 258 648 275"/>
-    <path d="M334 272 L305 310 L348 332 L326 376" stroke="#b20f16"/>
-    <path d="M390 273 L421 312 L378 337 L404 376" stroke="#b20f16"/>
-    <path d="M108 200 H272"/>
-    <path d="M272 200 l-26 -17"/>
-    <path d="M272 200 l-26 17"/>
-    <path d="M612 200 H448"/>
-    <path d="M448 200 l26 -17"/>
-    <path d="M448 200 l26 17"/>
-    <path d="M360 76 V242" stroke="#b20f16" stroke-dasharray="9 16"/>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <text x="186" y="82" font-size="22" font-weight="850" fill="#b20f16">Probability —</text>
+    <text x="186" y="112" font-size="22" font-weight="850" fill="#b20f16">and what about desirability?</text>
+    <text x="534" y="82" font-size="22" font-weight="850" fill="#b20f16">Probability —</text>
+    <text x="534" y="112" font-size="22" font-weight="850" fill="#b20f16">and what about desirability?</text>
   </g>
-  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="28" font-weight="800" fill="#111">
-    <text x="104" y="165">future direction A</text>
-    <text x="406" y="165">future direction B</text>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M72 258 C150 238 230 240 314 260" stroke="#111" stroke-width="6"/>
+    <path d="M406 260 C486 240 572 238 648 258" stroke="#111" stroke-width="6"/>
+    <path d="M330 248 L302 286 L343 311 L319 362" stroke="#b20f16" stroke-width="7"/>
+    <path d="M391 248 L421 287 L379 313 L405 362" stroke="#b20f16" stroke-width="7"/>
+    <path d="M337 254 L360 294 L383 254" stroke="#111" stroke-width="4" opacity="0.5"/>
+    <path d="M92 285 C160 306 244 305 306 290" stroke="#111" stroke-width="3" opacity="0.35"/>
+    <path d="M414 290 C480 305 566 305 628 285" stroke="#111" stroke-width="3" opacity="0.35"/>
   </g>
-  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="20" font-weight="800" fill="#b20f16" letter-spacing="1.5">
-    <text x="286" y="58">tension</text>
-    <text x="116" y="324">desirability</text>
-    <text x="486" y="324">probability</text>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-weight="900" text-anchor="middle">
+    <text x="186" y="212" font-size="36" fill="#111">Option A</text>
+    <text x="534" y="212" font-size="36" fill="#111">Option B</text>
   </g>
-  <circle cx="360" cy="200" r="16" fill="#111"/>
-  <circle cx="360" cy="200" r="7" fill="#b20f16"/>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="18" font-weight="800" fill="#626262" text-anchor="middle">
+    <text x="360" y="390">opposed futures made visible</text>
+  </g>
 </svg>

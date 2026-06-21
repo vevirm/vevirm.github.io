@@ -637,3 +637,165 @@ body {
   .hero-copy { padding: 28px 24px; }
   .method-inline-visual { float: none; width: 100%; margin: 0 0 16px; }
 }
+
+/* Clean correction: no floating hero background, no duplicated method-image grid */
+html, body { overflow-x: hidden; }
+body { background: #faf8f7; }
+.home-hero {
+  background: #faf8f7;
+  border-bottom: 1px solid rgba(231,223,220,0.72);
+}
+.hero {
+  overflow: visible;
+  padding: clamp(38px, 5.5vw, 70px) 0;
+}
+.hero::before,
+.hero::after {
+  display: none !important;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: clamp(22px, 3vw, 36px);
+  align-items: stretch;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+.hero-copy {
+  background: #fff;
+  border: 1px solid rgba(214,203,199,0.88);
+  border-left: 5px solid var(--red);
+  border-radius: 30px;
+  box-shadow: var(--shadow-soft);
+  padding: clamp(34px, 5vw, 60px);
+  min-width: 0;
+}
+.home-profile {
+  max-width: 360px;
+  width: 100%;
+  justify-self: end;
+  align-self: stretch;
+  border: 1px solid rgba(214,203,199,0.88) !important;
+  border-radius: 30px !important;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft) !important;
+  background: #fff;
+}
+.home-profile .portrait {
+  height: 360px;
+  min-height: 0;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center 24%;
+}
+.home-profile .profile-card-body {
+  border-top: 1px solid var(--line);
+  padding: 18px 20px 22px;
+}
+.theme-band,
+.intro-section,
+.home-imagination,
+.graphic-section,
+.alt {
+  background: #faf8f7 !important;
+}
+.section-pad.alt,
+.section-pad.graphic-section,
+.section-pad.home-imagination {
+  border-block: 1px solid rgba(231,223,220,0.72);
+}
+.graphic-section .section-head-row {
+  margin-bottom: 20px;
+}
+.research-build-grid,
+.graphic-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+.graph-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr);
+  gap: clamp(18px, 3vw, 34px);
+  align-items: center;
+  background: #fff !important;
+  border: 1px solid rgba(214,203,199,0.88);
+  border-radius: 26px;
+  box-shadow: var(--shadow-soft);
+  padding: clamp(22px, 3vw, 32px);
+  overflow: hidden;
+}
+.graph-card.scan-zone,
+.graph-card.delphi-zone,
+.graph-card.space-zone,
+.graph-card.narrative-zone {
+  border-top-width: 1px;
+}
+.graph-card.delphi-zone { border-left: 5px solid var(--red); }
+.graph-card.scan-zone,
+.graph-card.space-zone { border-left: 5px solid var(--ink); }
+.graph-card.narrative-zone { border-left: 5px solid var(--line-strong); }
+.graph-card h2 {
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+}
+.feature-illustration {
+  width: 100%;
+  max-height: 240px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid rgba(214,203,199,0.86);
+  border-radius: 18px;
+  box-shadow: none;
+}
+.method-preview-grid {
+  display: none;
+}
+.method-card.method-with-visual {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(230px, 0.38fr);
+  gap: 20px;
+  align-items: start;
+}
+.method-card.method-with-visual h3,
+.method-card.method-with-visual p,
+.method-card.method-with-visual details {
+  grid-column: 1;
+}
+.method-card.method-with-visual .method-inline-visual {
+  grid-column: 2;
+  grid-row: 1 / span 5;
+  width: 100%;
+  float: none;
+  margin: 0;
+  max-height: 190px;
+  object-fit: contain;
+}
+.method-kicker { display: none !important; }
+@media (max-width: 980px) {
+  .hero-grid,
+  .graph-card,
+  .method-card.method-with-visual {
+    grid-template-columns: 1fr;
+  }
+  .home-profile {
+    justify-self: start;
+    max-width: 380px;
+  }
+  .home-profile .portrait {
+    height: auto;
+    aspect-ratio: 1 / 1.05;
+  }
+  .method-card.method-with-visual .method-inline-visual {
+    grid-column: 1;
+    grid-row: auto;
+    max-width: 440px;
+  }
+}
+@media (max-width: 640px) {
+  .hero-copy { padding: 28px 22px; }
+  .home-profile { max-width: none; }
+  .graph-card { padding: 20px; }
+}
