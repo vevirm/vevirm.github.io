@@ -277,6 +277,29 @@ function renderCV() {
   });
 }
 
+async function renderRadarWisdom() {
+  const list = $('[data-radar-wisdom]');
+  if (!list) return;
+  try {
+    const res = await fetch('assets/radar-wisdom.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('Could not load wisdom data');
+    const payload = await res.json();
+    const items = Array.isArray(payload.items) ? payload.items : [];
+    if (!items.length) return;
+    list.innerHTML = items.map(item => {
+      const tags = (item.tags || []).map(tag => `<span class="chip">${escapeHTML(tag)}</span>`).join('');
+      return `<article class="radar-wisdom-card">
+        <p class="radar-wisdom-quote">“${escapeHTML(item.quote || '')}”</p>
+        <p class="radar-wisdom-ref">${escapeHTML(item.reference || [item.creator, item.title, item.year].filter(Boolean).join(', '))}</p>
+        <p>${escapeHTML(item.comment || '')}</p>
+        ${tags ? `<div class="radar-tags">${tags}</div>` : ''}
+      </article>`;
+    }).join('');
+  } catch (err) {
+    // Keep the static fallback card in the HTML if the data file fails to load.
+  }
+}
+
 async function renderResearchRadar() {
   const list = $('[data-radar-list]');
   if (!list) return;
@@ -316,5 +339,6 @@ document.addEventListener('DOMContentLoaded', () => {
   renderEngagement();
   initPublicationPage();
   renderCV();
+  renderRadarWisdom();
   renderResearchRadar();
 });

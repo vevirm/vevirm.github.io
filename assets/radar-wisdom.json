@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "sourceType": "song",
+      "creator": "Bob Dylan",
+      "title": "Subterranean Homesick Blues",
+      "year": "1965",
+      "quote": "You don’t need a weatherman...",
+      "reference": "Bob Dylan, “Subterranean Homesick Blues” (1965).",
+      "comment": "If foresight people start behaving as weather-men, oh my gosh. The useful question is what foresight adds when the wind is already felt: better framing, better consequences, better contestation, and better attention to who pretends not to notice.",
+      "tags": [
+        "foresight humility",
+        "obvious change",
+        "anti-oracle"
+      ]
+    }
+  ],
+  "note": "Keep song lyric excerpts very short; use commentary rather than reproducing lyrics."
+}

@@ -943,6 +943,59 @@ body { background: #faf8f7; }
 .radar-preview-box .button {
   margin-top: 8px;
 }
+
+.radar-wisdom-band {
+  background: linear-gradient(135deg, #111 0%, #261c1c 100%) !important;
+  color: #fff;
+  border-block: 1px solid rgba(17, 17, 17, 0.86);
+}
+.radar-wisdom-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(320px, 1.15fr);
+  gap: clamp(20px, 4vw, 44px);
+  align-items: start;
+}
+.radar-wisdom-band .eyebrow,
+.radar-wisdom-band .section-note {
+  color: rgba(255, 255, 255, 0.78);
+}
+.radar-wisdom-band h2 {
+  color: #fff;
+}
+.radar-wisdom-list {
+  display: grid;
+  gap: 16px;
+}
+.radar-wisdom-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-left: 5px solid var(--red);
+  border-radius: 26px;
+  padding: clamp(22px, 3vw, 30px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.22);
+}
+.radar-wisdom-quote {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+  line-height: 1.08;
+  margin-bottom: 10px;
+}
+.radar-wisdom-ref {
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+.radar-wisdom-card .chip {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.24);
+  color: #fff;
+}
+@media (max-width: 900px) {
+  .radar-wisdom-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 900px) {
   .radar-principles,
   .radar-topic-grid {
