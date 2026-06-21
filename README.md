@@ -60,4 +60,6 @@ scripts/research_radar_scan.py
 .github/workflows/research-radar.yml
 ```
 
+The scanner now uses a hard quality gate before scoring. It admits only DOI-bearing scholarly articles, academic books/chapters, authoritative institutional reports, and serious borderline working papers/preprints from recognised research bodies. It rejects news, blogs, vendor/consultancy material, press releases, listicles, shallow trend roundups, and thin items without enough substance signals. Tune this in `assets/research-radar-config.json` under `quality_gate`.
+
 The workflow runs weekly and can also be started manually from GitHub Actions.

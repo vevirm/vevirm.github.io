@@ -1,7 +1,8 @@
 {
   "max_candidates": 30,
   "days_back": 14,
-  "minimum_score": 9,
+  "minimum_score": 14,
+  "openalex_per_query": 25,
   "mailto": "vevirm@utu.fi",
   "topics": [
     {
@@ -11,7 +12,15 @@
         "strategic foresight futures research",
         "anticipation future studies"
       ],
-      "keywords": ["futures studies", "foresight", "futures research", "anticipation", "scenario", "scenarios", "horizon scanning"]
+      "keywords": [
+        "futures studies",
+        "foresight",
+        "futures research",
+        "anticipation",
+        "scenario",
+        "scenarios",
+        "horizon scanning"
+      ]
     },
     {
       "name": "Narrative foresight",
@@ -20,7 +29,14 @@
         "storytelling scenarios futures studies",
         "participatory foresight narratives"
       ],
-      "keywords": ["narrative", "narratives", "storytelling", "scenario", "participatory foresight", "radical futures"]
+      "keywords": [
+        "narrative",
+        "narratives",
+        "storytelling",
+        "scenario",
+        "participatory foresight",
+        "radical futures"
+      ]
     },
     {
       "name": "Delphi and expert methods",
@@ -29,7 +45,14 @@
         "Delphi study foresight experts",
         "expert elicitation futures studies"
       ],
-      "keywords": ["delphi", "expert elicitation", "expert judgement", "consensus", "foresight", "survey"]
+      "keywords": [
+        "delphi",
+        "expert elicitation",
+        "expert judgement",
+        "consensus",
+        "foresight",
+        "survey"
+      ]
     },
     {
       "name": "Futures of work",
@@ -38,7 +61,15 @@
         "remote work future work arrangements",
         "workplace futures digital green transition"
       ],
-      "keywords": ["future of work", "futures of work", "hybrid work", "remote work", "work arrangements", "workplace", "digital work"]
+      "keywords": [
+        "future of work",
+        "futures of work",
+        "hybrid work",
+        "remote work",
+        "work arrangements",
+        "workplace",
+        "digital work"
+      ]
     },
     {
       "name": "University futures and higher education",
@@ -47,7 +78,14 @@
         "future of universities higher education policy",
         "higher education futures academic values"
       ],
-      "keywords": ["university", "universities", "higher education", "academic values", "teaching", "research policy"]
+      "keywords": [
+        "university",
+        "universities",
+        "higher education",
+        "academic values",
+        "teaching",
+        "research policy"
+      ]
     },
     {
       "name": "Philosophy of futures studies and science",
@@ -56,7 +94,13 @@
         "philosophy of science futures studies",
         "future of science philosophy of science"
       ],
-      "keywords": ["philosophy of futures studies", "philosophy of science", "future of science", "scientific change", "conceptual engineering"]
+      "keywords": [
+        "philosophy of futures studies",
+        "philosophy of science",
+        "future of science",
+        "scientific change",
+        "conceptual engineering"
+      ]
     },
     {
       "name": "Counterfactuals, historiography and conceivability",
@@ -65,7 +109,15 @@
         "historical counterfactuals historiography explanation",
         "conceivability possible futures alternatives"
       ],
-      "keywords": ["counterfactual", "counterfactuals", "historiography", "philosophy of history", "historical explanation", "conceivability", "unconceived alternatives"]
+      "keywords": [
+        "counterfactual",
+        "counterfactuals",
+        "historiography",
+        "philosophy of history",
+        "historical explanation",
+        "conceivability",
+        "unconceived alternatives"
+      ]
     },
     {
       "name": "Causal Layered Analysis and deep futures methods",
@@ -74,7 +126,14 @@
         "CLA futures studies methodology",
         "worldviews myths futures studies"
       ],
-      "keywords": ["causal layered analysis", "CLA", "worldview", "myth", "metaphor", "deep futures"]
+      "keywords": [
+        "causal layered analysis",
+        "CLA",
+        "worldview",
+        "myth",
+        "metaphor",
+        "deep futures"
+      ]
     }
   ],
   "preferred_sources": [
@@ -110,26 +169,224 @@
     "Oxford University Press",
     "Cambridge University Press",
     "Routledge",
+    "Taylor & Francis",
     "Springer",
+    "Springer Nature",
     "Palgrave Macmillan",
+    "Elsevier",
+    "SAGE",
+    "Wiley",
+    "De Gruyter",
+    "Brill",
     "MIT Press",
     "Princeton University Press",
     "University of Chicago Press",
     "Harvard University Press",
+    "Manchester University Press",
+    "Edinburgh University Press",
+    "University of California Press",
     "OECD",
     "UNESCO",
     "European Commission",
+    "Joint Research Centre",
     "JRC"
   ],
   "blocked_terms": [
     "press release",
-    "news",
-    "newspaper",
-    "blog",
+    "announcement",
+    "sponsored",
+    "advertisement",
     "market report",
     "stock market",
     "investment outlook",
     "crypto",
-    "advertisement"
-  ]
+    "webinar",
+    "podcast"
+  ],
+  "quality_gate": {
+    "min_substance_signals": 4,
+    "min_abstract_words": 80,
+    "min_references": 8,
+    "excluded_source_types": [
+      "newspaper",
+      "magazine",
+      "blog"
+    ],
+    "excluded_source_patterns": [
+      "news",
+      "press release",
+      "blog",
+      "newsletter",
+      "editorial",
+      "op-ed",
+      "opinion",
+      "column",
+      "staff writer",
+      "sponsored",
+      "vendor",
+      "consultancy",
+      "marketing",
+      "infographic",
+      "course material",
+      "study guide",
+      "encyclopedia",
+      "wikipedia"
+    ],
+    "listicle_markers": [
+      "top ",
+      "trends to watch",
+      "things to know",
+      "what you need to know",
+      "in this post",
+      "ultimate guide",
+      "quick guide"
+    ],
+    "method_terms": [
+      "we analyse",
+      "we analyze",
+      "analysis of",
+      "data",
+      "dataset",
+      "survey",
+      "interview",
+      "case study",
+      "case studies",
+      "method",
+      "methodology",
+      "methods",
+      "empirical",
+      "systematic review",
+      "scoping review",
+      "literature review",
+      "bibliometric",
+      "experiment",
+      "model",
+      "framework",
+      "Delphi",
+      "expert elicitation",
+      "corpus",
+      "evidence"
+    ],
+    "analysis_terms": [
+      "findings",
+      "results",
+      "we find",
+      "we argue",
+      "we show",
+      "we demonstrate",
+      "we develop",
+      "we propose",
+      "contribution",
+      "synthesis",
+      "theoretical",
+      "conceptual framework",
+      "implications",
+      "policy implications",
+      "original"
+    ],
+    "academic_publisher_domains": [
+      "oup.com",
+      "cambridge.org",
+      "taylorfrancis.com",
+      "routledge.com",
+      "springer.com",
+      "springerlink.com",
+      "nature.com",
+      "elsevier.com",
+      "sciencedirect.com",
+      "sagepub.com",
+      "wiley.com",
+      "onlinelibrary.wiley.com",
+      "degruyter.com",
+      "brill.com",
+      "mitpressjournals.org",
+      "press.princeton.edu",
+      "uchicago.edu",
+      "ucpress.edu"
+    ],
+    "institutional_publishers": [
+      "OECD",
+      "UNESCO",
+      "European Commission",
+      "Joint Research Centre",
+      "JRC",
+      "World Bank",
+      "International Labour Organization",
+      "ILO",
+      "European Parliament",
+      "Council of Europe",
+      "United Nations",
+      "National Academies",
+      "Research Council",
+      "Academy of Finland",
+      "Ministry",
+      "Government Office",
+      "Parliamentary Office",
+      "RAND Corporation",
+      "Nesta"
+    ],
+    "institutional_domains": [
+      "oecd.org",
+      "unesco.org",
+      "europa.eu",
+      "ec.europa.eu",
+      "jrc.ec.europa.eu",
+      "worldbank.org",
+      "ilo.org",
+      "un.org",
+      "nationalacademies.org",
+      "rand.org",
+      "nesta.org.uk",
+      "aka.fi",
+      "gov.uk",
+      "valtioneuvosto.fi",
+      "eduskunta.fi"
+    ],
+    "recognised_research_groups": [
+      "NBER",
+      "IZA",
+      "CEPR",
+      "SSRN",
+      "arXiv",
+      "SocArXiv",
+      "OSF",
+      "Research Policy Institute",
+      "Millennium Project",
+      "Copenhagen Institute for Futures Studies",
+      "Institute for the Future"
+    ],
+    "recognised_research_domains": [
+      "nber.org",
+      "iza.org",
+      "cepr.org",
+      "ssrn.com",
+      "arxiv.org",
+      "osf.io",
+      "socarxiv.org",
+      "iftf.org",
+      "cifs.dk",
+      "millennium-project.org"
+    ],
+    "excluded_domains": [
+      "medium.com",
+      "substack.com",
+      "forbes.com",
+      "hbr.org",
+      "weforum.org",
+      "mckinsey.com",
+      "bcg.com",
+      "deloitte.com",
+      "pwc.com",
+      "kpmg.com",
+      "ey.com",
+      "gartner.com",
+      "statista.com",
+      "marketsandmarkets.com",
+      "globenewswire.com",
+      "prnewswire.com",
+      "businesswire.com",
+      "wikipedia.org"
+    ],
+    "article_requires_known_venue": true
+  }
 }
