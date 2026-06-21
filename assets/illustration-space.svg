@@ -1,36 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
   <title id="title">Futures as space</title>
-  <desc id="desc">A simple three-dimensional box with a figure in the middle, surrounded by arrows and conceptual labels.</desc>
+  <desc id="desc">A simple three-dimensional box with a stick figure inside and arrows around it.</desc>
   <rect width="720" height="420" rx="34" fill="#fff"/>
-  <rect x="30" y="30" width="660" height="360" rx="28" fill="#faf8f7" stroke="#111" stroke-width="2"/>
   <defs>
     <marker id="arrowRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#b20f16"/></marker>
     <marker id="arrowBlack" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#111"/></marker>
   </defs>
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="178" y="136" width="288" height="178" rx="4" stroke="#111" stroke-width="5"/>
-    <path d="M178 136L274 82H562V260L466 314" stroke="#111" stroke-width="5"/>
-    <path d="M466 136L562 82M466 314V136M178 314L274 260H562" stroke="#111" stroke-width="5" opacity="0.82"/>
-    <path d="M274 82V260" stroke="#111" stroke-width="3" opacity="0.45"/>
-    <path d="M178 136H466M274 260H562" stroke="#111" stroke-width="2" opacity="0.2"/>
+  <g fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="220" y="135" width="260" height="160" rx="3" stroke-width="5"/>
+    <path d="M220 135L300 88H560V248L480 295" stroke-width="5"/>
+    <path d="M480 135L560 88M480 295V135M220 295L300 248H560M300 88V248" stroke-width="4" opacity="0.55"/>
   </g>
-  <g transform="translate(326 204)" stroke="#111" stroke-width="5" stroke-linecap="round" fill="none">
-    <circle cx="0" cy="-38" r="18" fill="#fff"/>
-    <path d="M0 -20V38M-40 0H40M0 38L-34 82M0 38L34 82"/>
+  <g transform="translate(350 205)" stroke="#111" stroke-width="5" stroke-linecap="round" fill="none">
+    <circle cx="0" cy="-40" r="17" fill="#fff"/>
+    <path d="M0 -22V42M-38 0H38M0 42L-30 78M0 42L30 78"/>
   </g>
-  <circle cx="326" cy="204" r="8" fill="#b20f16"/>
-  <g fill="none" stroke-width="5" stroke-linecap="round">
-    <path d="M326 204C270 176 234 172 190 186" stroke="#b20f16" marker-end="url(#arrowRed)"/>
-    <path d="M326 204C386 162 428 132 482 112" stroke="#b20f16" marker-end="url(#arrowRed)"/>
-    <path d="M326 204C376 226 420 252 474 288" stroke="#111" marker-end="url(#arrowBlack)"/>
-    <path d="M326 204C286 246 258 274 218 306" stroke="#111" marker-end="url(#arrowBlack)"/>
-    <path d="M326 204C330 158 338 124 358 92" stroke="#b20f16" opacity="0.75" marker-end="url(#arrowRed)"/>
+  <circle cx="350" cy="205" r="7" fill="#b20f16"/>
+  <g fill="none" stroke-linecap="round" stroke-width="5">
+    <path d="M350 205C296 176 252 176 198 202" stroke="#b20f16" marker-end="url(#arrowRed)"/>
+    <path d="M350 205C404 168 450 132 512 112" stroke="#b20f16" marker-end="url(#arrowRed)"/>
+    <path d="M350 205C406 228 450 258 506 304" stroke="#111" marker-end="url(#arrowBlack)"/>
+    <path d="M350 205C314 250 282 282 230 320" stroke="#111" marker-end="url(#arrowBlack)"/>
   </g>
-  <g font-family="Arial, sans-serif" font-weight="700">
-    <text x="108" y="183" font-size="22" fill="#b20f16">tension field</text>
-    <text x="470" y="106" font-size="20" fill="#111">adjacency</text>
-    <text x="482" y="306" font-size="20" fill="#b20f16">movement</text>
-    <text x="146" y="328" font-size="19" fill="#111">possible location</text>
-    <text x="356" y="78" font-size="18" fill="#111" opacity="0.72">dimension</text>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-weight="800">
+    <text x="92" y="205" font-size="22" fill="#b20f16">tension field</text>
+    <text x="506" y="108" font-size="21" fill="#111">adjacency</text>
+    <text x="500" y="326" font-size="20" fill="#b20f16">movement</text>
   </g>
 </svg>

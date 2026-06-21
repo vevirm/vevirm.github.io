@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Dialectic Delphi rupture</title>
+  <desc id="desc">A simple rupture in the ground with two opposed sides and arrows showing structured disagreement.</desc>
+  <rect width="720" height="420" rx="34" fill="#fff"/>
+  <g stroke="#111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M72 275 C165 256 250 265 328 278"/>
+    <path d="M392 278 C472 262 564 258 648 275"/>
+    <path d="M334 272 L305 310 L348 332 L326 376" stroke="#b20f16"/>
+    <path d="M390 273 L421 312 L378 337 L404 376" stroke="#b20f16"/>
+    <path d="M108 200 H272"/>
+    <path d="M272 200 l-26 -17"/>
+    <path d="M272 200 l-26 17"/>
+    <path d="M612 200 H448"/>
+    <path d="M448 200 l26 -17"/>
+    <path d="M448 200 l26 17"/>
+    <path d="M360 76 V242" stroke="#b20f16" stroke-dasharray="9 16"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="28" font-weight="800" fill="#111">
+    <text x="104" y="165">future direction A</text>
+    <text x="406" y="165">future direction B</text>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" font-size="20" font-weight="800" fill="#b20f16" letter-spacing="1.5">
+    <text x="286" y="58">tension</text>
+    <text x="116" y="324">desirability</text>
+    <text x="486" y="324">probability</text>
+  </g>
+  <circle cx="360" cy="200" r="16" fill="#111"/>
+  <circle cx="360" cy="200" r="7" fill="#b20f16"/>
+</svg>
