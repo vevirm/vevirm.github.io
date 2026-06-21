@@ -979,11 +979,26 @@ body { background: #faf8f7; }
   font-size: clamp(1.45rem, 3vw, 2.2rem);
   line-height: 1.08;
   margin-bottom: 10px;
+  color: #fff;
 }
 .radar-wisdom-ref {
   color: rgba(255, 255, 255, 0.72);
   font-weight: 800;
   margin-bottom: 16px;
+}
+
+.radar-wisdom-card p {
+  color: rgba(255, 255, 255, 0.86);
+}
+.radar-wisdom-questions {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-top: -2px;
+  margin-bottom: 18px;
+}
+.radar-wisdom-questions strong {
+  color: #fff;
+  font-weight: 900;
 }
 .radar-wisdom-card .chip {
   background: rgba(255,255,255,0.12);

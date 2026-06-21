@@ -288,10 +288,17 @@ async function renderRadarWisdom() {
     if (!items.length) return;
     list.innerHTML = items.map(item => {
       const tags = (item.tags || []).map(tag => `<span class="chip">${escapeHTML(tag)}</span>`).join('');
+      const reference = item.reference || [item.creator, item.title, item.year].filter(Boolean).join(', ');
+      const questions = Array.isArray(item.questions) ? item.questions : [];
+      const emphasis = item.emphasis || '';
+      const questionLine = questions.length
+        ? `<p class="radar-wisdom-questions">${questions.map(q => q === emphasis ? `<strong>${escapeHTML(q)}</strong>` : escapeHTML(q)).join(' ')}</p>`
+        : '';
       return `<article class="radar-wisdom-card">
         <p class="radar-wisdom-quote">“${escapeHTML(item.quote || '')}”</p>
-        <p class="radar-wisdom-ref">${escapeHTML(item.reference || [item.creator, item.title, item.year].filter(Boolean).join(', '))}</p>
+        <p class="radar-wisdom-ref">${escapeHTML(reference)}</p>
         <p>${escapeHTML(item.comment || '')}</p>
+        ${questionLine}
         ${tags ? `<div class="radar-tags">${tags}</div>` : ''}
       </article>`;
     }).join('');
