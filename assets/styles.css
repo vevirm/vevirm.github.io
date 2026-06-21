@@ -1035,3 +1035,7 @@ body { background: #faf8f7; }
 .home-radar-callout h2 {
   font-size: clamp(1.55rem, 2.6vw, 2.25rem);
 }
+
+.home-wisdom-band {
+  margin-top: 0;
+}
