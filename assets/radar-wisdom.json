@@ -16,6 +16,26 @@
         "anti-oracle"
       ],
       "sourceUrl": "https://www.bobdylan.com/songs/subterranean-homesick-blues/"
+    },
+    {
+      "sourceType": "song",
+      "creator": "Bruce Springsteen",
+      "title": "The River",
+      "year": "1980",
+      "quote": "Is a dream a lie if it don't come true",
+      "reference": "Bruce Springsteen, “The River,” on The River, Columbia Records, 1980. Written by Bruce Springsteen.",
+      "comment": "A sharp line for futures work because it separates hope from fulfilment without making hope simple or innocent. It asks what happens to people, institutions, and promises when imagined futures do not arrive: were they false, or did they become something heavier?",
+      "questions": [
+        "When does an unrealised future become a betrayal?",
+        "What do futures practices owe to disappointed dreams?"
+      ],
+      "emphasis": "What happens to a future when it fails to arrive?",
+      "tags": [
+        "unrealised futures",
+        "hope and loss",
+        "moral imagination"
+      ],
+      "sourceUrl": "https://brucespringsteen.net/albums/the-river/"
     }
   ],
   "note": "Song and film excerpts are kept short; the work of the box is commentary and reference, not reproduction."

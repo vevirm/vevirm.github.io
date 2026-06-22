@@ -58,7 +58,9 @@
         "storytelling scenarios futures studies",
         "participatory foresight narratives",
         "futures literacy narratives scenarios",
-        "speculative futures narratives foresight"
+        "speculative futures narratives foresight",
+        "leadership imagination futures studies storytelling ethics",
+        "imagination age leadership futures studies"
       ],
       "keywords": [
         "narrative",
@@ -66,7 +68,10 @@
         "storytelling",
         "scenario",
         "participatory foresight",
-        "radical futures"
+        "radical futures",
+        "imagination",
+        "leadership ethics",
+        "moral imagination"
       ],
       "required_terms": [
         "narrative foresight",
@@ -745,7 +750,11 @@
       "work arrangements",
       "work design",
       "working life",
-      "workplace futures"
+      "workplace futures",
+      "moral imagination",
+      "leadership imagination",
+      "disciplined imagination",
+      "world-shaping storytelling"
     ],
     "strong_title_anchor_terms": [
       "algorithmic management",
@@ -798,7 +807,10 @@
       "weak signals",
       "work arrangements",
       "work design",
-      "workplace futures"
+      "workplace futures",
+      "imagination age",
+      "leadership imagination",
+      "moral imagination"
     ],
     "contribution_terms": [
       "method",
@@ -1049,7 +1061,11 @@
       "wild cards",
       "work design",
       "work organisation",
-      "work organization"
+      "work organization",
+      "disciplined imagination",
+      "moral courage",
+      "leadership ethics",
+      "storytelling leadership"
     ]
   },
   "self_exclusion": {
@@ -1059,5 +1075,42 @@
       "virmajoki, veli",
       "virmajoki"
     ]
-  }
+  },
+  "manual_candidates": [
+    {
+      "id": "isbn:9781041287636",
+      "title": "Leadership in the Imagination Age: Navigating Unprecedented Possibilities and Moral Challenges",
+      "authors": "S M A Moin",
+      "year": "2026",
+      "source": "Routledge",
+      "publisher": "Routledge / Taylor & Francis",
+      "type": "book",
+      "type_crossref": "book",
+      "source_type": "book",
+      "date": "2026-07-31",
+      "topic": "Narrative foresight",
+      "url": "https://www.routledge.com/Leadership-in-the-Imagination-Age-Navigating-Unprecedented-Possibilities-and-Moral-Challenges/Moin/p/book/9781041287636",
+      "score": 24,
+      "reasons": [
+        "manual source added by site owner",
+        "preferred publisher/institution: Routledge",
+        "topic match: imagination, storytelling, futures studies, ethics, leadership",
+        "relevant to narrative foresight and moral orientation under uncertainty"
+      ],
+      "quality_signals": [
+        "academic book publisher",
+        "accountable author/organisation",
+        "scholarly/policy venue signal",
+        "manual review requested by site owner"
+      ],
+      "fit_signals": [
+        "site anchor: futures studies, imagination, possibility, storytelling",
+        "contribution signal: framework, ethics, systems thinking, leadership",
+        "system/policy level: organisations, leadership, technology"
+      ],
+      "references": 0,
+      "abstract_words": 62,
+      "abstract": "A forthcoming Routledge book on leadership in a period shaped by AI, accelerating technologies, and planetary fragility. It connects disciplined imagination, moral courage, systems thinking, storytelling, and futures studies, making it a good Narrative foresight radar item rather than a narrow management title."
+    }
+  ]
 }

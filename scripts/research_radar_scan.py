@@ -646,6 +646,60 @@ def make_candidate(work: Dict[str, Any], topic: Dict[str, Any], score: int, reas
     }
 
 
+def manual_candidate_from_config(item: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+    """Normalize a manually curated candidate from the config file.
+
+    Manual candidates are useful for books or publisher pages that are not yet
+    discoverable through OpenAlex, or for items that the site owner explicitly
+    wants the scanner to keep visible for review.
+    """
+    if not isinstance(item, dict):
+        return None
+    title = normalize_text(item.get("title"))
+    if not title:
+        return None
+
+    def as_list(value: Any) -> List[str]:
+        if isinstance(value, list):
+            return [normalize_text(v) for v in value if normalize_text(v)]
+        if normalize_text(value):
+            return [normalize_text(value)]
+        return []
+
+    abstract = normalize_text(item.get("abstract"))
+    candidate = {
+        "id": normalize_text(item.get("id")) or normalize_text(item.get("url")) or title.lower(),
+        "title": title,
+        "authors": normalize_text(item.get("authors")) or "Unknown author(s)",
+        "year": normalize_text(item.get("year")) or "n.d.",
+        "source": normalize_text(item.get("source")) or normalize_text(item.get("publisher")) or "Manual source",
+        "publisher": normalize_text(item.get("publisher")),
+        "type": normalize_text(item.get("type")) or "manual",
+        "type_crossref": normalize_text(item.get("type_crossref")),
+        "source_type": normalize_text(item.get("source_type")) or "manual",
+        "date": normalize_text(item.get("date")),
+        "topic": normalize_text(item.get("topic")) or "Manual review",
+        "url": normalize_text(item.get("url")),
+        "score": int(item.get("score") or 99),
+        "reasons": as_list(item.get("reasons")) or ["manual source added in scanner config"],
+        "quality_signals": as_list(item.get("quality_signals")) or ["manual source added in scanner config"],
+        "fit_signals": as_list(item.get("fit_signals")) or ["manual source added in scanner config"],
+        "references": int(item.get("references") or 0),
+        "abstract_words": int(item.get("abstract_words") or word_count(abstract)),
+        "abstract": abstract,
+    }
+    return candidate
+
+
+def collect_manual_candidates(config: Dict[str, Any]) -> List[Dict[str, Any]]:
+    candidates: List[Dict[str, Any]] = []
+    for item in config.get("manual_candidates", []) or []:
+        candidate = manual_candidate_from_config(item)
+        if candidate:
+            candidates.append(candidate)
+    return candidates
+
+
 def collect_candidates(config: Dict[str, Any]) -> List[Dict[str, Any]]:
     days_back = int(config.get("days_back", 14))
     from_date = (dt.date.today() - dt.timedelta(days=days_back)).isoformat()
@@ -673,6 +727,13 @@ def collect_candidates(config: Dict[str, Any]) -> List[Dict[str, Any]]:
                 if key not in by_id or cand["score"] > by_id[key]["score"]:
                     by_id[key] = cand
 
+    for cand in collect_manual_candidates(config):
+        if cand.get("score", 0) < min_score:
+            continue
+        key = cand.get("id") or cand.get("url") or cand.get("title", "").lower()
+        if key and (key not in by_id or cand.get("score", 0) > by_id[key].get("score", 0)):
+            by_id[key] = cand
+
     if rejected_counts:
         print("Quality-gate rejections:")
         for reason, count in sorted(rejected_counts.items(), key=lambda item: item[1], reverse=True)[:12]:
@@ -691,7 +752,7 @@ def render_markdown(candidates: List[Dict[str, Any]], config: Dict[str, Any]) ->
     lines.append("")
     lines.append("This file is generated automatically. It is a candidate list only; nothing here appears on the public website unless later added to `assets/research-radar-approved.json`.")
     lines.append("")
-    lines.append("The scanner applies hard publication-type and substance gates, then a flexible site-neighbourhood gate before scoring. Quality alone is not enough: items also need to fit the intellectual project of the site — futures/foresight methods, philosophy of futures studies and science, historiography/counterfactuals, or system-level futures of work/universities/science. Self-authored works are excluded from discovery results.")
+    lines.append("The scanner applies hard publication-type and substance gates, then a flexible site-neighbourhood gate before scoring. Quality alone is not enough: items also need to fit the intellectual project of the site — futures/foresight methods, philosophy of futures studies and science, historiography/counterfactuals, or system-level futures of work/universities/science. Self-authored works are excluded from discovery results. Manually configured source candidates are also included when present.")
     lines.append("")
     lines.append("To curate, tell ChatGPT something like: `approve 2, 5, 9` or `hold 12`. Everything else can be ignored.")
     lines.append("")
