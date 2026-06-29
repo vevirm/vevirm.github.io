@@ -28,7 +28,24 @@ A forthcoming Routledge book on leadership in a period shaped by AI, acceleratin
 
 ---
 
-## 2. Advancing healthcare foresight: insights from the ‘National Ambulance Service 2040’ project
+## 2. Next-Generation Strategic Foresight for Responsible AI Governance and Technology Policy: Introducing the Archer Model
+
+**Authors:** Katalin Fehér, KU Leuven, Fenwick McKelvey, Lindsay Rodgers, Robert Marinov
+**Year / date:** 2026 / 2026-06-01
+**Source:** Futures
+**Publisher / institution:** Elsevier BV
+**Type:** article; source type: journal; references: 28; abstract words: 0
+**Topic:** Futures studies and foresight
+**Quality gate:** preferred journal; accountable author/organisation; DOI/indexing signal; reference list signal (28 refs); method/evidence language; scholarly/policy venue signal.
+**Topical fit:** title anchor: foresight, strategic foresight; contribution signal: model, policy, governance; system/policy level: policy, governance, technology; topic keywords: foresight.
+**Why selected:** quality gate: preferred journal; accountable author/organisation; DOI/indexing signal; reference list signal (28 refs); topical fit: title anchor: foresight, strategic foresight; contribution signal: model, policy, governance; system/policy level: policy, governance, technology; preferred source: Futures; preferred publisher/institution: Elsevier; topic match: foresight; recent.
+**Link:** https://doi.org/10.1016/j.futures.2026.103879
+
+**Decision:** approve / reject / hold
+
+---
+
+## 3. Advancing healthcare foresight: insights from the ‘National Ambulance Service 2040’ project
 
 **Authors:** Tamás Kristóf, Bertalan Meskó, Gábor Csató
 **Year / date:** 2026 / 2026-06-08
@@ -48,7 +65,27 @@ Abstract Healthcare systems face escalating long-term uncertainty due to technol
 
 ---
 
-## 3. Introducing Cross-impact Scenario Policy Analysis (CRISPA): building scenarios and policy mixes based on logical consistency
+## 4. Daily need experiences across office and remote workdays
+
+**Authors:** Anja H. Olafsen, Miika Kujanpää, Andreas Stenling, Susanne Tafvelin, Marte Bentzen
+**Year / date:** 2026 / 2026-06-27
+**Source:** European Journal of Work and Organizational Psychology
+**Publisher / institution:** Taylor & Francis
+**Type:** article; source type: journal; references: 53; abstract words: 183
+**Topic:** Futures of work
+**Quality gate:** academic-publisher journal article; accountable author/organisation; DOI/indexing signal; reference list signal (53 refs); developed abstract (183 words); method/evidence language.
+**Topical fit:** site anchor: hybrid work, remote work; contribution signal: theory, data; system/policy level: research, autonomy; topic keywords: hybrid work, remote work.
+**Why selected:** quality gate: academic-publisher journal article; accountable author/organisation; DOI/indexing signal; reference list signal (53 refs); topical fit: site anchor: hybrid work, remote work; contribution signal: theory, data; system/policy level: research, autonomy; preferred publisher/institution: Taylor & Francis; topic match: hybrid work, remote work; recent; substantial references.
+**Link:** https://doi.org/10.1080/1359432x.2026.2694513
+
+**Abstract snippet:**
+Despite substantial scholarly interest in remote work, research has primarily examined its effects on well-being at a broader, between-person level, overlooking daily fluctuations in employees’ experiences across work locations. Drawing on self-determination theory, we investigate fluctuations in psychological need experiences and energy levels as a function of work location, distinguishing between office workdays and remote workdays. Data was…
+
+**Decision:** approve / reject / hold
+
+---
+
+## 5. Introducing Cross-impact Scenario Policy Analysis (CRISPA): building scenarios and policy mixes based on logical consistency
 
 **Authors:** Geert te Boveldt, Sara Tori, Imre Keserü
 **Year / date:** 2026 / 2026-06-24
@@ -68,7 +105,7 @@ Uncertainty is a fundamental challenge for public decision-making in domains req
 
 ---
 
-## 4. Sustaining scenarios: researcher-practitioner reflections on extending research beyond project boundaries
+## 6. Sustaining scenarios: researcher-practitioner reflections on extending research beyond project boundaries
 
 **Authors:** Chelsea Wentworth, Rafael Lembi, Amarachi Wachuku, Miles McNall, Jennifer Hodbod et al.
 **Year / date:** 2026 / 2026-06-22
@@ -88,7 +125,27 @@ Abstract We evaluate the results of a food system scenarios workshop in Flint, M
 
 ---
 
-## 5. Challenges and priorities for forest-based climate change mitigation: a global expert elicitation
+## 7. Projected shifts in dry–wet extremes and possible associated drivers over the Hindu Kush Himalaya
+
+**Authors:** Pawan Kumar Chaubey, Raju Attada, Adam D. Switzer, K. P. Sooraj, Dhrubajyoti Samanta et al.
+**Year / date:** 2026 / 2026-06-27
+**Source:** Geomatics Natural Hazards and Risk
+**Publisher / institution:** Taylor & Francis
+**Type:** article; source type: journal; references: 47; abstract words: 205
+**Topic:** Futures studies and foresight
+**Quality gate:** academic-publisher journal article; accountable author/organisation; DOI/indexing signal; reference list signal (47 refs); developed abstract (205 words); method/evidence language.
+**Topical fit:** site anchor: scenarios; contribution signal: model; topic keywords: scenarios.
+**Why selected:** quality gate: academic-publisher journal article; accountable author/organisation; DOI/indexing signal; reference list signal (47 refs); topical fit: site anchor: scenarios; contribution signal: model; topic keywords: scenarios; preferred publisher/institution: Taylor & Francis; topic match: scenarios; recent; substantial references.
+**Link:** https://doi.org/10.1080/19475705.2026.2692760
+
+**Abstract snippet:**
+The Hindu Kush Himalaya (HKH) region is characterized by its mountainous terrain and diverse regional climate patterns. This study investigates how future hydroclimate extremes across four regions of the HKH may be influenced by various Shared Socioeconomic Pathways (SSPs) scenarios, using a CMIP6-based Multi-Model Ensemble (MME). Our results show that the frequency of dry days is projected to increase, with a notable shift in more extreme…
+
+**Decision:** approve / reject / hold
+
+---
+
+## 8. Challenges and priorities for forest-based climate change mitigation: a global expert elicitation
 
 **Authors:** Catalina Gonda
 **Year / date:** 2026 / 2026-06-20
@@ -108,7 +165,7 @@ Abstract Forests are central to global mitigation strategies, yet efforts to adv
 
 ---
 
-## 6. Augmentation or automation? The expanding role of artificial intelligence in urban planning and governance
+## 9. Augmentation or automation? The expanding role of artificial intelligence in urban planning and governance
 
 **Authors:** Frank Othengrafen, Lars Sievers, Merle Frankl
 **Year / date:** 2026 / 2026-06-16
@@ -128,7 +185,7 @@ AI is increasingly being introduced into urban governance and planning, yet its 
 
 ---
 
-## 7. Environmental Sustainability, Health and Social Wellbeing and Agility in Industry 4.0 to Society 5.0 Transition
+## 10. Environmental Sustainability, Health and Social Wellbeing and Agility in Industry 4.0 to Society 5.0 Transition
 
 **Authors:** Angana Chaudhuri, Mahak Sharma, Devrim Murat Yazan
 **Year / date:** 2026 / 2026-06-09
@@ -148,7 +205,7 @@ ABSTRACT Industry 4.0 is pushing the triple bottom line toward a necessary evolu
 
 ---
 
-## 8. Developing an early rapid sustainability assessment tool for responsible innovation
+## 11. Developing an early rapid sustainability assessment tool for responsible innovation
 
 **Authors:** Adam McCarthy, Claire Holland, Philip Shapira
 **Year / date:** 2026 / 2026-06-06
@@ -168,7 +225,7 @@ Abstract Early-stage technology transfer projects need rapid, low-cost ways to a
 
 ---
 
-## 9. Spatial implications of remote work: insights from seven European case studies
+## 12. Spatial implications of remote work: insights from seven European case studies
 
 **Authors:** Georgia Pozoukidou, Theodora Istoriou, Dimitra Plastara, Margarita Angelidou, Katharina Fellnhofer et al.
 **Year / date:** 2026 / 2026-06-03
@@ -188,7 +245,7 @@ In recent years, the rise of remote work has significantly impacted the dynamics
 
 ---
 
-## 10. Feeling Our Way Forward: Affect, Imaginative Agency, and Design in Future-Making
+## 13. Feeling Our Way Forward: Affect, Imaginative Agency, and Design in Future-Making
 
 **Authors:** Shanti Sumartojo, Lisa Grocott, Stacy Holman Jones, Myf Doughty, Isabella Brandalise
 **Year / date:** 2026 / 2026-06-25
@@ -208,7 +265,7 @@ This paper outlines the understanding of imaginative agency – the confidence, 
 
 ---
 
-## 11. Building Futures: Engaging Students with Dioramas in STEAM Education
+## 14. Building Futures: Engaging Students with Dioramas in STEAM Education
 
 **Authors:** Simon Taylor
 **Year / date:** 2026 / 2026-06-18
@@ -228,7 +285,7 @@ Abstract This study examined the perspectives and experiences of teachers and st
 
 ---
 
-## 12. Mapping Practice-Based Signals of Generative AI in Psychiatric Care: Qualitative Study of Korean Psychiatrists’ Experiences, Interpretations, and Implementation Priorities
+## 15. Mapping Practice-Based Signals of Generative AI in Psychiatric Care: Qualitative Study of Korean Psychiatrists’ Experiences, Interpretations, and Implementation Priorities
 
 **Authors:** Myungsung Kim, Yoosuk An, Min Jeon, Yunji Lee, Orane Farrah Lahcine et al.
 **Year / date:** 2026 / 2026-06-02
@@ -248,7 +305,7 @@ Background: Generative artificial intelligence (GenAI) has increasingly entered 
 
 ---
 
-## 13. Visualizing ESG Signaling Through User‐Generated Content: A Strategic Foresight Framework for Symbolic Legitimacy in Hospitality Branding
+## 16. Visualizing ESG Signaling Through User‐Generated Content: A Strategic Foresight Framework for Symbolic Legitimacy in Hospitality Branding
 
 **Authors:** Pabitra Mitra, Sujoy Bhattacharya, Chinchu Abraham
 **Year / date:** 2026 / 2026-06-03
@@ -268,27 +325,26 @@ ABSTRACT Social media platforms today have become essential for consumer‐brand
 
 ---
 
-## 14. Three theses of the future as a Science, Technology and Society Studies research object: current approaches and challenges
+## 17. Adaptive Scenario Planning for Madrasah Teacher Distribution in Greater Jakarta
 
-**Authors:** Cristián Navarrete, Iván Ojeda-Pereira, Fernando Campos‐Medina, Sebastián Herrera‐León
-**Year / date:** 2026 / 2026-06-02
-**Source:** Humanities and Social Sciences Communications
-**Publisher / institution:** Palgrave Macmillan
-**Type:** article; source type: journal; references: 0; abstract words: 149
+**Authors:** Ajang Pradita, Mohamad Syamsul Ma’arif, Furqon Syarief Hidayatulloh, Briliantina Indrati, Widya Rahmawati Al-Nur
+**Year / date:** 2026 / 2026-06-27
+**Source:** Nazhruna Jurnal Pendidikan Islam
+**Type:** article; source type: journal; references: 0; abstract words: 207
 **Topic:** Futures studies and foresight
-**Quality gate:** academic-publisher journal article; accountable author/organisation; DOI/indexing signal; developed abstract (149 words); method/evidence language; analysis/findings/synthesis language.
-**Topical fit:** site anchor: futures studies; contribution signal: theoretical, empirical, analysis; system/policy level: science, research, technology; topic keywords: futures studies.
-**Why selected:** quality gate: academic-publisher journal article; accountable author/organisation; DOI/indexing signal; developed abstract (149 words); topical fit: site anchor: futures studies; contribution signal: theoretical, empirical, analysis; system/policy level: science, research, technology; preferred publisher/institution: Palgrave Macmillan; topic match: futures studies; recent.
-**Link:** https://doi.org/10.1057/s41599-026-07541-0
+**Quality gate:** DOAJ/indexed journal article; accountable author/organisation; DOI/indexing signal; developed abstract (207 words); method/evidence language; analysis/findings/synthesis language.
+**Topical fit:** title anchor: scenario planning; contribution signal: framework, quality, evidence, empirical, findings; system/policy level: institutional, policy, policies, governance, organizational; topic keywords: foresight, scenario, scenarios.
+**Why selected:** quality gate: DOAJ/indexed journal article; accountable author/organisation; DOI/indexing signal; developed abstract (207 words); topical fit: title anchor: scenario planning; contribution signal: framework, quality, evidence, empirical, findings; system/policy level: institutional, policy, policies, governance, organizational; topic match: foresight, scenario, scenarios; recent.
+**Link:** https://doi.org/10.31538/nzh.v9i2.532
 
 **Abstract snippet:**
-Abstract In recent years, the future has re-emerged as a significant research topic, encompassing studies on perceptions, anticipations, imaginaries, and theoretical explorations of its nature. This article analyzes how the future is theoretically framed in Science, Technology, and Society studies (STS), and how this relates to its broader framing within futures studies. It identifies three core theses from research on futures that highlight…
+Ensuring equitable teacher distribution remains a critical challenge in improving the quality of madrasah education in Indonesia, particularly in the Greater Jakarta (Jabodetabek) region. Existing allocation policies primarily rely on teacher–student ratios and often overlook institutional capacity, regional diversity, and contextual conditions. This study examines the factors influencing the effectiveness of madrasah teacher distribution and…
 
 **Decision:** approve / reject / hold
 
 ---
 
-## 15. Scenario Planning in Educational Leadership: Cultivating Future-Ready Mindsets, Shared Language, and Symbolic Anchors for Innovation in Complex Systems
+## 18. Scenario Planning in Educational Leadership: Cultivating Future-Ready Mindsets, Shared Language, and Symbolic Anchors for Innovation in Complex Systems
 
 **Authors:** Adelee Penner, Sharon Friesen
 **Year / date:** 2026 / 2026-06-18
@@ -308,7 +364,7 @@ This AI-assisted integrative literature review, grounded in complexity theory, e
 
 ---
 
-## 16. The expanding roles of Global South countries in solar radiation modification diplomacy: indicators, cases, and equitable pathways forward
+## 19. The expanding roles of Global South countries in solar radiation modification diplomacy: indicators, cases, and equitable pathways forward
 
 **Authors:** Zachary Dove, María Inés Carabajal, Júlia Silvia Guivant, Hassaan Sipra, Portia Adade Williams et al.
 **Year / date:** 2026 / 2026-06-18
@@ -328,7 +384,7 @@ Abstract Global South countries are increasingly engaging in diplomacy surroundi
 
 ---
 
-## 17. Leadership in the Imagination Age
+## 20. Leadership in the Imagination Age
 
 **Authors:** S M A Moin
 **Year / date:** 2026 / 2026-06-16
@@ -347,7 +403,7 @@ This book reframes leadership for a world transformed by AI, accelerating techno
 
 ---
 
-## 18. Some Results of the Project “Ukrainian Scientific and Technical Foresight” on the Thematic Area “Information and Communication and Digital Technologies, Artificial Intelligence, Robotics, Cybersecurity
+## 21. Some Results of the Project “Ukrainian Scientific and Technical Foresight” on the Thematic Area “Information and Communication and Digital Technologies, Artificial Intelligence, Robotics, Cybersecurity
 
 **Authors:** O. O. Popovych, V.І. KLIMENKOVA
 **Year / date:** 2026 / 2026-06-01
@@ -366,7 +422,7 @@ The article analyzes the results of the forecasting and analytical study “Ukra
 
 ---
 
-## 19. Leveraging Intelligence for Economic Transformation: The Role of National Intelligence Agencies in Fostering Gross Capital Formation
+## 22. Leveraging Intelligence for Economic Transformation: The Role of National Intelligence Agencies in Fostering Gross Capital Formation
 
 **Authors:** Alexander Maune
 **Year / date:** 2026 / 2026-06-01
@@ -386,26 +442,7 @@ This study examines the role of national intelligence agencies in fostering gros
 
 ---
 
-## 20. Software Workforce Dynamics and Organizational Restructuring in Higher Education: A Retrospective Scenario Analysis
-
-**Authors:** Özkan Canay, Halil Arslan
-**Year / date:** 2026 / 2026-06-23
-**Source:** Sakarya University Journal of Computer and Information Sciences
-**Type:** article; source type: journal; references: 35; abstract words: 216
-**Topic:** Futures studies and foresight
-**Quality gate:** DOAJ/indexed journal article; accountable author/organisation; DOI/indexing signal; reference list signal (35 refs); developed abstract (216 words); method/evidence language.
-**Topical fit:** title anchor: scenario analysis; contribution signal: methods, model, data, dataset, findings; system/policy level: organization, organizational, university, universities, higher education; topic keywords: scenario.
-**Why selected:** quality gate: DOAJ/indexed journal article; accountable author/organisation; DOI/indexing signal; reference list signal (35 refs); topical fit: title anchor: scenario analysis; contribution signal: methods, model, data, dataset, findings; system/policy level: organization, organizational, university, universities, higher education; topic match: scenario; recent; substantial references.
-**Link:** https://doi.org/10.35377/saucis...1851026
-
-**Abstract snippet:**
-Large-scale software projects in universities often fall short due to excessive workload, insufficient staffing, and low motivation. Locating project-based software teams within the same organizational structure as administrative units leads to structural misalignments and intensifies these problems. This study examines workforce- and organization-related challenges through a comparative scenario analysis of a restructuring model proposed in…
-
-**Decision:** approve / reject / hold
-
----
-
-## 21. From opportunity to strategy: future scenarios for Nigeria–EU science, technology, and innovation collaboration
+## 23. From opportunity to strategy: future scenarios for Nigeria–EU science, technology, and innovation collaboration
 
 **Authors:** Leonardo Piccinetti, Trevor Uyi Omoruyi, Donatella Santoro, Mohammed Mahgoub Hassan, I. Vroh Bi et al.
 **Year / date:** 2026 / 2026-06-18
@@ -424,7 +461,7 @@ Science, Technology, and Innovation (STI) have become central to international p
 
 ---
 
-## 22. Strategies for large-scale deployment of low-emissions hydrogen for CO2 abatement in petrochemical clusters
+## 24. Strategies for large-scale deployment of low-emissions hydrogen for CO2 abatement in petrochemical clusters
 
 **Authors:** Tharun Roshan Kumar, Johanna Beiron, V.R. Reddy Marthala, Lars Pettersson, Simon Harvey et al.
 **Year / date:** 2026 / 2026-06-25
@@ -444,7 +481,7 @@ Substantial amounts of low-emissions hydrogen are required to enable CO 2 emissi
 
 ---
 
-## 23. AI in education and the future of teachers’ meaningful work
+## 25. AI in education and the future of teachers’ meaningful work
 
 **Authors:** Elin Biström, Jonas Mollwing
 **Year / date:** 2026 / 2026-06-08
