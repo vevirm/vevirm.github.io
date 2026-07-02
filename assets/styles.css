@@ -1000,6 +1000,19 @@ body { background: #faf8f7; }
   font-weight: 800;
   text-shadow: 0 1px 3px rgba(0,0,0,0.9), 0 0 10px rgba(0,0,0,0.6);
 }
+.radar-wisdom-comment-title {
+  color: #fff !important;
+  font-weight: 900;
+  margin-top: 0.6rem;
+  margin-bottom: 0.35rem;
+  letter-spacing: 0.01em;
+}
+
+.radar-wisdom-comment {
+  max-width: 68ch;
+  line-height: 1.68;
+}
+
 .radar-wisdom-questions {
   font-size: 1.05rem;
   line-height: 1.65;
