@@ -6,6 +6,7 @@ Static GitHub Pages site.
 
 - `index.html` — homepage, redesigned as an intellectual doorway into the work.
 - `research.html` — ideas, methods, concepts, and keyword-rich research map.
+- `writing.html` — essays and shorter public writing on futures, methods, and philosophy.
 - `publications.html` — formal publication list, rendered from `assets/site-data.js`.
 - `cv.html` — academic CV.
 - `engagement.html` — public engagement and professional outputs.

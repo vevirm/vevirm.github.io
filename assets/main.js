@@ -38,6 +38,10 @@ function escapeHTML(str = '') {
   return String(str).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 }
 
+function formatMultilineHTML(str = '') {
+  return escapeHTML(str).replace(/\r?\n/g, '<br>');
+}
+
 function fillProfile() {
   const p = data.profile || {};
   $$('[data-profile]').forEach(el => {
@@ -49,7 +53,7 @@ function fillProfile() {
     el.innerHTML = (p.researchAreas || []).map(area => `<span class="chip">${escapeHTML(area)}</span>`).join('');
   });
   $$('[data-link-list="footer"]').forEach(el => {
-    const internal = [{ label: 'Research Radar', url: 'research-radar.html' }];
+    const internal = [{ label: 'Research Radar', url: 'research-radar.html' }, { label: 'Writing', url: 'writing.html' }];
     const allowed = (p.links || []).filter(l => ['University profile','Google Scholar','ORCID','LinkedIn','Futures of Science blog'].includes(l.label));
     const internalLinks = internal.map(l => `<a href="${l.url}">${escapeHTML(l.label)}</a>`).join('');
     const externalLinks = allowed.map(l => `<a href="${l.url}" target="_blank" rel="noreferrer">${escapeHTML(l.label)}</a>`).join('');
@@ -284,24 +288,25 @@ async function renderRadarWisdom() {
     const res = await fetch('assets/radar-wisdom.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('Could not load wisdom data');
     const payload = await res.json();
-    const items = Array.isArray(payload.items) ? payload.items : [];
-    if (!items.length) return;
-    list.innerHTML = items.map(item => {
-      const tags = (item.tags || []).map(tag => `<span class="chip">${escapeHTML(tag)}</span>`).join('');
-      const reference = item.reference || [item.creator, item.title, item.year].filter(Boolean).join(', ');
-      const questions = Array.isArray(item.questions) ? item.questions : [];
-      const emphasis = item.emphasis || '';
-      const questionLine = questions.length
-        ? `<p class="radar-wisdom-questions">${questions.map(q => q === emphasis ? `<strong>${escapeHTML(q)}</strong>` : escapeHTML(q)).join(' ')}</p>`
-        : '';
-      return `<article class="radar-wisdom-card">
-        <p class="radar-wisdom-quote">“${escapeHTML(item.quote || '')}”</p>
-        <p class="radar-wisdom-ref">${escapeHTML(reference)}</p>
-        <p>${escapeHTML(item.comment || '')}</p>
-        ${questionLine}
-        ${tags ? `<div class="radar-tags">${tags}</div>` : ''}
-      </article>`;
-    }).join('');
+    const item = payload.current || (Array.isArray(payload.items) ? payload.items[0] : null);
+    if (!item) return;
+
+    const tags = (item.tags || []).map(tag => `<span class="chip">${escapeHTML(tag)}</span>`).join('');
+    const reference = item.reference || [item.creator, item.title, item.year].filter(Boolean).join(', ');
+    const questions = Array.isArray(item.questions) ? item.questions : [];
+    const emphasis = item.emphasis || '';
+    const comment = item.comment ? `<p>${escapeHTML(item.comment)}</p>` : '';
+    const questionLine = questions.length
+      ? `<p class="radar-wisdom-questions">${questions.map(q => q === emphasis ? `<strong>${escapeHTML(q)}</strong>` : escapeHTML(q)).join(' ')}</p>`
+      : '';
+
+    list.innerHTML = `<article class="radar-wisdom-card">
+      <p class="radar-wisdom-quote">“${formatMultilineHTML(item.quote || '')}”</p>
+      <p class="radar-wisdom-ref">${escapeHTML(reference)}</p>
+      ${comment}
+      ${questionLine}
+      ${tags ? `<div class="radar-tags">${tags}</div>` : ''}
+    </article>`;
   } catch (err) {
     // Keep the static fallback card in the HTML if the data file fails to load.
   }

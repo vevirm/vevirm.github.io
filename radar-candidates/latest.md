@@ -1,4 +1,4 @@
-# Research Radar candidates — 2026 week 27
+# Research Radar candidates — 2026 week 26
 
 This file is generated automatically. It is a candidate list only; nothing here appears on the public website unless later added to `assets/research-radar-approved.json`.
 

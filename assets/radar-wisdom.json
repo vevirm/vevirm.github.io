@@ -1,42 +1,15 @@
 {
-  "items": [
-    {
-      "sourceType": "song",
-      "creator": "Bob Dylan",
-      "title": "Subterranean Homesick Blues",
-      "year": "1965",
-      "quote": "Don’t need a weatherman to know … way the wind blows",
-      "reference": "Bob Dylan, “Subterranean Homesick Blues,” on Bringing It All Back Home, Columbia Records, 1965. Written by Bob Dylan.",
-      "comment": "If so, and if foresight people think they are weathermen, oh my gosh. Can one argue with that really? The useful question is what foresight adds when the wind is already felt: Do we need to accept it and reveal those who still listen to weathermen; ask them to look in the mirror?",
-      "questions": [],
-      "emphasis": "",
-      "tags": [
-        "foresight humility",
-        "obvious change",
-        "anti-oracle"
-      ],
-      "sourceUrl": "https://www.bobdylan.com/songs/subterranean-homesick-blues/"
-    },
-    {
-      "sourceType": "song",
-      "creator": "Bruce Springsteen",
-      "title": "The River",
-      "year": "1980",
-      "quote": "Is a dream a lie if it don't come true",
-      "reference": "Bruce Springsteen, “The River,” on The River, Columbia Records, 1980. Written by Bruce Springsteen.",
-      "comment": "A sharp line for futures work because it separates hope from fulfilment without making hope simple or innocent. It asks what happens to people, institutions, and promises when imagined futures do not arrive: were they false, or did they become something heavier?",
-      "questions": [
-        "When does an unrealised future become a betrayal?",
-        "What do futures practices owe to disappointed dreams?"
-      ],
-      "emphasis": "What happens to a future when it fails to arrive?",
-      "tags": [
-        "unrealised futures",
-        "hope and loss",
-        "moral imagination"
-      ],
-      "sourceUrl": "https://brucespringsteen.net/albums/the-river/"
-    }
-  ],
-  "note": "Song and film excerpts are kept short; the work of the box is commentary and reference, not reproduction."
+  "current": {
+    "sourceType": "song",
+    "creator": "Bob Dylan",
+    "title": "Stuck Inside of Mobile with the Memphis Blues Again",
+    "year": "1966",
+    "quote": "It all seems so well timed\n\nAn’ here I sit so patiently\n\nWaiting to find out what price\n\nYou have to pay to get out of\n\nGoing through all these things twice",
+    "reference": "Bob Dylan, “Stuck Inside of Mobile with the Memphis Blues Again,” 1966. Written by Bob Dylan.",
+    "comment": "",
+    "questions": [],
+    "emphasis": "",
+    "tags": []
+  },
+  "note": "This file is intentionally a single replaceable current entry. To change the wisdom box, replace current rather than adding to an array."
 }

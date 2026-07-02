@@ -1064,3 +1064,87 @@ body { background: #faf8f7; }
 .home-wisdom-band {
   margin-top: 0;
 }
+
+
+/* Writing page */
+.writing-hero {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(178,15,22,0.08), transparent 28%),
+    linear-gradient(135deg, #fff, rgba(246,241,238,0.78));
+}
+.writing-callout-section {
+  background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(248,231,232,0.36));
+  border-block: 1px solid rgba(231,223,220,0.72);
+}
+.writing-callout-box {
+  background: #fff;
+  border: 1px solid rgba(214,203,199,0.88);
+  border-left: 7px solid var(--ink);
+  border-radius: 26px;
+  box-shadow: var(--shadow-soft);
+  padding: clamp(22px, 3vw, 30px);
+}
+.writing-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 0.66fr);
+  gap: 28px;
+  align-items: start;
+}
+.writing-sidebar {
+  position: sticky;
+  top: 92px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow-soft);
+  padding: 24px;
+}
+.writing-sidebar h2 {
+  font-size: clamp(1.28rem, 2vw, 1.65rem);
+  margin-bottom: 10px;
+}
+.longform-article {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+.article-header {
+  padding: clamp(24px, 4vw, 42px) clamp(22px, 4vw, 48px) 18px;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, #fff, rgba(246,241,238,0.64));
+}
+.article-kicker {
+  margin: 0 0 10px;
+  color: var(--red);
+  font-size: 0.76rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.article-header h2 {
+  max-width: 800px;
+  font-size: clamp(1.8rem, 3.2vw, 2.75rem);
+}
+.article-body {
+  padding: clamp(24px, 4vw, 48px);
+  max-width: 860px;
+}
+.article-body p {
+  color: var(--ink-2);
+  font-size: clamp(1.02rem, 1.35vw, 1.15rem);
+  line-height: 1.82;
+  margin-bottom: 1.45rem;
+}
+.article-body p:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 900px) {
+  .writing-layout {
+    grid-template-columns: 1fr;
+  }
+  .writing-sidebar {
+    position: static;
+  }
+}
