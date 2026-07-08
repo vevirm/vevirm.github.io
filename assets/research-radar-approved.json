@@ -453,6 +453,20 @@
         "philosophy of science",
         "anticipation"
       ]
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "Is the futures studies community thriving together? – A bibliometric approach",
+      "authors": "Julia D. Koch & Marcus John",
+      "year": "2026",
+      "source": "European Journal of Futures Research, 14, Article 17. DOI: 10.1186/s40309-026-00281-z",
+      "why": "A useful empirical self-examination of futures studies as a research community. The bibliometric analysis tracks publication growth, co-publication, connectedness, and international cooperation across the field.",
+      "connectsWith": [
+        "futures studies",
+        "bibliometrics",
+        "research community",
+        "international collaboration"
+      ]
     }
   ]
 }
