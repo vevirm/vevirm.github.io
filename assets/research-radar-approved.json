@@ -1,5 +1,5 @@
 {
-  "updated": "Curated approved list; added Leadership in the Imagination Age and 2026-W25 items",
+  "updated": "Curated approved list; added AI-augmented strategic foresight to Futures of work",
   "mode": "curated-approved",
   "items": [
     {
@@ -438,6 +438,20 @@
         "futures of work",
         "spatial change",
         "urban systems"
+      ]
+    },
+    {
+      "topic": "Futures of work",
+      "title": "Artificial intelligence in strategic foresight: Evidence from a longitudinal case at Siemens Professional Education",
+      "authors": "René Rohrbeck, Stephan Szuppa & Julia Schmidt",
+      "year": "2026",
+      "source": "Futures, 183, 103883. DOI: 10.1016/j.futures.2026.103883",
+      "why": "Relevant to the futures-of-work strand because it examines how AI-augmented foresight is used to anticipate future skill requirements and support education and reskilling decisions, while showing key trade-offs in human–AI collaboration.",
+      "connectsWith": [
+        "artificial intelligence",
+        "strategic foresight",
+        "skills anticipation",
+        "reskilling"
       ]
     },
     {
