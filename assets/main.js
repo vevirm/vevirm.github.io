@@ -288,29 +288,39 @@ async function renderRadarWisdom() {
     const res = await fetch('assets/radar-wisdom.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('Could not load wisdom data');
     const payload = await res.json();
-    const item = payload.current || (Array.isArray(payload.items) ? payload.items[0] : null);
-    if (!item) return;
+    const items = Array.isArray(payload.items) && payload.items.length
+      ? payload.items
+      : (payload.current ? [payload.current] : []);
+    if (!items.length) return;
 
-    const tags = (item.tags || []).map(tag => `<span class="chip">${escapeHTML(tag)}</span>`).join('');
-    const reference = item.reference || [item.creator, item.title, item.year].filter(Boolean).join(', ');
-    const questions = Array.isArray(item.questions) ? item.questions : [];
-    const emphasis = item.emphasis || '';
-    const commentTitle = item.commentTitle ? `<p class="radar-wisdom-comment-title">${escapeHTML(item.commentTitle)}</p>` : '';
-    const comment = item.comment ? `<p class="radar-wisdom-comment">${escapeHTML(item.comment)}</p>` : '';
-    const questionLine = questions.length
-      ? `<p class="radar-wisdom-questions">${questions.map(q => q === emphasis ? `<strong>${escapeHTML(q)}</strong>` : escapeHTML(q)).join(' ')}</p>`
-      : '';
+    list.innerHTML = items.map(item => {
+      const tags = (item.tags || []).map(tag => `<span class="chip">${escapeHTML(tag)}</span>`).join('');
+      const referenceParts = Array.isArray(item.referenceParts) ? item.referenceParts : [];
+      const reference = item.reference || [item.creator, item.title, item.year].filter(Boolean).join(', ');
+      const referenceHTML = referenceParts.length
+        ? referenceParts.map(part => part.italic
+          ? `<em>${escapeHTML(part.text || '')}</em>`
+          : escapeHTML(part.text || '')).join('')
+        : escapeHTML(reference);
+      const questions = Array.isArray(item.questions) ? item.questions : [];
+      const emphasis = item.emphasis || '';
+      const commentTitle = item.commentTitle ? `<p class="radar-wisdom-comment-title">${escapeHTML(item.commentTitle)}</p>` : '';
+      const comment = item.comment ? `<p class="radar-wisdom-comment">${escapeHTML(item.comment)}</p>` : '';
+      const questionLine = questions.length
+        ? `<p class="radar-wisdom-questions">${questions.map(q => q === emphasis ? `<strong>${escapeHTML(q)}</strong>` : escapeHTML(q)).join(' ')}</p>`
+        : '';
 
-    list.innerHTML = `<article class="radar-wisdom-card">
-      <p class="radar-wisdom-quote">“${formatMultilineHTML(item.quote || '')}”</p>
-      <p class="radar-wisdom-ref">${escapeHTML(reference)}</p>
-      ${commentTitle}
-      ${comment}
-      ${questionLine}
-      ${tags ? `<div class="radar-tags">${tags}</div>` : ''}
-    </article>`;
+      return `<article class="radar-wisdom-card">
+        <p class="radar-wisdom-quote">“${formatMultilineHTML(item.quote || '')}”</p>
+        <p class="radar-wisdom-ref">${referenceHTML}</p>
+        ${commentTitle}
+        ${comment}
+        ${questionLine}
+        ${tags ? `<div class="radar-tags">${tags}</div>` : ''}
+      </article>`;
+    }).join('');
   } catch (err) {
-    // Keep the static fallback card in the HTML if the data file fails to load.
+    // Keep the static fallback cards in the HTML if the data file fails to load.
   }
 }
 
