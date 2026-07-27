@@ -1,5 +1,5 @@
 {
-  "updated": "Curated approved list; added AI-augmented strategic foresight to Futures of work",
+  "updated": "Curated approved list; added three radar findings on governance logics, spatial mobility, and remote work",
   "mode": "curated-approved",
   "items": [
     {
@@ -481,6 +481,54 @@
         "research community",
         "international collaboration"
       ]
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "Governance logics and foresight functions: European strategic foresight in contrastive perspective",
+      "authors": "Natalia Veselitskaya & Dina Malekova",
+      "year": "2026",
+      "source": "European Journal of Futures Research. DOI: 10.1186/s40309-026-00278-8",
+      "why": "Shows that foresight methods are not merely transferable tools but are embedded in governance settings and perform different institutional functions. The contrastive European perspective is useful for analysing how strategic foresight changes across policy and administrative contexts.",
+      "connectsWith": [
+        "strategic foresight",
+        "governance logics",
+        "foresight methods",
+        "institutional functions",
+        "European policy"
+      ],
+      "url": "https://doi.org/10.1186/s40309-026-00278-8"
+    },
+    {
+      "topic": "Futures of work",
+      "title": "How and when remote workdays impact employee daily social need fulfilment",
+      "authors": "Vera M. Schweitzer, Anne Burmeister, Laura Venz, Fabiola H. Gerpott, Ulrike Fasbender et al.",
+      "year": "2026",
+      "source": "Journal of Occupational and Organizational Psychology. DOI: 10.1111/joop.70150",
+      "why": "Provides a focused empirical contribution to the futures of hybrid work by examining how and under what conditions remote workdays affect employees’ daily social need fulfilment. It is useful for thinking about work arrangements beyond productivity alone.",
+      "connectsWith": [
+        "remote work",
+        "hybrid work",
+        "social needs",
+        "work design",
+        "employee experience"
+      ],
+      "url": "https://doi.org/10.1111/joop.70150"
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "Foresight on spatial mobility during green and digital transitions: insights from five European regions",
+      "authors": "Anastasia Panori, Natalia Głowacka & Asya Salnikova",
+      "year": "2026",
+      "source": "European Planning Studies. DOI: 10.1080/09654313.2026.2698851",
+      "why": "Connects regional foresight and scenario work with the changing spatial mobility implications of green and digital transitions. Its comparative evidence from five European regions makes it relevant to policy-oriented, stakeholder-based foresight at the territorial level.",
+      "connectsWith": [
+        "regional foresight",
+        "spatial mobility",
+        "green transition",
+        "digital transition",
+        "scenarios"
+      ],
+      "url": "https://doi.org/10.1080/09654313.2026.2698851"
     }
   ]
 }
