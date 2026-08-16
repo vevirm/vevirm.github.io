@@ -529,6 +529,54 @@
         "scenarios"
       ],
       "url": "https://doi.org/10.1080/09654313.2026.2698851"
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "Beyond the Binaries: Techno-Optimism and Pessimism as Situated Epistemic-Affective Orientations",
+      "authors": "Johanna Ahola-Launonen",
+      "year": "2026",
+      "source": "Minerva. DOI: 10.1007/s11024-026-09651-0",
+      "why": "A useful contribution to debates about technological futures because it treats techno-optimism and pessimism as situated epistemic-affective orientations rather than simple opposing positions. It is especially relevant for analysing how anticipation, uncertainty, knowledge, and critique acquire normative force.",
+      "connectsWith": [
+        "anticipation",
+        "technological futures",
+        "techno-optimism",
+        "techno-pessimism",
+        "epistemic orientations"
+      ],
+      "url": "https://doi.org/10.1007/s11024-026-09651-0"
+    },
+    {
+      "topic": "University futures and higher education",
+      "title": "Anticipatory governance and leadership for AI implementation in higher education: A scoping review",
+      "authors": "Sandra Baroudi",
+      "year": "2026",
+      "source": "International Journal of Educational Technology in Higher Education. DOI: 10.1186/s41239-026-00616-7",
+      "why": "Directly relevant to university futures because it reviews how anticipatory governance and leadership are conceptualised and operationalised for AI-related transformation in higher education. The system- and organisational-level focus makes it useful for connecting foresight with institutional governance and implementation.",
+      "connectsWith": [
+        "anticipatory governance",
+        "higher education",
+        "artificial intelligence",
+        "leadership",
+        "institutional change"
+      ],
+      "url": "https://doi.org/10.1186/s41239-026-00616-7"
+    },
+    {
+      "topic": "Conceivability, counterfactuals and history",
+      "title": "Wargames Are Experiments: Wargames as Experimental Methods in International Relations",
+      "authors": "Philip Jan Schäfer & Joseph Verbovszky",
+      "year": "2026",
+      "source": "Zeitschrift für Außen- und Sicherheitspolitik. DOI: 10.1007/s12399-026-01107-3",
+      "why": "Relevant to the counterfactual strand because it examines wargames as experimental methods for testing causal hypotheses, exploring counterfactual scenarios, and generating evidence about decision-making. Its attention to design conditions and epistemological limits makes it useful for thinking about what scenario-based experiments can establish.",
+      "connectsWith": [
+        "counterfactuals",
+        "wargaming",
+        "experimental methods",
+        "scenarios",
+        "causal inference"
+      ],
+      "url": "https://doi.org/10.1007/s12399-026-01107-3"
     }
   ]
 }
