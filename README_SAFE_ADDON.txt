@@ -1,18 +1,52 @@
-RADAR INSIGHTS — V6
-===================
+RADAR INSIGHTS — SIMPLE TOPIC BULLETS V7
+========================================
 
-There are only two user-facing views:
+The main radar and its scanner remain the source of truth.
 
-MAIN RADAR
-    /
+INSIGHTS PAGE
+-------------
+Path: /briefing/
 
-INSIGHTS
-    /insights/
+The page reads the existing ../radar.json directly in the browser.
+There is no briefing.json and no separate briefing workflow.
 
-Insights reads radar.json directly, classifies every admitted radar item into
-one primary topic, and shows one concise bullet for that item.
+For every admitted radar item the page:
+1. deduplicates items that appear in more than one strand,
+2. assigns the item to one primary topic,
+3. extracts one concise substantive point,
+4. shows that point as one bullet under the topic heading.
 
-Visible content is only topic headings and bullets.
+VISIBLE OUTPUT
+--------------
+Only:
+- topic heading
+- bullet
+- bullet
 
-The old /briefing/ route is a redirect to /insights/ so old bookmarks still work.
-There is no separate briefing database or briefing-generation workflow.
+There are no source labels, dates, Strand badges, evidence panels, topic counts,
+"also touches" tags, relevance notes, or methodology boxes on the Insights page.
+
+TOPICS
+------
+Raw materials
+Research
+AI
+Semiconductors & quantum
+Energy
+Security & defence
+Trade & industry
+Digital & cyber
+Space
+Health & biotech
+Talent & skills
+International partnerships
+Foresight
+Other strategic R&I
+
+SAFETY
+------
+radar.json is intentionally NOT included in this package.
+Do not delete the existing live radar.json when uploading the repository.
+
+The original scanner, scanner configuration, and radar-scan workflow are kept
+unchanged. Insights only reads their output.

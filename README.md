@@ -38,18 +38,6 @@ Factual current-window news from the whitelist only. Every item must anchor to a
 
 The full human-readable standard is in `radar_criteria.md`.
 
-
-## Radar insights
-
-The repository has two user-facing views:
-
-- `/` — the main radar, with the full admitted material.
-- `/insights/` — the same admitted `radar.json` items, automatically classified into one primary topic and reduced to one concise bullet point each.
-
-The Insights page is deliberately plain: topic headings and bullets only. It shows no sources, dates, links, Strand labels, anchors, tags, counts, evidence cards or methodology panels. It reads `radar.json` directly, so there is no second database and no separate briefing generator.
-
-The old `/briefing/` address remains only as a compatibility redirect to `/insights/`.
-
 ## Password gate
 
 The page uses the simple casual-visitor password gate requested for this radar. Password: `TutuRadar2026?`

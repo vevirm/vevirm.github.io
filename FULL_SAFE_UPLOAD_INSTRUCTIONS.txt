@@ -1,52 +1,47 @@
-R&I × GEOPOLITICS RADAR — SIMPLE INSIGHTS V6
-=============================================
+R&I × GEOPOLITICS RADAR — FULL SAFE REPOSITORY V7
+==================================================
 
-THIS PACKAGE UPDATES THE EXISTING LIVE REPOSITORY.
+THIS ZIP IS FOR UPLOADING OVER THE EXISTING GITHUB REPOSITORY.
 
-IMPORTANT: radar.json is intentionally NOT included.
-Do NOT delete the existing live radar.json before uploading this package.
-That preserves the accumulated radar corpus. If this is used for a completely
-new repository, the first scanner run will create radar.json.
+IMPORTANT
+---------
+The live radar.json is intentionally NOT included.
+Do not delete radar.json from the GitHub repository before uploading this ZIP.
+That preserves the accumulated radar corpus.
 
-THE REPOSITORY NOW HAS TWO VIEWS
---------------------------------
-1. /           = the existing full radar
-2. /insights/  = the radar classified by topic, one concise bullet per item
+MAIN RADAR
+----------
+The main radar, scanner logic, radar configuration, and normal radar-scan
+workflow are preserved from the original safe package.
 
-The old /briefing/ address only redirects to /insights/.
-
-INSIGHTS CONTAINS ONLY
-----------------------
-Topic heading
-- one-point bullet
-- one-point bullet
-
-No sources, dates, links, Strand labels, anchors, relevance metadata, counts,
-tags, cards, evidence panels or methodology text are shown.
-
-HOW IT WORKS
-------------
-insights/index.html reads the same live radar.json used by the main radar.
-Every admitted A/B/C item is assigned to one primary topical bucket. The page
-then extracts one short understandable point from that radar item. There is no
-briefing.json and no briefing-generation workflow.
-
-SCANNER SAFETY
+RADAR INSIGHTS
 --------------
-scripts/scan_radar.py, radar_config.json and .github/workflows/radar-scan.yml are
-unchanged. The working scanner continues to update radar.json normally.
+The existing /briefing/ address is now the simple Insights page.
+It reads ../radar.json directly. Nothing generates or overwrites it.
+
+The page does exactly this:
+- classify each radar item into one primary topic,
+- deduplicate the same item across strands,
+- extract one clear point from the radar text,
+- show one bullet for that point under the topic heading.
+
+It does NOT show sources, dates, Strand labels, evidence, counts, cards,
+relevance notes, tags, or long abstracts.
+
+There is intentionally NO:
+- .github/workflows/radar-briefing.yml
+- scripts/build_briefing.py
+- briefing/briefing.json
 
 UPLOAD
 ------
-1. Extract this ZIP.
-2. Upload/replace everything inside it at the root of vevirm/radar_articles_reports.
-3. Make sure the hidden .github/workflows/radar-scan.yml file is uploaded.
-4. Do NOT delete the existing radar.json.
-5. Commit to main.
+Upload the CONTENTS of this ZIP into the repository root, preserving folders
+such as .github/, briefing/, scripts/, tests/, and WORKFLOW_BACKUP/.
 
-AFTER GITHUB PAGES DEPLOYS
---------------------------
-Open:
-https://vevirm.github.io/radar_articles_reports/insights/?v=6
+Do not delete the existing radar.json.
 
-If an old /briefing/ bookmark is opened, it redirects to the new /insights/ page.
+After GitHub Pages deploys, open:
+  /radar_articles_reports/briefing/?v=7
+
+The page contains the internal build marker "simple-topic-bullets-v7" so this
+version can be distinguished from older cached briefing pages.

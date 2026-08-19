@@ -1,9 +1,5 @@
-Simple Radar Insights v6
-2026-08-19
-
-User-facing pages:
-- / : main R&I geopolitics radar
-- /insights/ : the same admitted radar items classified by topic, one clear bullet per item
-- /briefing/ : compatibility redirect to /insights/
-
-The scanner/admission logic and radar scan workflow are unchanged.
+Radar insights rethink v7
+- Main radar/scanner preserved from the original safe package.
+- /briefing/ is now the simple insights page itself.
+- Insights read radar.json directly, assign each radar item to one topic, and show one concise point as one bullet.
+- No briefing generator or briefing workflow can overwrite the page.
