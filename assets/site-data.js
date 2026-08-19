@@ -85,6 +85,21 @@ window.siteData = {
       "category": "Peer-reviewed scientific articles",
       "type": "Journal article",
       "year": "2026",
+      "title": "Four cases of foresight and futures thinking in public universities under the discourse of university disruption",
+      "authors": "Witoon, S.; Virmajoki, V.",
+      "venue": "Higher Education Policy",
+      "status": "published",
+      "tags": [
+        "foresight",
+        "university futures",
+        "higher education"
+      ],
+      "links": []
+    },
+    {
+      "category": "Peer-reviewed scientific articles",
+      "type": "Journal article",
+      "year": "2026",
       "title": "University futures: Insights from a dialectic Delphi study",
       "authors": "Virmajoki, V.; Ahlqvist, T.; Suomalainen, K.-M.; Ahokas, I.",
       "venue": "Futures 180, 103816",
