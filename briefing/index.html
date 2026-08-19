@@ -6,77 +6,9 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<meta name="robots" content="noindex,nofollow,noarchive">
+<meta http-equiv="refresh" content="0; url=../insights/?v=6">
 <title>Radar insights</title>
-<style>
-:root{--bg:#f7f6f2;--text:#171716;--muted:#68645d;--line:#dedbd3;--accent:#741b25;--max:980px}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
-.wrap{width:min(calc(100% - 36px),var(--max));margin:0 auto}
-header{padding:28px 0 20px;border-bottom:1px solid var(--line)}
-h1{margin:0;font-size:clamp(2rem,5vw,3.1rem);line-height:1.05;letter-spacing:-.04em}
-.sub{margin:7px 0 0;color:var(--muted)}
-.back{display:inline-block;margin-top:12px;color:var(--accent);text-decoration:none;font-size:.9rem;font-weight:650}
-main{padding:8px 0 48px}
-section{padding:22px 0 18px;border-bottom:1px solid var(--line)}
-section:last-child{border-bottom:0}
-h2{margin:0 0 9px;font-size:1.35rem;letter-spacing:-.02em}
-ul{margin:0;padding-left:1.3em}
-li{margin:.48em 0;padding-left:.08em}
-li strong{font-weight:720}
-.empty{color:var(--muted);padding:28px 0}
-@media(max-width:640px){body{font-size:16px}.wrap{width:min(calc(100% - 28px),var(--max))}section{padding:19px 0 15px}}
-</style>
+<script>location.replace('../insights/?v=6');</script>
 </head>
-<body>
-<header>
-  <div class="wrap">
-    <h1>Radar insights</h1>
-    <p class="sub">Signals from the main radar, grouped by topic.</p>
-    <a class="back" href="../">← Main radar</a>
-  </div>
-</header>
-<main class="wrap" id="topics"><p class="empty">Loading signals…</p></main>
-<script>
-const TOPICS=[
-  {name:"Raw materials",terms:[["critical raw material",12],["critical raw materials",12],["rare earth",11],["rare earths",11],["raw material",9],["mineral",5],["minerals",5],["lithium",9],["cobalt",9],["nickel",8],["graphite",9],["copper",6],["gallium",10],["germanium",10],["tungsten",9],["mining",7],["refining",7]]},
-  {name:"Research",terms:[["horizon europe",11],["framework programme",9],["framework program",9],["european research council",10],["erc",8],["european research area",9],["research funding",8],["research infrastructure",8],["research security",9],["knowledge security",9],["science diplomacy",9],["scientific cooperation",8],["research cooperation",8],["research collaboration",8],["university",5],["universities",5],["researcher",5],["researchers",5]]},
-  {name:"AI",terms:[["artificial intelligence",12],["ai",10],["machine learning",9],["foundation model",10],["foundation models",10],["large language model",10],["llm",9],["gpu",8],["gpus",8],["compute capacity",9],["computing capacity",9],["ai factory",12],["ai factories",12],["supercomputing",7]]},
-  {name:"Semiconductors & quantum",terms:[["semiconductor",12],["semiconductors",12],["microelectronics",10],["chip",9],["chips",9],["quantum",12],["photonics",10]]},
-  {name:"Energy",terms:[["energy security",10],["nuclear",9],["small modular reactor",10],["smr",9],["hydrogen",8],["renewable",6],["renewables",6],["electricity grid",9],["power grid",9],["battery",6],["cleantech",8],["clean tech",8],["fusion",9],["energy",4]]},
-  {name:"Security & defence",terms:[["defence",11],["defense",11],["dual-use",10],["dual use",10],["military",10],["nato",9],["security screening",8],["export control",8],["export controls",8],["foreign interference",9],["knowledge leakage",9],["economic coercion",7]]},
-  {name:"Trade & industry",terms:[["economic security",9],["industrial policy",9],["industrial competitiveness",9],["competitiveness",6],["manufacturing",6],["supply chain",6],["supply chains",6],["trade",5],["tariff",8],["tariffs",8],["investment screening",9],["foreign direct investment",8],["sanction",7],["sanctions",7],["strategic autonomy",8],["strategic dependency",8],["strategic dependencies",8],["de-risking",8],["derisking",8]]},
-  {name:"Digital & cyber",terms:[["digital infrastructure",10],["cloud infrastructure",9],["cloud",5],["telecom",8],["telecommunications",8],["5g",8],["6g",9],["submarine cable",9],["subsea cable",9],["data governance",8],["data space",8],["digital sovereignty",9],["cybersecurity",9],["cyber security",9],["cyber",6]]},
-  {name:"Space",terms:[["satellite",11],["satellites",11],["launch vehicle",10],["launcher",9],["copernicus",10],["galileo",10],["earth observation",9],["orbital",9],["space",7]]},
-  {name:"Health & biotech",terms:[["biotech",10],["biotechnology",10],["life science",8],["life sciences",8],["health security",9],["pharma",8],["pharmaceutical",8],["pharmaceuticals",8],["vaccine",9],["vaccines",9],["biomedical",9],["genomics",9],["bioeconomy",8],["health",4]]},
-  {name:"Talent & skills",terms:[["researcher mobility",10],["scientist mobility",10],["brain drain",10],["brain gain",10],["talent",9],["skills",8],["visa",7],["visas",7],["doctoral",7],["phd",7],["workforce",6],["training",5]]},
-  {name:"International partnerships",terms:[["global gateway",10],["indo-pacific",9],["international cooperation",8],["international partnership",9],["international partnerships",9],["association agreement",9],["associated country",8],["china",4],["chinese",4],["united states",4],["japan",4],["south korea",4],["india",4],["taiwan",4],["ukraine",4],["russia",4],["africa",4],["latin america",4]]},
-  {name:"Foresight",terms:[["foresight",12],["horizon scanning",12],["scenario planning",11],["weak signal",11],["weak signals",11],["delphi",10],["backcasting",10],["anticipatory governance",10],["futures literacy",10],["scenario",7],["scenarios",7]]}
-];
-const OTHER="Other";
-function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c])}
-function clean(v){return String(v??"").replace(/\s+/g," ").trim()}
-function norm(v){return " "+clean(v).toLowerCase().replace(/[–—]/g,"-").replace(/[^a-z0-9+.#/-]+/g," ").replace(/\s+/g," ").trim()+" "}
-function contains(text,term){return text.includes(norm(term))}
-function itemTitle(x){return clean(x.title||x.headline||"Untitled signal")}
-function itemText(x){return [x.title,x.headline,x.summary,x.signal_note,x.relevance_note,x.anchor].filter(Boolean).join(" ")}
-function scoreTopic(x,topic){const text=norm(itemText(x));return topic.terms.reduce((sum,[term,w])=>sum+(contains(text,term)?w:0),0)}
-function topicFor(x){let best=null,bestScore=0;for(const topic of TOPICS){const score=scoreTopic(x,topic);if(score>bestScore){best=topic;bestScore=score}}return best?best.name:OTHER}
-function shortDetail(x){let s=clean(x.signal_note||x.summary||"");if(!s)return "";const first=s.match(/^(.{20,260}?[.!?])(?:\s|$)/);if(first)s=first[1];if(s.length>230)s=s.slice(0,230).replace(/\s+\S*$/,"").replace(/[,:;\s]+$/,"")+"…";return s}
-function sortValue(x){return clean(x.date||x.published||x.updated||"")}
-function build(data){
-  const rows=[...(Array.isArray(data.strand_a)?data.strand_a:[]),...(Array.isArray(data.strand_b)?data.strand_b:[]),...(Array.isArray(data.strand_c)?data.strand_c:[])];
-  const seen=new Set(),groups=new Map([...TOPICS.map(t=>t.name),OTHER].map(n=>[n,[]]));
-  for(const x of rows){const title=itemTitle(x),key=title.toLowerCase();if(seen.has(key))continue;seen.add(key);groups.get(topicFor(x)).push({title,detail:shortDetail(x),sort:sortValue(x)})}
-  for(const items of groups.values())items.sort((a,b)=>b.sort.localeCompare(a.sort)||a.title.localeCompare(b.title));
-  return [...TOPICS.map(t=>t.name),OTHER].map(name=>({name,items:groups.get(name)})).filter(g=>g.items.length);
-}
-function render(groups){
-  const root=document.getElementById("topics");
-  if(!groups.length){root.innerHTML='<p class="empty">No radar signals are available yet.</p>';return}
-  root.innerHTML=groups.map(g=>`<section><h2>${esc(g.name)}</h2><ul>${g.items.map(x=>`<li>${x.detail?`<strong>${esc(x.title)}</strong> — ${esc(x.detail)}`:esc(x.title)}</li>`).join("")}</ul></section>`).join("");
-}
-(async()=>{try{const r=await fetch("../radar.json?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error("radar.json unavailable");render(build(await r.json()))}catch(e){document.getElementById("topics").innerHTML='<p class="empty">Radar data is not available yet.</p>'}})();
-</script>
-</body>
+<body><p><a href="../insights/?v=6">Open Radar insights</a></p></body>
 </html>

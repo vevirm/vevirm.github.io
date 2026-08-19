@@ -41,9 +41,14 @@ The full human-readable standard is in `radar_criteria.md`.
 
 ## Radar insights
 
-The visible **Radar insights** page is intentionally minimal. It reads the existing `radar.json` directly and sorts the same admitted radar material into headings such as Raw materials, Research, AI, Energy, Security, Trade, Space, Health, Talent and Foresight. Under each heading are short bullets only.
+The repository has two user-facing views:
 
-The Insights page shows no sources, dates, links, strands, anchors, tags, counts, evidence panels or extra analysis. Each radar item appears once under its strongest topic. There is no separate briefing database and no workflow that regenerates the HTML page.
+- `/` — the main radar, with the full admitted material.
+- `/insights/` — the same admitted `radar.json` items, automatically classified into one primary topic and reduced to one concise bullet point each.
+
+The Insights page is deliberately plain: topic headings and bullets only. It shows no sources, dates, links, Strand labels, anchors, tags, counts, evidence cards or methodology panels. It reads `radar.json` directly, so there is no second database and no separate briefing generator.
+
+The old `/briefing/` address remains only as a compatibility redirect to `/insights/`.
 
 ## Password gate
 
