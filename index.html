@@ -53,9 +53,9 @@
           <span id="scanState" class="pill warn">Scanner: first run pending</span>
           <span id="lastScan" class="pill">Last scan: pending</span>
         </div>
-        <nav><a class="insights" href="briefing/">Radar insights — analysis & watchpoints</a><a href="#strand-a">Strand A</a><a href="#strand-b">Strand B</a><a href="#strand-c">Strand C</a></nav>
+        <nav><a class="insights" href="briefing/">Radar insights</a><a href="#strand-a">Strand A</a><a href="#strand-b">Strand B</a><a href="#strand-c">Strand C</a></nav>
         <section class="insights-spotlight" aria-label="Radar insights briefing">
-          <div><div class="spot-kicker">Analytical briefing</div><h2>Radar insights: from source items to the bigger picture</h2><p>See the strongest issue concentrations, specific admitted developments, why they matter for R&amp;I, concrete decision implications, watchpoints and the supporting evidence — without losing sight of the overall system.</p><p id="insightsSummary" class="insights-live">The latest admitted radar material feeds this briefing automatically.</p></div>
+          <div><div class="spot-kicker">Simple topic view</div><h2>Radar insights: signals by topic</h2><p>Raw materials, research, AI, energy, security, trade, space and more — just headings and bullets from the radar.</p><p id="insightsSummary" class="insights-live">Updated automatically from the admitted radar material.</p></div>
           <a class="insights-cta" href="briefing/">Open Radar insights →</a>
         </section>
       </div>
@@ -103,7 +103,7 @@ async function loadRadar(){
     document.getElementById("countA").textContent=`${A.length} item${A.length===1?"":"s"} in corpus`;
     document.getElementById("countB").textContent=`${B.length} item${B.length===1?"":"s"} in corpus`;
     document.getElementById("countC").textContent=`${C.length} signal${C.length===1?"":"s"}`;
-    const freshAB=[...A,...B].filter(x=>x.new_this_scan).length;const insightSummary=document.getElementById("insightsSummary");if(insightSummary)insightSummary.textContent=`Latest briefing input: ${freshAB} fresh A/B item${freshAB===1?"":"s"}, ${C.length} current weak signal${C.length===1?"":"s"}, and ${A.length+B.length} cumulative A/B item${A.length+B.length===1?"":"s"}.`;
+    const freshAB=[...A,...B].filter(x=>x.new_this_scan).length;const insightSummary=document.getElementById("insightsSummary");if(insightSummary)insightSummary.textContent=`Insights updated from ${A.length+B.length+C.length} radar item${A.length+B.length+C.length===1?"":"s"}.`;
     document.getElementById("itemsA").innerHTML=A.length?A.map(abItem).join(""):empty(d.first_scan_complete?"No accepted Strand A publications in the current corpus.":"First scan has not completed yet.");
     document.getElementById("itemsB").innerHTML=B.length?B.map(abItem).join(""):empty(d.first_scan_complete?"No accepted Strand B publications in the current corpus.":"First scan has not completed yet.");
     document.getElementById("itemsC").innerHTML=C.length?C.map(cItem).join(""):empty(d.first_scan_complete?"No qualifying anchored weak signals in this scan.":"First scan has not completed yet.");

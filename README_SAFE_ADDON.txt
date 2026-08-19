@@ -1,58 +1,35 @@
-R&I RADAR BRIEFING — SAFE + IMMEDIATE
-=======================================
+RADAR INSIGHTS — SIMPLE TOPIC VIEW
+==================================
 
-EXISTING RADAR
---------------
-Unchanged:
-- existing radar results stay in place
-- the existing R&I Radar Scan remains the scanner
-- the existing regular scan schedule stays unchanged
-- existing A/B/C logic stays unchanged
+Purpose
+-------
+Radar insights is a deliberately simple subject view of the material already
+admitted to radar.json. It is not a second scanner and it does not create a
+second analytical layer.
 
-ADDED SUBPAGE
--------------
-/briefing/
+The page contains only topic headings and bullets, for example:
+- Raw materials
+- Research
+- AI
+- Chips & quantum
+- Energy
+- Security & defence
+- Trade & industry
+- Digital & cyber
+- Space
+- Health & biotech
+- Talent & skills
+- International partnerships
+- Foresight
 
-TIMING
-------
-1. FIRST RUN
-   Immediately when this add-on is uploaded/updated, analyze the radar material
-   that already exists.
+Each radar item is assigned to one primary topic so it appears only once. The
+visible bullet is built only from the title and short note/summary already in the
+main radar. The insights page does not show sources, dates, links, strands,
+anchors, tags, counts, evidence panels or extra interpretation.
 
-2. NORMAL RHYTHM
-   Immediately after every successful "R&I Radar Scan", analyze the newest
-   radar material.
-
-3. MANUAL
-   The briefing workflow can also be run manually at any time.
-
-OUTPUT
-------
-The main visible output is a detailed but readable analytical briefing:
-- big-picture issue concentration at the top
-- concrete admitted developments surfaced early
-- why each issue matters for R&I
-- decision implications and decision questions
-- what to watch next
-- source-level evidence and Strand C anchors
-
-The issue labels organise the evidence; they no longer replace the detail.
-
-SAFETY
-------
-This package does NOT contain or replace:
-- radar.json
-- the main index.html
-- scripts/scan_radar.py
-- .github/workflows/radar-scan.yml
-- radar_config.json
-- radar_criteria.md
-
-The briefing reads radar.json, verifies that it did not change it, and commits
-ONLY briefing/index.html and briefing/briefing.json.
-
-FILES
------
-.github/workflows/radar-briefing.yml
-scripts/build_briefing.py
-README_SAFE_ADDON.txt
+Timing and safety
+-----------------
+The existing briefing workflow runs after successful radar scans. It reads
+radar.json and writes only briefing/index.html and briefing/briefing.json. The
+workflow checks the radar checksum before and after building so the scanner
+corpus is not modified.

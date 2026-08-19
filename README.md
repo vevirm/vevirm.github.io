@@ -41,15 +41,9 @@ The full human-readable standard is in `radar_criteria.md`.
 
 ## Radar insights
 
-The visible **Radar insights** entry point now opens a fuller analytical briefing rather than a short list of generic theme bullets. The briefing remains evidence-linked to material already admitted by the scanner and adds:
+The visible **Radar insights** entry point is intentionally minimal: the SAME material already shown by the radar is sorted into simple headings such as Raw materials, Research, AI, Energy, Security, Trade, Space, Health, Talent and Foresight. Under each heading there are plain bullets built from the radar title and short summary/note. No sources, dates, links, strands, anchors, tags, counts or extra analysis are shown on the Insights page. Each radar item appears once.
 
-- a **Big picture** view of the strongest evidence concentrations
-- **priority developments** drawn directly from admitted A/B publications and anchored C signals
-- per-issue **why it matters** and a concrete **decision question**
-- detailed **R&I decision implications** and **what to watch next**
-- source-level evidence cards with strand, freshness, source/date, notes and Strand C anchors
-
-The briefing builder does not fetch or admit new material and does not modify `radar.json`; scanner/classifier logic remains separate. A live fallback page can also derive concrete evidence directly from the current radar while a generated briefing build is pending.
+The topic builder does not fetch or admit new material and does not modify `radar.json`; scanner/classifier logic remains separate.
 
 ## Password gate
 
