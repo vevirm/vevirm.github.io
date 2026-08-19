@@ -1,4 +1,5 @@
-R&I × Geopolitics Radar — FULL SAFE — Simple Signals V4
-Recovery-protected radar + minimal topic/bullet Radar insights
-2026-08-19
-Insights v4: topic headings and plain bullets only; no source/date/link/strand/tag/evidence clutter.
+Simple Signals V5 — 2026-08-19
+
+Radar Insights is a minimal topic-and-bullets view that reads radar.json directly.
+No sources, dates, strand labels, counts, tags, evidence cards or relevance metadata are shown.
+The existing scanner script, radar configuration and radar-scan workflow are unchanged.

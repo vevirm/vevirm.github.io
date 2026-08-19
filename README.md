@@ -41,9 +41,9 @@ The full human-readable standard is in `radar_criteria.md`.
 
 ## Radar insights
 
-The visible **Radar insights** entry point is intentionally minimal: the SAME material already shown by the radar is sorted into simple headings such as Raw materials, Research, AI, Energy, Security, Trade, Space, Health, Talent and Foresight. Under each heading there are plain bullets built from the radar title and short summary/note. No sources, dates, links, strands, anchors, tags, counts or extra analysis are shown on the Insights page. Each radar item appears once.
+The visible **Radar insights** page is intentionally minimal. It reads the existing `radar.json` directly and sorts the same admitted radar material into headings such as Raw materials, Research, AI, Energy, Security, Trade, Space, Health, Talent and Foresight. Under each heading are short bullets only.
 
-The topic builder does not fetch or admit new material and does not modify `radar.json`; scanner/classifier logic remains separate.
+The Insights page shows no sources, dates, links, strands, anchors, tags, counts, evidence panels or extra analysis. Each radar item appears once under its strongest topic. There is no separate briefing database and no workflow that regenerates the HTML page.
 
 ## Password gate
 
