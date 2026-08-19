@@ -1,72 +1,92 @@
-# Veli Virmajoki Academic Site
+# R&I × Geopolitics + Foresight Methodology Radar
 
-Static GitHub Pages site.
+EU-first, automatically updated GitHub Pages radar.
 
-## Main pages
+## What this repository does
 
-- `index.html` — homepage, redesigned as an intellectual doorway into the work.
-- `research.html` — ideas, methods, concepts, and keyword-rich research map.
-- `writing.html` — essays and shorter public writing on futures, methods, and philosophy.
-- `publications.html` — formal publication list, rendered from `assets/site-data.js`.
-- `cv.html` — academic CV.
-- `engagement.html` — public engagement and professional outputs.
-- `contact.html` — contact information.
+- Runs a first scan immediately when the repository files/workflow are committed to `main`.
+- Runs again every 12 hours via GitHub Actions.
+- Requires no OpenAI key and no paid API.
+- Discovers candidates through OpenAlex, Crossref, whitelisted institutional websites/sitemaps, and a whitelist-only current-news layer.
+- Applies strict admission gates before anything is shown publicly.
+- Writes accepted results to `radar.json`.
+- Requests a GitHub Pages rebuild after each scan so fresh results become visible on the site.
+- Keeps accepted A/B publications as a cumulative corpus; Strand C is a current-window signal layer.
 
-## Editing
+## Important classification design
 
-- Main publication and CV data: `assets/site-data.js`
-- Visual design and layout: `assets/styles.css`
-- Interactive behaviour: `assets/main.js`
+The scanner does **not** use a simple keyword score as the admission rule.
 
-The current visual identity uses white, red, and black, with spacious sections and restrained typography.
+### Strand A
+
+All must pass:
+
+1. substantive R&I/science/technology **policy** content
+2. substantive geopolitics/economic-security content
+3. an explicit textual bridge between 1 and 2
+4. direct or explicit derived EU relevance
+
+Calls, funding notices, project pages, facility/laboratory pages, ordinary institutional news, events, jobs, blogs and opinion/commentary are hard-rejected.
+
+### Strand B
+
+Foresight must be methodology-first. The publication must discuss how foresight/scenarios/horizon scanning/anticipatory governance is designed, evaluated, institutionalised or integrated with other methods. A trend report or scenario output alone does not qualify.
+
+### Strand C
+
+Factual current-window news from the whitelist only. Every item must anchor to an accepted A/B publication or recurring A/B theme. No anchor means no inclusion.
+
+The full human-readable standard is in `radar_criteria.md`.
 
 
-Added Research Radar:
-- research-radar.html
-- assets/research-radar-approved.json
+## Radar insights
+
+The visible **Radar insights** entry point now opens a fuller analytical briefing rather than a short list of generic theme bullets. The briefing remains evidence-linked to material already admitted by the scanner and adds:
+
+- a **Big picture** view of the strongest evidence concentrations
+- **priority developments** drawn directly from admitted A/B publications and anchored C signals
+- per-issue **why it matters** and a concrete **decision question**
+- detailed **R&I decision implications** and **what to watch next**
+- source-level evidence cards with strand, freshness, source/date, notes and Strand C anchors
+
+The briefing builder does not fetch or admit new material and does not modify `radar.json`; scanner/classifier logic remains separate. A live fallback page can also derive concrete evidence directly from the current radar while a generated briefing build is pending.
+
+## Password gate
+
+The page uses the simple casual-visitor password gate requested for this radar. Password: `TutuRadar2026?`
+
+This is not server-side security; the repository and `radar.json` remain public because the site is hosted as a public GitHub Pages project.
+
+## Expected GitHub Pages address
+
+`https://vevirm.github.io/radar_articles_reports/`
+
+Keep Pages configured as:
+
+- **Deploy from a branch**
+- Branch: `main`
+- Folder: `/(root)`
+
+## Workflow
+
+The active workflow must exist at:
+
+`.github/workflows/radar-scan.yml`
+
+A visible backup copy is also included at:
+
+`WORKFLOW_BACKUP/radar-scan.yml`
+
+This backup is included because some Windows upload workflows can make the dot-prefixed `.github` directory easy to miss.
 
 
-Research Radar is now visible in the top navigation as Radar and has a stronger homepage callout.
+## Balanced v3 changes
+- Broader A/B discovery queries and larger candidate pools.
+- Strand A accepts a supported document-level R&I/geopolitics bridge; same-sentence wording is no longer mandatory.
+- Strand B admits strong transferable public-sector R&I/S&T foresight methodology as derived EU relevance.
+- First C scan looks back 7 days; later scans use a 48-hour overlap.
+- C anchor threshold is moderately relaxed but an explicit A/B anchor remains mandatory.
+- Hard exclusions for calls, facilities, project pages, ordinary news and marketing remain.
 
-
-## Research Radar weekly candidates
-
-This site includes a Research Radar page (`research-radar.html`) and a weekly candidate-scan system.
-
-The public page shows only items in:
-
-```text
-assets/research-radar-approved.json
-```
-
-The automatic scanner creates candidate lists in:
-
-```text
-radar-candidates/latest.md
-```
-
-The candidate list is for review only. To curate it, open `radar-candidates/latest.md`, choose item numbers, and use a note such as:
-
-```text
-approve 2, 5, 9
-hold 12
-reject the rest
-```
-
-The weekly scan is configured in:
-
-```text
-assets/research-radar-config.json
-scripts/research_radar_scan.py
-.github/workflows/research-radar.yml
-```
-
-The workflow runs weekly and can also be started manually from GitHub Actions.
-
-### Scanner focus after the balanced-neighbourhood update
-
-The weekly scanner is not a general “interesting new papers” feed, but it should also not merely rediscover Veli Virmajoki's own publications. It now uses a balanced neighbourhood gate: first publication/substance quality, then intellectual proximity to the site.
-
-A candidate should connect to futures/foresight methods, Delphi/expert methods, scenario work, horizon scanning, narrative foresight, philosophy of futures studies, philosophy/futures of science, historiography/counterfactuals/conceivability, or system-level futures of work, universities, higher education, science, knowledge, policy, or governance.
-
-Self-authored works are excluded from the discovery list. Peer-reviewed empirical articles can still be rejected when they are mainly micro-experience studies in unrelated domains, even if they have methods and references.
+## Recovery safeguard
+This recovery build seeds the three accepted Strand B publications that were present in the last healthy corpus on 2026-08-18 at 01:52 UTC. It also detects an empty/pending `radar.json` during future package upgrades and searches recent Git history for the strongest populated cumulative A/B corpus before scanning, preventing an upgrade template from silently wiping accepted literature.

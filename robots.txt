@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://vevirm.github.io/sitemap.xml
+Disallow: /
