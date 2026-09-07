@@ -1,60 +1,306 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive"><meta name="theme-color" content="#0b0b0b">
-<title>Research &amp; Innovation × Geopolitics Radar</title>
-<link rel="stylesheet" href="home.css?v=23.1">
-<script src="radar_data.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veli Virmajoki | Futures Studies, Delphi, Narrative Foresight & Philosophy</title>
+  <meta name="description" content="Veli Virmajoki is a Senior Researcher at the Finland Futures Research Centre, University of Turku. Work on futures studies, dialectic Delphi, narrative foresight, futures of work, futures of science, university futures, counterfactuals, and philosophy of futures studies.">
+  <meta name="keywords" content="Veli Virmajoki, futures studies, futures research, foresight, Delphi, dialectic Delphi, Delphi method, narrative foresight, narratives-with-branches, philosophy of futures studies, philosophy and futures studies, philosophy of science, futures of work, futures of science, future of universities, university futures, horizon scanning, Causal Layered Analysis, CLA, counterfactuals, limits of conceivability, possibility space, futures as space, futures of work arrangements, Finland Futures Research Centre, University of Turku">
+  <link rel="canonical" href="https://vevirm.github.io/">
+  <meta property="og:title" content="Veli Virmajoki | Futures Studies, Delphi & Philosophy of Futures Studies">
+  <meta property="og:description" content="Concepts, methods, and publications on futures studies, dialectic Delphi, narrative foresight, philosophy of science, futures of work, futures of science, and university futures.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vevirm.github.io/">
+  <meta name="theme-color" content="#111111">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/site-data.js"></script>
+  <script defer src="assets/main.js"></script>
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Veli Virmajoki",
+    "jobTitle": "Senior Researcher",
+    "affiliation": {"@type":"CollegeOrUniversity","name":"University of Turku"},
+    "worksFor": {"@type":"Organization","name":"Finland Futures Research Centre"},
+    "email": "mailto:vevirm@utu.fi",
+    "url": "https://vevirm.github.io/",
+    "sameAs": ["https://www.utu.fi/en/people/veli-virmajoki", "https://users.utu.fi/vevirm/", "https://blogit.utu.fi/futuresofscience/", "https://www.linkedin.com/in/veli-virmajoki-0b163692/", "https://orcid.org/0000-0002-1963-587X", "https://scholar.google.com/citations?hl=fi&user=zf1KYYIAAAAJ"],
+    "knowsAbout": ["futures studies", "foresight", "Delphi method", "dialectic Delphi", "narrative foresight", "philosophy of futures studies", "philosophy of science", "futures of work", "futures of science", "university futures", "counterfactual thinking", "Causal Layered Analysis", "horizon scanning", "possibility space"]
+  }</script>
 </head>
-<body>
-<section id="gate"><form id="gateForm" class="gate-card"><div class="gate-kicker">R&amp;I × Geopolitics Radar</div><h1>Open the Radar</h1><p>Password</p><div class="gate-row"><input id="password" type="password" autocomplete="current-password" aria-label="Password"><button type="submit">Open</button></div><div id="gateError" class="gate-error" aria-live="polite"></div></form></section>
-<div id="app">
-  <header class="home-head">
-    <div class="home-wrap head-row">
-      <a class="home-brand" href="./">R&amp;I × Geopolitics Radar</a>
-      <button id="lock" class="lock" type="button">Lock</button>
-      <!-- Regression compatibility only; not rendered: The main product · OPEN THE MAIN RADAR · Established evidence · Ways to look ahead · Weak signals · From the Radar · Read the patterns · Look ahead · Go deeper · Matrix · Trends &amp; counter-trends · Ongoing phenomena · Risks &amp; opportunities · External shocks · Stuff · <a class="radar-primary" href="radar/">Radar</a> -->
-    </div>
-  </header>
+<body data-page="home">
 
-  <main class="home-wrap home-main">
-    <section class="home-summary" aria-label="Radar size">
-      <div class="total-number" id="evidenceCount">—</div>
-      <div class="total-copy">pieces of evidence</div>
-      <div class="split-line"><span><strong id="currentCount">—</strong> in the Radar</span><span><strong id="historicalCount">—</strong> older</span><span><strong id="sourceCount">—</strong> sources</span></div>
-    </section>
-
-    <nav class="site-menu" aria-label="Everything in the Radar">
-      <a class="menu-main" href="radar/"><strong>Radar</strong><span>Search what we found</span></a>
-      <a href="read/"><strong>Read this first</strong><span>The short version</span></a>
-      <a href="frontier/quick/"><strong>Matrix</strong><span>Where Europe is strong, weak or dependent</span></a>
-      <a href="trends/"><strong>Trends</strong><span>What is getting stronger or weaker</span></a>
-      <a href="phenomena/"><strong>Ongoing patterns</strong><span>What keeps coming back</span></a>
-      <a href="priorities/"><strong>Risks &amp; opportunities</strong><span>What could go wrong or go well</span></a>
-      <a href="shocks/"><strong>External shocks</strong><span>What a big outside event could do</span></a>
-      <a href="historical/"><strong>History</strong><span>Older evidence for comparison</span></a>
-      <a href="literature/"><strong>Sources</strong><span>Where the evidence comes from</span></a>
-      <a href="briefing/"><strong>Evidence by topic</strong><span>What we found, grouped by topic</span></a>
-      <a href="glossary/"><strong>Glossary</strong><span>What the words mean</span></a>
-      <a href="stuff/"><strong>Stuff</strong><span>Technical methods, files and audit detail</span></a>
+<header class="site-header" data-header>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Veli Virmajoki home">
+      <span class="brand-mark">VV</span>
+      <span class="brand-text">Veli Virmajoki</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="research-radar.html">Radar</a>
+      <a href="writing.html">Essays</a>
+      <a href="publications.html">Publications</a>
+      <a href="cv.html">CV</a>
+      <a href="engagement.html">Engagement</a>
+      <a class="nav-pill" href="contact.html">Contact</a>
     </nav>
+  </div>
+</header>
 
-    <section class="word-cloud-panel" aria-labelledby="cloudTitle">
-      <div class="cloud-head"><h1 id="cloudTitle">What is in the Radar</h1></div>
-      <div id="cloud" class="word-cloud" aria-live="polite"><div class="cloud-loading">Loading words…</div></div>
-    </section>
-  </main>
-<!-- Regression compatibility only; not rendered: See what is happening. Then go deeper. · Read at least this · Search the evidence · Go deeper · What people are talking about now · Bigger means more independent sources. Red means mostly new. · source organisations · <a href="explore/">Go deeper</a> -->
-</div>
-<script src="topic-cloud.js?v=23.1"></script>
-<script>
-const PASSWORD_HASH="2a2acaba9fbe458e48fdcf8dd59c276bb425780c82a976dea408b88b46612bb8";
-async function sha256(text){const data=new TextEncoder().encode(text),hash=await crypto.subtle.digest('SHA-256',data);return [...new Uint8Array(hash)].map(b=>b.toString(16).padStart(2,'0')).join('')}
-function unlock(){sessionStorage.setItem('radarUnlocked','1');document.getElementById('gate').style.display='none';document.getElementById('app').style.display='block';TopicCloud.load()}
-if(sessionStorage.getItem('radarUnlocked')==='1')unlock();
-document.getElementById('gateForm').addEventListener('submit',async e=>{e.preventDefault();const input=document.getElementById('password');if(await sha256(input.value)===PASSWORD_HASH)unlock();else{document.getElementById('gateError').textContent='Wrong password';input.select()}});
-document.getElementById('lock').addEventListener('click',()=>{sessionStorage.removeItem('radarUnlocked');location.reload()});
-</script>
+<main id="main">
+  <section class="hero home-hero section-pad">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Futures studies · Philosophy of science · Foresight</p>
+        <h1>Veli Virmajoki</h1>
+        <p class="lead">I study what could happen, how we can think about it, and why it matters.</p>
+        <p class="hero-bio">I am a Senior Researcher at the Finland Futures Research Centre, University of Turku, and Docent in Philosophy of Science. My work moves between futures studies, philosophy of science, historiography, and applied foresight. I develop concepts and methods for studying possible futures of work, science, universities, narratives, and historical alternatives.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="research.html">Enter the research</a>
+          <a class="button" href="research-radar.html">Research Radar</a>
+          <a class="button ghost" href="publications.html">Publications</a>
+        </div>
+      </div>
+      <aside class="profile-card home-profile" aria-label="Profile summary">
+        <img class="portrait" data-profile="portrait" alt="Portrait of Veli Virmajoki">
+        <div class="profile-card-body">
+          <h2 data-profile="title"></h2>
+          <p data-profile="affiliation"></p>
+          <a class="email-link" href="mailto:vevirm@utu.fi">vevirm@utu.fi</a>
+        </div>
+      </aside>
+
+      <article class="featured-booklet" aria-labelledby="featured-booklet-title">
+        <a class="featured-booklet-cover-link" href="Knowledge_Values_Time_in_Futures_Studies.pdf" target="_blank" rel="noreferrer" aria-label="Open Knowledge, Values, Time in Futures Studies as a PDF">
+          <img class="featured-booklet-cover" src="assets/knowledge-values-time-cover.png" alt="Cover of Knowledge, Values, Time in Futures Studies" width="1024" height="1448">
+        </a>
+        <div class="featured-booklet-copy">
+          <p class="eyebrow">Four introductory essays · 2026</p>
+          <h2 id="featured-booklet-title">Knowledge, Values, Time in Futures Studies</h2>
+          <p class="featured-booklet-summary">A brief, open-access introduction to four central questions: what knowledge about futures can mean, how values shape futures work, why time matters, and which philosophical foundations hold the field together.</p>
+          <p class="featured-booklet-thesis">The future is not known, but it can be understood.</p>
+          <div class="featured-booklet-actions">
+            <a class="button primary" href="Knowledge_Values_Time_in_Futures_Studies.pdf" target="_blank" rel="noreferrer">Read the booklet</a>
+            <a class="tiny-link featured-booklet-download" href="Knowledge_Values_Time_in_Futures_Studies.pdf" download>Download PDF · 52 pages</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-pad compact theme-band" aria-label="Research keywords">
+    <div class="container keyword-rail">
+      <span>Delphi</span>
+      <span>Narrative foresight</span>
+      <span>Philosophy of futures studies</span>
+      <span>Futures of work</span>
+      <span>Futures of science</span>
+      <span>University futures</span>
+      <span>Counterfactuals</span>
+      <span>Possibility space</span>
+      <span>Causal Layered Analysis</span>
+      <span>Research Radar</span>
+      <span>Horizon scanning</span>
+    </div>
+  </section>
+
+  <section class="section-pad compact radar-preview-section home-radar-callout">
+    <div class="container split calm-split radar-preview-box">
+      <div>
+        <p class="eyebrow">Research Radar</p>
+        <h2>Recent work worth noticing.</h2>
+      </div>
+      <div class="text-column">
+        <p>The Research Radar is a selective reading page for high-quality work around futures studies, Delphi, narrative foresight, futures of work, university futures, philosophy of science, historiography, counterfactuals, and related fields. It starts from references already close to my research and can later be supported by strict weekly scanning.</p>
+        <a class="button" href="research-radar.html">Open Research Radar</a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section-pad intro-section">
+    <div class="container split calm-split">
+      <div>
+        <p class="eyebrow">A way through the work</p>
+        <h2>Futures are not only imagined. They are structured, argued for, and limited.</h2>
+      </div>
+      <div class="text-column">
+        <p>My research asks how futures become thinkable. This means studying methods such as Delphi, scenario work, narrative foresight, horizon scanning, and Causal Layered Analysis, but also the philosophical assumptions behind them.</p>
+        <p>The same question appears in several directions: futures of work, futures of science, futures of universities, philosophy of historiography, and counterfactual reasoning. The topics look different, but they share a concern with possibility, explanation, time, and the conditions under which alternatives can be seen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad compact imagination-strip home-imagination">
+    <div class="container split culture-split">
+      <div>
+        <p class="eyebrow">Not only technical examples</p>
+        <h2>Films, songs, and sports can also carry ideas.</h2>
+      </div>
+      <div class="text-column with-side-illustration">
+        <img class="side-illustration" src="assets/illustration-culture.svg" alt="Line drawing of film, music, writing, and sport as sources of examples">
+        <p>The work is academic, but examples can also come from <em>The Shining</em>, <em>It’s a Wonderful Life</em>, Bob Dylan, rap, and sports. They make questions of narrative, timing, pressure, failure, and possibility easier to see.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section-pad compact writing-callout-section">
+    <div class="container split calm-split writing-callout-box">
+      <div>
+        <p class="eyebrow">Essays</p>
+        <h2>A place for sharper, shorter arguments.</h2>
+      </div>
+      <div class="text-column">
+        <p>The first essay asks what philosophy can actually do for futures studies when it stops floating above research practice and starts examining methods.</p>
+        <a class="button" href="writing.html">Read the first essay</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad compact radar-wisdom-band home-wisdom-band" aria-labelledby="home-wisdom-title">
+    <div class="container radar-wisdom-shell">
+      <div>
+        <p class="eyebrow">Songs, films, sayings</p>
+        <h2 id="home-wisdom-title">Small pieces of wisdom for large claims about futures</h2>
+        <p class="section-note">A place for lines from songs, films, and public culture that can irritate, sharpen, or humble foresight talk. The point is not quotation collecting; the point is commentary.</p>
+      </div>
+      <div class="radar-wisdom-list" data-radar-wisdom>
+        <article class="radar-wisdom-card">
+          <p class="radar-wisdom-quote">“It all seems so well timed<br><br>An’ here I sit so patiently<br><br>Waiting to find out what price<br><br>You have to pay to get out of<br><br>Going through all these things twice”</p>
+          <p class="radar-wisdom-ref">Bob Dylan, “Stuck Inside of Mobile with the Memphis Blues Again,” 1966. Written by Bob Dylan.</p>
+          <p class="radar-wisdom-comment-title">Why I read this as futures-studies wisdom</p>
+          <p class="radar-wisdom-comment">I read the lines as a warning about timing because futures work often succeeds or fails in relation to a moment: when a scenario, warning, or intervention arrives, who is ready to hear it, and what institutions can still do with it. Dylan’s speaker notices that everything seems “so well timed,” but the cost appears when one assumes that the same passage can be repeated and escaped in the same way. In futures studies, this means a well-timed success should not become a formula: contexts shift, consequences accumulate, and going through the same things twice may carry a different price.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad graphic-section" id="methods">
+    <div class="container section-head-row">
+      <div>
+        <p class="eyebrow">Methods and concepts</p>
+        <h2>Some ways the research is built</h2>
+      </div>
+      <a class="text-link" href="research.html#methods">See the full research page →</a>
+    </div>
+    <div class="container graphic-grid research-build-grid">
+      <article class="graph-card delphi-zone">
+        <div class="graph-text">
+          <h2>Dialectic Delphi</h2>
+          <p>Dialectic Delphi is a method I have developed for working with opposed futures. It places different directions side by side, so that probability, desirability, arguments, tensions, and trade-offs can be studied together.</p>
+        </div>
+        <img class="diagram feature-illustration" src="assets/illustration-dialectic-delphi.svg" alt="Rupture in the ground with option A and option B on different sides">
+      </article>
+      <article class="graph-card space-zone">
+        <div class="graph-text">
+          <h2>Futures as a space of movements</h2>
+          <p>One part of my work treats futures less like a single road and more like a conceptual space. We can ask where a work arrangement, a university, or a scientific practice is located, what dimensions shape it, and what kinds of movement are possible.</p>
+        </div>
+        <img class="diagram feature-illustration" src="assets/illustration-space.svg" alt="Three-dimensional box with a figure, arrows, and labels for tension field and adjacency">
+      </article>
+      <article class="graph-card narrative-zone">
+        <div class="graph-text">
+          <h2>Narratives with branches</h2>
+          <p>A narrative of the future is not only a story to communicate a scenario. It can be worked with. Episodes can be added, and these episodes can make different branches visible.</p>
+        </div>
+        <img class="diagram feature-illustration" src="assets/illustration-narrative.svg" alt="Simple tree drawing showing a narrative branching into possible futures">
+      </article>
+      <article class="graph-card scan-zone">
+        <div class="graph-text">
+          <h2>The base underneath: deep horizon scanning</h2>
+          <p>The other tools still rest on careful scanning of high-quality papers, books, and reports. In many projects this means reading across hundreds of serious sources, so that the concepts and methods do not stand on thin trend lists.</p>
+        </div>
+        <img class="diagram feature-illustration" src="assets/illustration-horizon-scanning.svg" alt="Pile of books, papers, and reports with a scanning lens">
+      </article>
+    </div>
+  </section>
+
+  <section class="section-pad alt">
+    <div class="container section-head-row">
+      <div>
+        <p class="eyebrow">Arguments</p>
+        <h2>A few arguments to enter the work</h2>
+      </div>
+      <a class="text-link" href="research.html#views">Read more →</a>
+    </div>
+    <div class="container idea-grid">
+      <article class="idea-card">
+        <h3>Delphi is not only about consensus.</h3>
+        <p>I think Delphi is often too quickly understood as a method that tries to make people agree. In futures research, disagreement can be useful because it shows tensions, trade-offs, and different meanings inside the same future issue.</p>
+        <a class="tiny-link" href="research.html#view-delphi">Read more</a>
+      </article>
+      <article class="idea-card">
+        <h3>The future of work is about arrangements.</h3>
+        <p>Future work should not be reduced to guesses about exact jobs. The deeper issue is how work is arranged: where it happens, how it is measured, and how technology, place, organisations, and life outside work are connected.</p>
+        <a class="tiny-link" href="research.html#view-work">Read more</a>
+      </article>
+      <article class="idea-card">
+        <h3>People do not live inside trends.</h3>
+        <p>Narratives matter because they connect large changes with human experience. They can make futures more concrete without making them look like predictions.</p>
+        <a class="tiny-link" href="research.html#view-narratives">Read more</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section-pad compact work-nature-section">
+    <div class="container section-head compact-head">
+      <p class="eyebrow">Where the work appears</p>
+      <h2>Research, books, reports, talks, and public discussion</h2>
+      <p class="section-note">The publication list gives the formal record. The work also appears in reports, stakeholder work, presentations, interviews, and public discussion. The important point is the nature of the work: careful arguments, frameworks, and methods that travel between futures studies, philosophy, and historiography.</p>
+    </div>
+    <div class="container nature-grid">
+      <article class="nature-card">
+        <h3>Peer-reviewed arguments</h3>
+        <p>Articles and chapters where futures studies, philosophy of science, historiography, and counterfactual thinking are developed through careful conceptual work.</p>
+      </article>
+      <article class="nature-card">
+        <h3>Books and frameworks</h3>
+        <p>Long-form work on causal explanation, knowledge, futures of work, and conceptual tools that make complex research areas easier to discuss.</p>
+      </article>
+      <article class="nature-card">
+        <h3>Presentations and interviews</h3>
+        <p>I regularly present the work in academic and professional settings, take part in interviews, and join stakeholder discussions, including keynote speaking.</p>
+      </article>
+      <article class="nature-card">
+        <h3>Methods that connect fields</h3>
+        <p>Dialectic Delphi, narratives-with-branches, futures as space, CLA extensions, and philosophical analysis used to make futures research more reflective.</p>
+      </article>
+    </div>
+  </section>
+
+
+
+  <section class="section-pad alt">
+    <div class="container section-head-row">
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <h2>Recent and representative publications</h2>
+      </div>
+      <a class="text-link" href="publications.html">All publications →</a>
+    </div>
+    <div class="container card-grid" data-selected-publications></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>Veli Virmajoki</strong>
+      <p>Senior Researcher · Finland Futures Research Centre · University of Turku</p>
+    </div>
+    <div class="footer-links" data-link-list="footer"></div>
+  </div>
+  <div class="container footer-note">
+    <span>Academic website of Veli Virmajoki.</span>
+  </div>
+</footer>
+
 </body>
 </html>
