@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Dialectic Delphi rupture</title>
+  <desc id="desc">A rupture separates option A and option B, each asked in terms of probability and desirability.</desc>
+  <rect width="720" height="420" rx="34" fill="#fff"/>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="900">
+    <text x="185" y="76" font-size="21" fill="#b20f16">Probability —</text>
+    <text x="185" y="106" font-size="21" fill="#b20f16">and what about desirability?</text>
+    <text x="535" y="76" font-size="21" fill="#b20f16">Probability —</text>
+    <text x="535" y="106" font-size="21" fill="#b20f16">and what about desirability?</text>
+    <text x="185" y="202" font-size="42" fill="#111">Option A</text>
+    <text x="535" y="202" font-size="42" fill="#111">Option B</text>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M70 266 C145 250 221 250 304 266" stroke="#111" stroke-width="6"/>
+    <path d="M416 266 C499 250 575 250 650 266" stroke="#111" stroke-width="6"/>
+    <path d="M336 252 L306 292 L348 316 L323 370" stroke="#b20f16" stroke-width="8"/>
+    <path d="M386 252 L416 292 L374 316 L399 370" stroke="#b20f16" stroke-width="8"/>
+    <path d="M344 256 L360 292 L378 256" stroke="#111" stroke-width="4" opacity="0.45"/>
+    <path d="M100 302 C168 318 244 318 304 304" stroke="#111" stroke-width="3" opacity="0.28"/>
+    <path d="M416 304 C476 318 552 318 620 302" stroke="#111" stroke-width="3" opacity="0.28"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="850">
+    <text x="360" y="390" font-size="18" fill="#626262">opposed futures, not smoothed into one view</text>
+  </g>
+</svg>

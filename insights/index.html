@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Radar insights</title>
+<style>
+:root{--bg:#f7f6f2;--text:#171716;--muted:#66625c;--line:#d9d6cf;--accent:#741b25;--max:940px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.52 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{width:min(calc(100% - 36px),var(--max));margin:0 auto}
+header{padding:34px 0 22px;border-bottom:1px solid var(--line)}
+h1{margin:0;font-size:clamp(2.2rem,6vw,3.6rem);line-height:1;letter-spacing:-.045em}
+.sub{margin:9px 0 0;color:var(--muted)}
+.back{display:inline-block;margin-top:13px;color:var(--accent);font-size:.92rem;font-weight:700;text-decoration:none}
+main{padding:8px 0 54px}
+section{padding:24px 0 20px;border-bottom:1px solid var(--line)}
+section:last-child{border-bottom:0}
+h2{margin:0 0 10px;font-size:1.42rem;line-height:1.2;letter-spacing:-.025em}
+ul{margin:0;padding-left:1.3em}
+li{margin:.55em 0;padding-left:.08em}
+.empty{color:var(--muted);padding:30px 0}
+@media(max-width:640px){body{font-size:16px}.wrap{width:min(calc(100% - 28px),var(--max))}section{padding:20px 0 16px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Radar insights</h1>
+    <p class="sub">One point per radar signal, grouped by topic.</p>
+    <a class="back" href="../">← Main radar</a>
+  </div>
+</header>
+<main class="wrap" id="topics"><p class="empty">Loading radar insights…</p></main>
+<script>
+const TOPICS=[
+  {name:"Raw materials & supply chains",terms:[["critical raw material",15],["critical raw materials",15],["critical mineral",14],["critical minerals",14],["rare earth",14],["rare earths",14],["raw material",12],["mineral",7],["minerals",7],["lithium",12],["cobalt",12],["nickel",11],["graphite",12],["copper",9],["gallium",13],["germanium",13],["tungsten",12],["mining",10],["refining",10],["resource security",9]]},
+  {name:"Research & science",terms:[["horizon europe",14],["framework programme",12],["framework program",12],["european research council",14],["erc",10],["european research area",12],["research funding",11],["research infrastructure",11],["research security",12],["knowledge security",12],["science diplomacy",12],["scientific cooperation",10],["research cooperation",10],["research collaboration",10],["research and innovation",8],["researcher",7],["researchers",7],["university",7],["universities",7],["science",5]]},
+  {name:"AI",terms:[["artificial intelligence",16],["ai",13],["machine learning",13],["foundation model",13],["foundation models",13],["large language model",13],["large language models",13],["llm",12],["llms",12],["gpu",11],["gpus",11],["compute capacity",12],["computing capacity",12],["ai factory",15],["ai factories",15],["supercomputing",10]]},
+  {name:"Semiconductors & quantum",terms:[["semiconductor",16],["semiconductors",16],["microelectronics",14],["microchip",13],["microchips",13],["chip",12],["chips",12],["quantum",16],["photonics",13]]},
+  {name:"Energy",terms:[["nuclear",15],["reactor",12],["reactors",12],["small modular reactor",14],["smr",13],["smrs",13],["energy security",13],["hydrogen",11],["renewable",9],["renewables",9],["electricity grid",12],["power grid",12],["battery",9],["batteries",9],["cleantech",11],["clean tech",11],["fusion",13],["energy",6]]},
+  {name:"Security & defence",terms:[["defence",15],["defense",15],["dual-use",13],["dual use",13],["military",13],["nato",12],["security screening",11],["export control",12],["export controls",12],["foreign interference",12],["knowledge leakage",12],["economic coercion",11],["sanction",10],["sanctions",10],["war",8],["russia",6],["ukraine",6]]},
+  {name:"Trade & industry",terms:[["economic security",12],["industrial policy",12],["industrial competitiveness",12],["competitiveness",9],["manufacturing",9],["supply chain",8],["supply chains",8],["trade",8],["tariff",11],["tariffs",11],["investment screening",12],["foreign direct investment",11],["strategic autonomy",11],["strategic dependency",11],["strategic dependencies",11],["de-risking",11],["derisking",11],["single market",10],["financial system",10],["rmb",10],["clearing",8],["industry",6]]},
+  {name:"Digital & cyber",terms:[["digital infrastructure",14],["cloud infrastructure",13],["cloud",8],["telecom",12],["telecommunications",12],["5g",12],["6g",13],["submarine cable",13],["subsea cable",13],["data governance",12],["data space",12],["digital sovereignty",13],["cybersecurity",13],["cyber security",13],["cyber",10],["digital",6]]},
+  {name:"Space",terms:[["satellite",15],["satellites",15],["launch vehicle",14],["launcher",13],["copernicus",14],["galileo",14],["earth observation",13],["orbital",13],["space",10]]},
+  {name:"Health & biotech",terms:[["biotech",14],["biotechnology",14],["life science",12],["life sciences",12],["health security",13],["pharma",12],["pharmaceutical",12],["pharmaceuticals",12],["vaccine",13],["vaccines",13],["biomedical",13],["genomics",13],["bioeconomy",11],["global health",12],["health",7]]},
+  {name:"Climate & environment",terms:[["climate",13],["climate-resilient",14],["climate resilient",14],["deforestation",14],["biodiversity",13],["sustainability",11],["sustainable",9],["environmental",11],["circular economy",12],["circular",8],["green transition",12],["decarbonisation",12],["decarbonization",12]]},
+  {name:"Talent & skills",terms:[["researcher mobility",13],["scientist mobility",13],["brain drain",13],["brain gain",13],["talent",12],["skills",11],["visa",10],["visas",10],["doctoral",10],["phd",10],["workforce",9],["training",8]]},
+  {name:"International partnerships",terms:[["global gateway",13],["indo-pacific",13],["indo pacific",13],["international cooperation",12],["international partnership",13],["international partnerships",13],["association agreement",12],["associated country",11],["eu-asia",13],["eu–asia",13],["europe-asia",12],["china",7],["chinese",7],["united states",7],["japan",7],["south korea",7],["india",7],["taiwan",7],["africa",6],["latin america",6],["arctic",6],["geopolitical",6]]},
+  {name:"Foresight & methods",terms:[["foresight",16],["horizon scanning",16],["scenario planning",15],["scenario building",15],["weak signal",15],["weak signals",15],["delphi",14],["backcasting",14],["anticipatory governance",14],["futures literacy",14],["futures research",13],["scenario",11],["scenarios",11],["future-oriented",9],["future oriented",9]]}
+];
+const OTHER="Other strategic R&I";
+function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c])}
+function clean(v){return String(v??"").replace(/\u00ad/g,"").replace(/[ \t]+/g," ").replace(/\s*\n\s*/g," ").trim()}
+function norm(v){return " "+clean(v).toLowerCase().replace(/[–—]/g,"-").replace(/[^a-z0-9+.#/-]+/g," ").replace(/\s+/g," ").trim()+" "}
+function has(text,term){return text.includes(norm(term))}
+function cleanTitle(x){
+  let t=clean(x.title||x.headline||"Untitled signal");
+  const s=clean(x.source||"");
+  if(s){for(const sep of [" – "," — "," - "]){const suffix=sep+s;if(t.toLowerCase().endsWith(suffix.toLowerCase())){t=t.slice(0,-suffix.length).trim();break}}}
+  return t;
+}
+function contentForTopic(x){
+  if(x.headline)return clean(x.headline);
+  return clean([x.title,x.summary].filter(Boolean).join(" "));
+}
+function topicScore(x,topic){
+  const title=norm(x.title||x.headline||"");
+  const body=norm(contentForTopic(x));
+  let score=0;
+  for(const [term,w] of topic.terms){if(has(title,term))score+=w*3;if(has(body,term))score+=w}
+  return score;
+}
+function topicFor(x){let best=OTHER,bestScore=0;for(const topic of TOPICS){const s=topicScore(x,topic);if(s>bestScore){best=topic.name;bestScore=s}}return best}
+function stripPdfNoise(text){
+  let s=clean(text).replace(/\.{5,}/g," ");
+  const idx=s.slice(0,650).search(/\bSUMMARY\b/i);if(idx>=0)s=s.slice(idx).replace(/^SUMMARY\s*/i,"");
+  s=s.replace(/(?:\b[A-Z]\s+){5,}[A-Z]\b/g," ").replace(/\s+/g," ").trim();
+  return s;
+}
+function sentenceCandidates(text){
+  const s=stripPdfNoise(text);
+  return s.split(/(?<=[.!?])\s+(?=[A-Z0-9“"'‘])/).map(clean).filter(Boolean);
+}
+function sentenceScore(s,title,topic){
+  const low=s.toLowerCase(),len=s.length;
+  if(len<38)return -100;
+  if(/^(research design|methodology|annex|contents|table of contents|finally,|cf\.|references\b)/i.test(s))return -100;
+  if(/received funding from|grant agreement no\.?|this amount does not include/i.test(s))return -30;
+  const nt=norm(title).trim(),ns=norm(s).trim();if(nt&&ns.startsWith(nt))return -20;
+  let score=0;
+  if(len>=65&&len<=235)score+=5;else if(len<=300)score+=2;else score-=3;
+  if(/\b(eu|europe|european|china|united states|us|japan|korea|russia|ukraine)\b/i.test(s))score+=2;
+  if(/\b(introduc|launch|shift|recast|raise|depend|require|expand|reduce|increase|decrease|strengthen|weaken|build|develop|test|show|find|plan|urge|struggle|connect|cooperat|compete|diversif|sanction|secure|scale|fund|govern)\w*/i.test(s))score+=3;
+  const t=TOPICS.find(x=>x.name===topic);if(t){const n=norm(s);for(const [term,w] of t.terms){if(has(n,term))score+=Math.min(3,w/5)}}
+  if(/^(rather|its|their|they|it)\b/i.test(s))score-=3;
+  return score;
+}
+function trimPoint(s,max=235){s=clean(s);if(s.length<=max)return s;let cut=s.slice(0,max+1);cut=cut.slice(0,Math.max(cut.lastIndexOf(";"),cut.lastIndexOf(","),cut.lastIndexOf(" ")));return cut.replace(/[,:;\s]+$/,"")+"…"}
+function specialPoint(x){
+  const s=stripPdfNoise(x.summary||"");
+  const grant=s.match(/Horizon Europe[\s\S]{0,220}?introduc(?:e|ing) a new grant scheme\s*[–—-]\s*(?:the\s+)?([^.(;]{3,70})/i);
+  if(grant)return trimPoint(`Horizon Europe introduces a new grant scheme, the ${clean(grant[1]).replace(/\s+\(\d+\).*$/,"")}.`);
+  return "";
+}
+function pointFor(x,topic){
+  if(x.headline)return trimPoint(cleanTitle(x));
+  const special=specialPoint(x);if(special)return special;
+  const title=cleanTitle(x),cands=sentenceCandidates(x.summary||"");
+  let best="",bestScore=-999;for(const s of cands){const sc=sentenceScore(s,title,topic);if(sc>bestScore){best=s;bestScore=sc}}
+  if(bestScore<0||!best)return trimPoint(title);
+  return trimPoint(best);
+}
+function sortValue(x){return clean(x.date||x.published||x.updated||"")}
+function build(data){
+  const rows=[...(Array.isArray(data.strand_a)?data.strand_a:[]),...(Array.isArray(data.strand_b)?data.strand_b:[]),...(Array.isArray(data.strand_c)?data.strand_c:[])];
+  const order=[...TOPICS.map(t=>t.name),OTHER],groups=new Map(order.map(n=>[n,[]])),seen=new Set();
+  for(const x of rows){const key=norm(x.link||x.title||x.headline).trim();if(!key||seen.has(key))continue;seen.add(key);const topic=topicFor(x);groups.get(topic).push({point:pointFor(x,topic),sort:sortValue(x)})}
+  for(const items of groups.values())items.sort((a,b)=>b.sort.localeCompare(a.sort)||a.point.localeCompare(b.point));
+  return order.map(name=>({name,items:groups.get(name)})).filter(g=>g.items.length);
+}
+function render(groups){
+  const root=document.getElementById("topics");
+  if(!groups.length){root.innerHTML='<p class="empty">No radar signals are available yet.</p>';return}
+  root.innerHTML=groups.map(g=>`<section><h2>${esc(g.name)}</h2><ul>${g.items.map(x=>`<li>${esc(x.point)}</li>`).join("")}</ul></section>`).join("");
+}
+(async()=>{try{const r=await fetch("../radar.json?v="+Date.now(),{cache:"no-store"});if(!r.ok)throw new Error("radar.json unavailable");render(build(await r.json()))}catch(e){document.getElementById("topics").innerHTML='<p class="empty">Radar data is not available yet.</p>'}})();
+</script>
+</body>
+</html>
