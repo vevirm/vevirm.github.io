@@ -328,9 +328,13 @@ async function renderResearchRadar() {
     list.innerHTML = topics.map(topic => {
       const cards = items.filter(item => (item.topic || 'Other') === topic).map(item => {
         const connects = (item.connectsWith || []).map(tag => `<span class="chip">${escapeHTML(tag)}</span>`).join('');
+        const title = escapeHTML(item.title || '');
+        const titleMarkup = item.url
+          ? `<a href="${escapeHTML(item.url)}" target="_blank" rel="noreferrer">${title}</a>`
+          : title;
         return `<article class="radar-item">
           <div class="radar-meta">${escapeHTML(item.authors || '')} · ${escapeHTML(item.year || '')}</div>
-          <h3>${escapeHTML(item.title || '')}</h3>
+          <h3>${titleMarkup}</h3>
           <p class="radar-source">${escapeHTML(item.source || '')}</p>
           <p>${escapeHTML(item.why || '')}</p>
           ${connects ? `<div class="radar-tags">${connects}</div>` : ''}

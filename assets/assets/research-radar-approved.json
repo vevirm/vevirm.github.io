@@ -1,5 +1,5 @@
 {
-  "updated": "Curated approved list; added AI-augmented strategic foresight to Futures of work",
+  "updated": "2026-10-07",
   "mode": "curated-approved",
   "items": [
     {
@@ -480,6 +480,468 @@
         "bibliometrics",
         "research community",
         "international collaboration"
+      ]
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "Governance logics and foresight functions: European strategic foresight in contrastive perspective",
+      "authors": "Natalia Veselitskaya & Dina Malekova",
+      "year": "2026",
+      "source": "European Journal of Futures Research. DOI: 10.1186/s40309-026-00278-8",
+      "why": "Shows that foresight methods are not merely transferable tools but are embedded in governance settings and perform different institutional functions. The contrastive European perspective is useful for analysing how strategic foresight changes across policy and administrative contexts.",
+      "connectsWith": [
+        "strategic foresight",
+        "governance logics",
+        "foresight methods",
+        "institutional functions",
+        "European policy"
+      ],
+      "url": "https://doi.org/10.1186/s40309-026-00278-8"
+    },
+    {
+      "topic": "Futures of work",
+      "title": "How and when remote workdays impact employee daily social need fulfilment",
+      "authors": "Vera M. Schweitzer, Anne Burmeister, Laura Venz, Fabiola H. Gerpott, Ulrike Fasbender et al.",
+      "year": "2026",
+      "source": "Journal of Occupational and Organizational Psychology. DOI: 10.1111/joop.70150",
+      "why": "Provides a focused empirical contribution to the futures of hybrid work by examining how and under what conditions remote workdays affect employees’ daily social need fulfilment. It is useful for thinking about work arrangements beyond productivity alone.",
+      "connectsWith": [
+        "remote work",
+        "hybrid work",
+        "social needs",
+        "work design",
+        "employee experience"
+      ],
+      "url": "https://doi.org/10.1111/joop.70150"
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "Foresight on spatial mobility during green and digital transitions: insights from five European regions",
+      "authors": "Anastasia Panori, Natalia Głowacka & Asya Salnikova",
+      "year": "2026",
+      "source": "European Planning Studies. DOI: 10.1080/09654313.2026.2698851",
+      "why": "Connects regional foresight and scenario work with the changing spatial mobility implications of green and digital transitions. Its comparative evidence from five European regions makes it relevant to policy-oriented, stakeholder-based foresight at the territorial level.",
+      "connectsWith": [
+        "regional foresight",
+        "spatial mobility",
+        "green transition",
+        "digital transition",
+        "scenarios"
+      ],
+      "url": "https://doi.org/10.1080/09654313.2026.2698851"
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "Beyond the Binaries: Techno-Optimism and Pessimism as Situated Epistemic-Affective Orientations",
+      "authors": "Johanna Ahola-Launonen",
+      "year": "2026",
+      "source": "Minerva. DOI: 10.1007/s11024-026-09651-0",
+      "why": "A useful contribution to debates about technological futures because it treats techno-optimism and pessimism as situated epistemic-affective orientations rather than simple opposing positions. It is especially relevant for analysing how anticipation, uncertainty, knowledge, and critique acquire normative force.",
+      "connectsWith": [
+        "anticipation",
+        "technological futures",
+        "techno-optimism",
+        "techno-pessimism",
+        "epistemic orientations"
+      ],
+      "url": "https://doi.org/10.1007/s11024-026-09651-0"
+    },
+    {
+      "topic": "University futures and higher education",
+      "title": "Anticipatory governance and leadership for AI implementation in higher education: A scoping review",
+      "authors": "Sandra Baroudi",
+      "year": "2026",
+      "source": "International Journal of Educational Technology in Higher Education. DOI: 10.1186/s41239-026-00616-7",
+      "why": "Directly relevant to university futures because it reviews how anticipatory governance and leadership are conceptualised and operationalised for AI-related transformation in higher education. The system- and organisational-level focus makes it useful for connecting foresight with institutional governance and implementation.",
+      "connectsWith": [
+        "anticipatory governance",
+        "higher education",
+        "artificial intelligence",
+        "leadership",
+        "institutional change"
+      ],
+      "url": "https://doi.org/10.1186/s41239-026-00616-7"
+    },
+    {
+      "topic": "Conceivability, counterfactuals and history",
+      "title": "Wargames Are Experiments: Wargames as Experimental Methods in International Relations",
+      "authors": "Philip Jan Schäfer & Joseph Verbovszky",
+      "year": "2026",
+      "source": "Zeitschrift für Außen- und Sicherheitspolitik. DOI: 10.1007/s12399-026-01107-3",
+      "why": "Relevant to the counterfactual strand because it examines wargames as experimental methods for testing causal hypotheses, exploring counterfactual scenarios, and generating evidence about decision-making. Its attention to design conditions and epistemological limits makes it useful for thinking about what scenario-based experiments can establish.",
+      "connectsWith": [
+        "counterfactuals",
+        "wargaming",
+        "experimental methods",
+        "scenarios",
+        "causal inference"
+      ],
+      "url": "https://doi.org/10.1007/s12399-026-01107-3"
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "The generation of scientific knowledge in futures studies and foresight",
+      "authors": "Ali Chaparak",
+      "year": "2025",
+      "source": "Foresight, 27(6), 1158–1178",
+      "url": "https://doi.org/10.1108/FS-12-2024-0229",
+      "why": "A rare recent attempt to state what would make futures studies epistemically reliable without reducing reliability to predictive success. Its use of social reliabilism makes it directly relevant to questions about evidence, scientific legitimacy, and the standards by which futures claims should be judged.",
+      "connectsWith": [
+        "epistemology",
+        "reliability",
+        "futures studies",
+        "scientific knowledge"
+      ]
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "Cognitive mechanisms in foresight: A bridge between psychology and futures studies",
+      "authors": "Angela Faiella & Giovanni Emanuele Corazza",
+      "year": "2025",
+      "source": "Futures, 166, 103547",
+      "url": "https://doi.org/10.1016/j.futures.2025.103547",
+      "why": "A useful bridge between foresight practice and cognitive science. It identifies memory, creativity, emotion, bias, and group processes as mechanisms that shape what people can generate and judge as futures, giving a firmer basis for evaluating participatory foresight.",
+      "connectsWith": [
+        "foresight",
+        "psychology",
+        "cognition",
+        "bias",
+        "creativity"
+      ]
+    },
+    {
+      "topic": "Futures studies and foresight",
+      "title": "Regimes of futurity: Progress, catastrophe, and historicity in the Anthropocene",
+      "authors": "Martin Savransky",
+      "year": "2025",
+      "source": "Futures, 173, 103682",
+      "url": "https://doi.org/10.1016/j.futures.2025.103682",
+      "why": "A conceptually serious paper on the historical forms through which societies relate to the future. It is valuable for resisting the assumption that 'the future' is a stable object and for connecting futures studies with historicity, progress, catastrophe, and the Anthropocene.",
+      "connectsWith": [
+        "futurity",
+        "historicity",
+        "Anthropocene",
+        "philosophy of futures"
+      ]
+    },
+    {
+      "topic": "Scenarios, history and horizon scanning",
+      "title": "Types of scenario planning and their effectiveness: A review of reviews",
+      "authors": "Kathya Cordova-Pozo & Etiënne A. J. A. Rouwette",
+      "year": "2023",
+      "source": "Futures, 149, 103153",
+      "url": "https://doi.org/10.1016/j.futures.2023.103153",
+      "why": "One of the strongest recent attempts to impose order on the methodological diversity of scenario planning. It synthesizes review evidence on definitions, schools, techniques, and effectiveness rather than treating scenario practice as self-validating.",
+      "connectsWith": [
+        "scenario planning",
+        "methodology",
+        "effectiveness",
+        "review"
+      ]
+    },
+    {
+      "topic": "Scenarios, history and horizon scanning",
+      "title": "Enhancing the horizon scanning utility of futures-oriented systematic and scoping reviews",
+      "authors": "Eray Arda Akartuna, Shane D. Johnson & Amy Thornton",
+      "year": "2024",
+      "source": "Futures, 158, 103340",
+      "url": "https://doi.org/10.1016/j.futures.2024.103340",
+      "why": "A concrete methodological contribution to horizon scanning that connects scanning with systematic review practice and explicit quality appraisal. The proposed neutrality-evidence-relevance-clarity framework is especially useful for distinguishing signals from low-quality noise.",
+      "connectsWith": [
+        "horizon scanning",
+        "weak signals",
+        "systematic review",
+        "evidence quality"
+      ]
+    },
+    {
+      "topic": "Scenarios, history and horizon scanning",
+      "title": "Developments and challenges of foresight evaluation: Review of the past 30 years of research",
+      "authors": "Byoung Kwon Ko & Jae-Suk Yang",
+      "year": "2024",
+      "source": "Futures, 155, 103291",
+      "url": "https://doi.org/10.1016/j.futures.2023.103291",
+      "why": "Evaluation is one of the weakest parts of foresight methodology. This review maps three decades of work on how foresight quality and impact have actually been assessed, making it useful for judging methods by more than process elegance or participant satisfaction.",
+      "connectsWith": [
+        "foresight evaluation",
+        "methodology",
+        "quality",
+        "impact"
+      ]
+    },
+    {
+      "topic": "Narrative foresight",
+      "title": "Anticipating futures: Understanding the fundamental importance of narratives through an integrative interdisciplinary approach",
+      "authors": "Ian Townend et al.",
+      "year": "2025",
+      "source": "Futures, 173, 103649",
+      "url": "https://doi.org/10.1016/j.futures.2025.103649",
+      "why": "A broad interdisciplinary argument for treating narratives as dynamic components of anticipation rather than decorative communication. It connects empirical-analytical, narrative-experiential, and socio-technological approaches and emphasizes how narratives evolve through feedback and engagement.",
+      "connectsWith": [
+        "narrative",
+        "anticipation",
+        "complex systems",
+        "scenario planning"
+      ]
+    },
+    {
+      "topic": "Narrative foresight",
+      "title": "Literary futures: Harnessing fiction for futures work",
+      "authors": "Rebecca Braun, Orla Lehane & Maria Roca Lizarazu",
+      "year": "2024",
+      "source": "Futures, 158, 103348",
+      "url": "https://doi.org/10.1016/j.futures.2024.103348",
+      "why": "A particularly well-developed recent attempt to turn literary technique into a research-informed futures method. Its use of character, worldbuilding, and participant evidence makes it stronger than generic claims that fiction merely stimulates imagination.",
+      "connectsWith": [
+        "fiction",
+        "worldbuilding",
+        "narrative methods",
+        "participatory futures"
+      ]
+    },
+    {
+      "topic": "Narrative foresight",
+      "title": "Exploring cultural futures: Dimensions of projectivity as a methodological lens for narrative analysis",
+      "authors": "Ulrike Ehgartner & Daniel Welch",
+      "year": "2024",
+      "source": "Futures, 164, 103445",
+      "url": "https://doi.org/10.1016/j.futures.2024.103445",
+      "why": "A methodologically useful application of Mische's dimensions of projectivity to future-oriented narratives. It gives narrative analysis explicit dimensions—such as reach, contingency, connectivity, and volition—instead of treating stories as unanalyzed wholes.",
+      "connectsWith": [
+        "narrative analysis",
+        "projectivity",
+        "cultural futures",
+        "methodology"
+      ]
+    },
+    {
+      "topic": "Delphi and expert methods",
+      "title": "Proposal for a critical appraisal tool for studies using the Delphi method (DCAT)",
+      "authors": "Sean Grant & Dmitry Khodyakov",
+      "year": "2025",
+      "source": "BMJ, 391, e084509",
+      "url": "https://doi.org/10.1136/bmj-2025-084509",
+      "why": "A major methodological contribution because it turns general complaints about Delphi quality into an explicit appraisal instrument. The 16-item DCAT provides a basis for judging design, data collection, analysis, and reporting across Delphi studies.",
+      "connectsWith": [
+        "Delphi",
+        "quality appraisal",
+        "research design",
+        "expert elicitation"
+      ]
+    },
+    {
+      "topic": "Delphi and expert methods",
+      "title": "Biases in expert judgements in large-scale S&T Delphi Surveys: How to cope with them?",
+      "authors": "Alexander Sokolov, Anna Grebenyuk & Kuniko Urashima",
+      "year": "2025",
+      "source": "Technological Forecasting and Social Change, 218, 124223",
+      "url": "https://doi.org/10.1016/j.techfore.2025.124223",
+      "why": "Important empirical evidence against the assumption that additional Delphi rounds naturally improve judgments through convergence. By comparing major national S&T Delphi exercises, it identifies systematic biases and shows why iteration itself cannot be treated as a quality guarantee.",
+      "connectsWith": [
+        "Delphi",
+        "expert judgement",
+        "bias",
+        "consensus",
+        "foresight"
+      ]
+    },
+    {
+      "topic": "Delphi and expert methods",
+      "title": "Evaluating Delphi survey accuracy in transportation: Evidence from Japanese technology foresight",
+      "authors": "Sukhayl Niyazov, Olesia Maibakh, Alexei Sukharev, Tatiana Kulakova & Andrey Ufimtsev",
+      "year": "2026",
+      "source": "Technological Forecasting and Social Change, 224, 124496",
+      "url": "https://doi.org/10.1016/j.techfore.2025.124496",
+      "why": "Unusually valuable because it evaluates Delphi forecasts against what later happened. The paper directly tests accuracy across 167 technology topics and also questions whether a second Delphi round improves forecasting performance.",
+      "connectsWith": [
+        "Delphi",
+        "forecast accuracy",
+        "technology foresight",
+        "evaluation"
+      ]
+    },
+    {
+      "topic": "Philosophy of science and futures of science",
+      "title": "Artificial intelligence tools expand scientists’ impact but contract science’s focus",
+      "authors": "Qianyue Hao, Fengli Xu, Yong Li et al.",
+      "year": "2026",
+      "source": "Nature, 649, 1237–1243",
+      "url": "https://doi.org/10.1038/s41586-025-09922-y",
+      "why": "A large-scale empirical result with direct implications for the future organization of science: AI use is associated with greater individual scientific impact while scientific attention becomes more concentrated. It raises a fundamental tension between productivity and epistemic diversity.",
+      "connectsWith": [
+        "future of science",
+        "AI",
+        "scientific discovery",
+        "research diversity"
+      ]
+    },
+    {
+      "topic": "Philosophy of science and futures of science",
+      "title": "The Interplay of Data, Models, and Theories in Machine Learning",
+      "authors": "Maria Federica Norelli, Ioannis Votsis & Jon Williamson",
+      "year": "2025",
+      "source": "Philosophy of Science, 92(5), 1383–1393",
+      "url": "https://doi.org/10.1017/psa.2025.10161",
+      "why": "A direct philosophy-of-science intervention into how machine-learning models relate to data and theory. It is useful for thinking beyond the simplistic idea that AI is either a black-box tool or a replacement for theory.",
+      "connectsWith": [
+        "philosophy of science",
+        "machine learning",
+        "models",
+        "theory",
+        "data"
+      ]
+    },
+    {
+      "topic": "Philosophy of science and futures of science",
+      "title": "Can Generative AI Produce Novel Evidence?",
+      "authors": "Donal Khosrowi & Finola Finn",
+      "year": "2025",
+      "source": "Philosophy of Science, 92(5), 1405–1416",
+      "url": "https://doi.org/10.1017/psa.2025.10123",
+      "why": "A sharp conceptual paper on a genuinely new epistemic question: whether generative AI outputs can count as evidence rather than merely representations or hypotheses. Its historical-science cases make the issue concrete and relevant to changing scientific practice.",
+      "connectsWith": [
+        "philosophy of science",
+        "generative AI",
+        "evidence",
+        "scientific practice"
+      ]
+    },
+    {
+      "topic": "Conceivability, counterfactuals and history",
+      "title": "Historical contingency and counterfactual history: Revisiting the Cushing thesis",
+      "authors": "Kristian Camilleri",
+      "year": "2026",
+      "source": "Studies in History and Philosophy of Science, 119, 102235",
+      "url": "https://doi.org/10.1016/j.shpsa.2026.102235",
+      "why": "A very recent, careful test of one of the best-known counterfactual histories of science. It shows how apparent plausibility can depend on stripping away precisely the contextual contingencies that a serious counterfactual history needs to preserve.",
+      "connectsWith": [
+        "counterfactual history",
+        "contingency",
+        "history of science",
+        "plausibility"
+      ]
+    },
+    {
+      "topic": "Conceivability, counterfactuals and history",
+      "title": "When to Use Counterfactuals in Causal Historiography: Methods for Semantics and Inference",
+      "authors": "Tay Jeong",
+      "year": "2026",
+      "source": "Sociological Methods & Research, 55(2)",
+      "url": "https://doi.org/10.1177/00491241251314039",
+      "why": "A method-focused account of when counterfactual reasoning genuinely helps causal historical inquiry. It connects interventionist causation with problems of variable specification, contrast classes, and inference instead of defending counterfactual history in the abstract.",
+      "connectsWith": [
+        "counterfactuals",
+        "causal explanation",
+        "historiography",
+        "interventionism"
+      ]
+    },
+    {
+      "topic": "Conceivability, counterfactuals and history",
+      "title": "Causes, Counterfactuals, and Counterfactual History",
+      "authors": "Matthew Rellihan",
+      "year": "2025",
+      "source": "Journal of the Philosophy of History, 20(2), 133–155",
+      "url": "https://doi.org/10.1163/18722636-12341561",
+      "why": "A useful conceptual separation of different counterfactual roles in causal inquiry and historical speculation. It identifies where counterfactual reasoning becomes epistemically weak and proposes a more constrained methodology for counterfactual history.",
+      "connectsWith": [
+        "counterfactual history",
+        "causation",
+        "speculation",
+        "methodology"
+      ]
+    },
+    {
+      "topic": "University futures and higher education",
+      "title": "Speculative futures for higher education",
+      "authors": "Sian Bayne & Jen Ross",
+      "year": "2024",
+      "source": "International Journal of Educational Technology in Higher Education, 21, 39",
+      "url": "https://doi.org/10.1186/s41239-024-00469-y",
+      "why": "A strong example of speculative method used reflexively rather than predictively. It treats higher-education futures as open and contested while showing how carefully designed speculative scenarios can support thought without pretending to forecast institutional outcomes.",
+      "connectsWith": [
+        "higher education",
+        "speculative methods",
+        "university futures",
+        "scenarios"
+      ]
+    },
+    {
+      "topic": "University futures and higher education",
+      "title": "Theorizing ‘the future’ in higher education: A framework for studying affective futurity",
+      "authors": "Michalinos Zembylas",
+      "year": "2025",
+      "source": "Futures, 165, 103517",
+      "url": "https://doi.org/10.1016/j.futures.2024.103517",
+      "why": "A sophisticated conceptual contribution that asks how university futures are not only imagined but felt. The framework of affective futurity links anticipation, hope, optimism, power, and social justice and expands university-futures research beyond institutional scenarios.",
+      "connectsWith": [
+        "higher education",
+        "affective futurity",
+        "anticipation",
+        "social justice"
+      ]
+    },
+    {
+      "topic": "University futures and higher education",
+      "title": "How universities study the future: A critical view",
+      "authors": "Reza Hafezi, Sara Ghaboulian Zare, Firouzeh Rosa Taghikhah & Saeed Roshani",
+      "year": "2024",
+      "source": "Futures, 163, 103439",
+      "url": "https://doi.org/10.1016/j.futures.2024.103439",
+      "why": "Directly relevant to the methodology of university-futures research. It critically reviews higher-education scenario studies rather than simply adding another scenario set, identifies recurring methodological weaknesses, and proposes guidance for stronger future work.",
+      "connectsWith": [
+        "university futures",
+        "higher education",
+        "scenario methodology",
+        "critical review"
+      ]
+    },
+    {
+      "topic": "Futures of work",
+      "title": "Generative AI at Work",
+      "authors": "Erik Brynjolfsson, Danielle Li & Lindsey Raymond",
+      "year": "2025",
+      "source": "The Quarterly Journal of Economics, 140(2), 889–942",
+      "url": "https://doi.org/10.1093/qje/qjae044",
+      "why": "One of the strongest causal studies of generative AI in real work. Using data from 5,172 customer-support agents, it shows substantial average productivity effects but also strong heterogeneity by worker experience and skill, making it more informative than broad automation forecasts.",
+      "connectsWith": [
+        "future of work",
+        "generative AI",
+        "productivity",
+        "skills",
+        "field evidence"
+      ]
+    },
+    {
+      "topic": "Futures of work",
+      "title": "Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of Artificial Intelligence on Knowledge Worker Productivity and Quality",
+      "authors": "Fabrizio Dell’Acqua et al.",
+      "year": "2026",
+      "source": "Organization Science, advance online publication",
+      "url": "https://doi.org/10.1287/orsc.2025.21838",
+      "why": "A foundational empirical paper for understanding AI and knowledge work because it shows that augmentation is task-dependent rather than uniform. The 'jagged technological frontier' gives a much better conceptual model than simple substitution-versus-complementarity claims.",
+      "connectsWith": [
+        "knowledge work",
+        "AI",
+        "productivity",
+        "task structure",
+        "augmentation"
+      ]
+    },
+    {
+      "topic": "Futures of work",
+      "title": "The Cybernetic Teammate: A Field Experiment on Generative AI and Teamwork",
+      "authors": "Fabrizio Dell’Acqua et al.",
+      "year": "2026",
+      "source": "Organization Science, advance online publication",
+      "url": "https://doi.org/10.1287/orsc.2025.20702",
+      "why": "A preregistered field experiment with professionals doing real product-innovation work. It examines not only output quality but expertise integration and social engagement, making it important for thinking about how AI may alter the structure and meaning of teamwork itself.",
+      "connectsWith": [
+        "future of work",
+        "AI",
+        "teamwork",
+        "expertise",
+        "collaboration"
       ]
     }
   ]
