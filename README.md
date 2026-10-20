@@ -1,28 +1,72 @@
-# RADAR 2 UPDATE — OPENALEX RESEARCH IS THE DEFAULT
+# Veli Virmajoki Academic Site
 
-Read **[START-HERE-OPENALEX-RADAR-2.md](START-HERE-OPENALEX-RADAR-2.md)** first. No OpenAI key is required. Live OpenAlex API searches compare later scholarly studies with older foresight claims; the Word report includes cautious thematic assessments and original source links, not invented accuracy statistics. Existing OpenAlex indexed studies have also been compared offline to seed the report.
+Static GitHub Pages site.
 
----
+## Main pages
 
-# European Foresight Radar
+- `index.html` — homepage, redesigned as an intellectual doorway into the work.
+- `research.html` — ideas, methods, concepts, and keyword-rich research map.
+- `writing.html` — essays and shorter public writing on futures, methods, and philosophy.
+- `publications.html` — formal publication list, rendered from `assets/site-data.js`.
+- `cv.html` — academic CV.
+- `engagement.html` — public engagement and professional outputs.
+- `contact.html` — contact information.
 
-A simple EU foresight research observatory.
+## Editing
 
-- **Scanner 1** discovers research leads and writes `research-leads.json` and `stuff/WORLD_RADAR_MASTER.xlsx`. A lead is enough to enter the library; it is not automatically a verified forecast.
-- **Scanner 2** reads those leads, uses AI-assisted web research when OPENAI_API_KEY is configured (otherwise an honest offline audit), and writes `retrospective-results.json`, `outlook-summary.json` and `stuff/WHAT_WAS_EXPECTED_WHAT_HAPPENED.docx`. The Radar 2 workflow now also uploads a downloadable `Radar-2-Word-and-Audit` artifact on every valid report-generation run.
-- **Website** (`index.html`) presents the outlook, searchable research library, reality checks and downloads. It is a static GitHub Pages site.
+- Main publication and CV data: `assets/site-data.js`
+- Visual design and layout: `assets/styles.css`
+- Interactive behaviour: `assets/main.js`
 
-## Start
+The current visual identity uses white, red, and black, with spacious sections and restrained typography.
 
-1. Upload the entire extracted repository, including `.github/workflows`, to a GitHub repository on branch `main`.
-2. Under **Settings → Secrets and variables → Actions**, add `OPENAI_API_KEY` for Scanner 2. Optional: `OPENALEX_API_KEY` for scholarly discovery.
-3. Under **Settings → Actions → General**, allow workflows to read and write repository contents. Enable GitHub Pages with **GitHub Actions** as source.
-4. Run **European Foresight Radar — Scholarly Discovery and Retrospective Verification** (Scanner 1), then **Radar 2 - outcomes and Word report** (Scanner 2). Run **Publish radar website (controlled)** if needed.
 
-## Notes
+Added Research Radar:
+- research-radar.html
+- assets/research-radar-approved.json
 
-GitHub's scheduled Actions are best effort. Scanner 1 targets ~25 minutes (14-minute discovery, 9-minute verification); Scanner 2 allows up to 18 minutes of evidence research, with a limit of 12 requests each run. Radar 2 runs at 04:17 and 16:17 UTC, and Radar 1 at 01:17 and 13:17 UTC. Radar 2 can generate the report without a key, but does no new independent outcome research in offline mode; GitHub Actions now marks these runs failed unless `allow_offline_report` is explicitly selected. The generated Word remains downloadable as an artifact even when a missing key triggers this warning/failure. Live APIs and GitHub deployment have not been tested here. Excel and Word contain saved results and will be refreshed when workflows succeed. GitHub Pages is public: the site and JSON source data are publicly accessible.
 
-Some legacy supporting scripts/data remain deliberately because removing them without a live integration test could break scanning. They are not shown on the website.
+Research Radar is now visible in the top navigation as Radar and has a stronger homepage callout.
 
-**Current Word report:** `stuff/WHAT_WAS_EXPECTED_WHAT_HAPPENED.docx` was rebuilt and visually checked offline in this package. It contains 28 unverified abstract forecast candidates and 2 source-linked, editorial policy observations, with explicit expected/actual fields. Zero forecast comparisons have passed source review so far. See `RADAR-2-REPAIRS.md`.
+
+## Research Radar weekly candidates
+
+This site includes a Research Radar page (`research-radar.html`) and a weekly candidate-scan system.
+
+The public page shows only items in:
+
+```text
+assets/research-radar-approved.json
+```
+
+The automatic scanner creates candidate lists in:
+
+```text
+radar-candidates/latest.md
+```
+
+The candidate list is for review only. To curate it, open `radar-candidates/latest.md`, choose item numbers, and use a note such as:
+
+```text
+approve 2, 5, 9
+hold 12
+reject the rest
+```
+
+The weekly scan is configured in:
+
+```text
+assets/research-radar-config.json
+scripts/research_radar_scan.py
+.github/workflows/research-radar.yml
+```
+
+The workflow runs weekly and can also be started manually from GitHub Actions.
+
+### Scanner focus after the balanced-neighbourhood update
+
+The weekly scanner is not a general “interesting new papers” feed, but it should also not merely rediscover Veli Virmajoki's own publications. It now uses a balanced neighbourhood gate: first publication/substance quality, then intellectual proximity to the site.
+
+A candidate should connect to futures/foresight methods, Delphi/expert methods, scenario work, horizon scanning, narrative foresight, philosophy of futures studies, philosophy/futures of science, historiography/counterfactuals/conceivability, or system-level futures of work, universities, higher education, science, knowledge, policy, or governance.
+
+Self-authored works are excluded from the discovery list. Peer-reviewed empirical articles can still be rejected when they are mainly micro-experience studies in unrelated domains, even if they have methods and references.
