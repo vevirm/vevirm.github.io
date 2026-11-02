@@ -57,6 +57,21 @@ window.siteData = {
       "category": "Peer-reviewed scientific articles",
       "type": "Journal article",
       "year": "2026",
+      "title": "On the Intellectual Unity of Futures Studies",
+      "authors": "Virmajoki, V.",
+      "venue": "Futures",
+      "status": "published",
+      "tags": [
+        "futures studies",
+        "philosophy of futures studies",
+        "foundations"
+      ],
+      "links": []
+    },
+    {
+      "category": "Peer-reviewed scientific articles",
+      "type": "Journal article",
+      "year": "2026",
       "title": "The Next Episode for Narrative Foresight",
       "authors": "Heinonen, S.; Virmajoki, V.; Viitamäki, R.",
       "venue": "Futures",
