@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 
 <html lang="en">
@@ -114,6 +117,31 @@
 </section>
 <section class="section-pad writing-index-section">
 <div class="container narrow essay-list">
+<article class="essay-entry" id="complexity-causality-and-foresight">
+<p class="article-kicker">Essay · Foresight · Philosophy of science · 2026</p>
+<h2>Everybody Knows: Complexity, Causality, and the Most Trivial Reason to Do Foresight</h2>
+<p class="essay-description">Why saying the world is complex does not, by itself, justify foresight—and why making causal assumptions explicit matters.</p>
+<p style="margin:0 0 1.1rem"><a class="button primary" href="essays/Complexity%2C%20Causality%2C%20and%20the%20Most%20Trivial%20Reason%20to%20Do%20Foresight.pdf" target="_blank" rel="noreferrer">Read the PDF here</a></p>
+</article>
+<!-- Automatically list PDFs added to /writing/ or /essays/ that are not already featured below.
+     GitHub Pages/Jekyll builds this list whenever a PDF is committed. -->
+{% assign featured_pdfs = "|There Is No Such Thing as a Halfway Crook #U2013 or Theory.pdf|Ready_for_What_Conceptual Engineering of Readiness in Research and Innovation Foresight.pdf|A Philosophy of Research and Innovation Foresight - What the Estimation of European RI Futures Assumes about Science .pdf|The_Seventh_Wave_Escape_from_Performed_Future.pdf|Defining_Futures_Concepts.pdf|The_Reality_of_the_Future_and_the_Space_of_Possibility.pdf|The_Modal_Vocabulary.pdf|" %}
+{% assign featured_pdfs = featured_pdfs | append: 'Complexity, Causality, and the Most Trivial Reason to Do Foresight.pdf|' %}
+{% assign pdf_files = site.static_files | sort: 'name' %}
+{% for pdf in pdf_files %}
+  {% assign pdf_marker = pdf.name | prepend: '|' | append: '|' %}
+  {% if pdf.extname == '.pdf' %}
+  {% if pdf.path contains '/writing/' or pdf.path contains '/essays/' %}
+    {% unless featured_pdfs contains pdf_marker %}
+<article class="essay-entry">
+<p class="article-kicker">Essay · PDF</p>
+<h2>{{ pdf.name | remove: '.pdf' | replace: '_', ' ' | escape }}</h2>
+<p style="margin:0 0 1.1rem"><a class="button primary" href="{{ pdf.path | relative_url | replace: ' ', '%20' }}" target="_blank" rel="noreferrer">Read the PDF here</a></p>
+</article>
+    {% endunless %}
+  {% endif %}
+  {% endif %}
+{% endfor %}
 <article class="essay-entry" id="there-is-no-such-thing-as-a-halfway-crook-or-theory">
 <p class="article-kicker">Essay · Philosophy of science · 2026</p>
 <h2>There Is No Such Thing as a Halfway Crook – or Theory</h2>
